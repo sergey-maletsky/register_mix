@@ -1,0 +1,1460 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<orgstructure>
+    <department>
+        <id>ac8be646-b3f8-4215-a731-9914a65a4af4</id>
+        <name>ООО Аврора</name>
+        <status>ACTIVE</status>
+    </department>
+    <department>
+        <id>ff0b48d5-81ff-4917-a2da-9798a321c804</id>
+        <name>Аппарат директора</name>
+        <parentId>ac8be646-b3f8-4215-a731-9914a65a4af4</parentId>
+        <status>ACTIVE</status>
+        <roles>npd_manager</roles>
+    </department>
+    <department>
+        <id>6a421edb-54bf-4a3c-9c0f-59042094c097</id>
+        <name>Общий отдел</name>
+        <parentId>ff0b48d5-81ff-4917-a2da-9798a321c804</parentId>
+        <status>ACTIVE</status>
+        <roles>npd_manager</roles>
+        <roles>applicants_manager</roles>
+    </department>
+    <department>
+        <id>fe4d2dd5-2af4-45ef-8a4e-404fb6bc8608</id>
+        <name>Отдел контроля</name>
+        <parentId>6a421edb-54bf-4a3c-9c0f-59042094c097</parentId>
+        <status>ACTIVE</status>
+    </department>
+    <department>
+        <id>9e1ec373-2613-4844-bc07-46cf4d67cade</id>
+        <name>Канцелярия</name>
+        <parentId>6a421edb-54bf-4a3c-9c0f-59042094c097</parentId>
+        <status>ACTIVE</status>
+    </department>
+    <department>
+        <id>658183c9-78de-4559-a1eb-8c20fc21440e</id>
+        <name>Отдел по работе с обращениями граждан</name>
+        <parentId>6a421edb-54bf-4a3c-9c0f-59042094c097</parentId>
+        <status>ACTIVE</status>
+        <roles>applicants_manager</roles>
+    </department>
+    <department>
+        <id>b5fc855d-0471-4971-af76-5735aff12124</id>
+        <name>Техническая дирекция</name>
+        <parentId>ff0b48d5-81ff-4917-a2da-9798a321c804</parentId>
+        <status>ACTIVE</status>
+        <roles>npd_manager</roles>
+    </department>
+    <department>
+        <id>e13300b3-e57a-43cb-b45b-664e166e6af2</id>
+        <name>Служба АСУ</name>
+        <parentId>b5fc855d-0471-4971-af76-5735aff12124</parentId>
+        <status>ACTIVE</status>
+    </department>
+    <department>
+        <id>71d4eb63-6b35-4699-9f7d-30270219b4ca</id>
+        <name>Технический отдел</name>
+        <parentId>b5fc855d-0471-4971-af76-5735aff12124</parentId>
+        <status>ACTIVE</status>
+    </department>
+    <department>
+        <id>2781bf53-2c6e-4634-b871-4bdeb8325de9</id>
+        <name>Дирекция по производству</name>
+        <parentId>ff0b48d5-81ff-4917-a2da-9798a321c804</parentId>
+        <status>ACTIVE</status>
+        <roles>npd_manager</roles>
+    </department>
+    <department>
+        <id>20b3df36-ca6b-42c0-b90f-528c908686f8</id>
+        <name>Производственный отдел</name>
+        <parentId>2781bf53-2c6e-4634-b871-4bdeb8325de9</parentId>
+        <status>ACTIVE</status>
+    </department>
+    <department>
+        <id>a2dfccd6-46f2-4f1c-878b-c7d3c690824e</id>
+        <name>Дирекция по сбыту</name>
+        <parentId>ff0b48d5-81ff-4917-a2da-9798a321c804</parentId>
+        <status>ACTIVE</status>
+        <roles>npd_manager</roles>
+    </department>
+    <department>
+        <id>9c6b0700-50a1-44a2-bf8b-f21ced5970fd</id>
+        <name>Отдел по работе с юридическими лицами</name>
+        <parentId>a2dfccd6-46f2-4f1c-878b-c7d3c690824e</parentId>
+        <status>ACTIVE</status>
+    </department>
+    <department>
+        <id>a091a37a-0c23-42ba-98d0-9758d982fa7d</id>
+        <name>Отдел по работе с физическими лицами</name>
+        <parentId>a2dfccd6-46f2-4f1c-878b-c7d3c690824e</parentId>
+        <status>ACTIVE</status>
+    </department>
+    <department>
+        <id>f31f097a-a53f-4a5c-8e7b-4c795371779a</id>
+        <name>Финансовая дирекция</name>
+        <parentId>ff0b48d5-81ff-4917-a2da-9798a321c804</parentId>
+        <status>ACTIVE</status>
+        <roles>npd_manager</roles>
+    </department>
+    <department>
+        <id>53f1fc14-bf77-41a9-a7d3-4e223615f683</id>
+        <name>Финансовый отдел</name>
+        <parentId>f31f097a-a53f-4a5c-8e7b-4c795371779a</parentId>
+        <status>ACTIVE</status>
+    </department>
+    <department>
+        <id>e1440111-2494-44cd-8844-4dbecd75ddb6</id>
+        <name>Планово-экономический отдел</name>
+        <parentId>f31f097a-a53f-4a5c-8e7b-4c795371779a</parentId>
+        <status>ACTIVE</status>
+    </department>
+    <department>
+        <id>4b7655d6-f7d9-4f01-8ed0-9af18ea0390c</id>
+        <name>Бухгалтерия</name>
+        <parentId>f31f097a-a53f-4a5c-8e7b-4c795371779a</parentId>
+        <status>ACTIVE</status>
+    </department>
+    <department>
+        <id>22bbda6d-0b87-4146-a479-01868840c103</id>
+        <name>Дирекция по персоналу</name>
+        <parentId>ff0b48d5-81ff-4917-a2da-9798a321c804</parentId>
+        <status>ACTIVE</status>
+        <roles>npd_manager</roles>
+    </department>
+    <department>
+        <id>f93303e7-06c5-4b0a-b038-47ad258b4b2b</id>
+        <name>Дирекция по экономическому развитию</name>
+        <parentId>ff0b48d5-81ff-4917-a2da-9798a321c804</parentId>
+        <status>ACTIVE</status>
+    </department>
+    <department>
+        <id>4174d3dd-17a2-4e7a-9dd7-6c35aa054e70</id>
+        <name>Дирекция по правовым вопросам</name>
+        <parentId>ff0b48d5-81ff-4917-a2da-9798a321c804</parentId>
+        <status>ACTIVE</status>
+    </department>
+    <department>
+        <id>7dd820d6-1aaf-4a81-912b-31c2e8c03228</id>
+        <name>Договорной отдел</name>
+        <parentId>4174d3dd-17a2-4e7a-9dd7-6c35aa054e70</parentId>
+        <status>ACTIVE</status>
+    </department>
+    <position>
+        <id>83e249bf-0b11-4f2e-90d4-004decaee466</id>
+        <name>Генеральный директор</name>
+        <parentId>ff0b48d5-81ff-4917-a2da-9798a321c804</parentId>
+        <status>ACTIVE</status>
+        <rank>900</rank>
+        <department>
+            <id>ff0b48d5-81ff-4917-a2da-9798a321c804</id>
+            <name>Аппарат директора</name>
+        </department>
+        <person>
+            <id>f35b2992-8de6-406b-9e4a-89e3b5307b00</id>
+            <name>Карпин В.Г.</name>
+        </person>
+    </position>
+    <position>
+        <id>2105d3e1-67e5-4f21-bc62-35571047b776</id>
+        <name>Начальник аппарата</name>
+        <parentId>ff0b48d5-81ff-4917-a2da-9798a321c804</parentId>
+        <status>ACTIVE</status>
+        <rank>600</rank>
+        <roles>records_manager</roles>
+        <roles>contracts_manager</roles>
+        <roles>registrator</roles>
+        <department>
+            <id>ff0b48d5-81ff-4917-a2da-9798a321c804</id>
+            <name>Аппарат директора</name>
+        </department>
+        <person>
+            <id>acbbd909-6963-4d59-9aa9-a1e3ee109195</id>
+            <name>Онопко В.С.</name>
+        </person>
+    </position>
+    <position>
+        <id>dfc5d249-b2d6-4306-984f-d80b5020abe3</id>
+        <name>Советник</name>
+        <parentId>ff0b48d5-81ff-4917-a2da-9798a321c804</parentId>
+        <status>ACTIVE</status>
+        <rank>300</rank>
+        <roles>records_manager</roles>
+        <roles>contracts_manager</roles>
+        <department>
+            <id>ff0b48d5-81ff-4917-a2da-9798a321c804</id>
+            <name>Аппарат директора</name>
+        </department>
+        <person>
+            <id>8a68d5ee-e5a5-4fc0-ab79-a83c26d9f4b8</id>
+            <name>Лебедев С.Г.</name>
+        </person>
+    </position>
+    <position>
+        <id>56aabc92-5f60-4382-ad47-5dbf23df5cac</id>
+        <name>Секретарь</name>
+        <parentId>ff0b48d5-81ff-4917-a2da-9798a321c804</parentId>
+        <status>ACTIVE</status>
+        <rank>100</rank>
+        <roles>template_editor</roles>
+        <roles>orgstruct_editor</roles>
+        <roles>records_manager</roles>
+        <roles>contracts_manager</roles>
+        <department>
+            <id>ff0b48d5-81ff-4917-a2da-9798a321c804</id>
+            <name>Аппарат директора</name>
+        </department>
+        <person>
+            <id>e1cecfb2-3209-40fc-ba82-89812fce8432</id>
+            <name>Никифоров Ю.В.</name>
+        </person>
+    </position>
+    <position>
+        <id>a7ab5bf8-18ae-4f2a-a6bd-9d841f137238</id>
+        <name>Начальник отдела</name>
+        <parentId>6a421edb-54bf-4a3c-9c0f-59042094c097</parentId>
+        <status>ACTIVE</status>
+        <rank>600</rank>
+        <roles>records_manager</roles>
+        <department>
+            <id>6a421edb-54bf-4a3c-9c0f-59042094c097</id>
+            <name>Общий отдел</name>
+        </department>
+        <person>
+            <id>f46d2d08-5724-4fd9-8fcc-2c44e4af5e74</id>
+            <name>Гусева М.П.</name>
+        </person>
+    </position>
+    <position>
+        <id>84b5ad81-99b9-4727-ab02-d415d5cfb12b</id>
+        <name>Заместитель начальника отдела</name>
+        <parentId>6a421edb-54bf-4a3c-9c0f-59042094c097</parentId>
+        <status>ACTIVE</status>
+        <rank>400</rank>
+        <roles>template_editor</roles>
+        <roles>orgstruct_editor</roles>
+        <roles>records_manager</roles>
+        <department>
+            <id>6a421edb-54bf-4a3c-9c0f-59042094c097</id>
+            <name>Общий отдел</name>
+        </department>
+        <person>
+            <id>7e8da669-086d-4031-bd7d-5056687c194c</id>
+            <name>Серов А.П.</name>
+        </person>
+    </position>
+    <position>
+        <id>de9341fc-e2b9-4117-8909-26a99e0f9bbe</id>
+        <name>Начальник отдела</name>
+        <parentId>fe4d2dd5-2af4-45ef-8a4e-404fb6bc8608</parentId>
+        <status>ACTIVE</status>
+        <rank>600</rank>
+        <department>
+            <id>fe4d2dd5-2af4-45ef-8a4e-404fb6bc8608</id>
+            <name>Отдел контроля</name>
+        </department>
+        <person>
+            <id>d5a2e10e-7ca8-4043-864b-0b71fc685bfb</id>
+            <name>Уткина В.В.</name>
+        </person>
+    </position>
+    <position>
+        <id>ff9fab95-747b-4c0b-86e7-350d80cb6f3c</id>
+        <name>Старший специалист</name>
+        <parentId>fe4d2dd5-2af4-45ef-8a4e-404fb6bc8608</parentId>
+        <status>ACTIVE</status>
+        <rank>300</rank>
+        <department>
+            <id>fe4d2dd5-2af4-45ef-8a4e-404fb6bc8608</id>
+            <name>Отдел контроля</name>
+        </department>
+        <person>
+            <id>7e8da669-086d-4031-bd7d-5056687c194c</id>
+            <name>Серов А.П.</name>
+        </person>
+    </position>
+    <position>
+        <id>192c7c12-3d9f-4d07-89ce-233e4a459add</id>
+        <name>Специалист</name>
+        <parentId>fe4d2dd5-2af4-45ef-8a4e-404fb6bc8608</parentId>
+        <status>ACTIVE</status>
+        <rank>200</rank>
+        <roles>orgstruct_editor</roles>
+        <department>
+            <id>fe4d2dd5-2af4-45ef-8a4e-404fb6bc8608</id>
+            <name>Отдел контроля</name>
+        </department>
+        <person>
+            <id>45537384-9f50-4f58-b8d8-99ff70c332e1</id>
+            <name>Волков И.И.</name>
+        </person>
+    </position>
+    <position>
+        <id>dffebef4-aaf2-4b45-8bf5-3e3ae180c265</id>
+        <name>Начальник канцелярии</name>
+        <parentId>9e1ec373-2613-4844-bc07-46cf4d67cade</parentId>
+        <status>ACTIVE</status>
+        <rank>600</rank>
+        <roles>records_manager</roles>
+        <department>
+            <id>9e1ec373-2613-4844-bc07-46cf4d67cade</id>
+            <name>Канцелярия</name>
+        </department>
+        <person>
+            <id>64f48f8d-0fb9-4dcd-bfa3-cc1ebace6999</id>
+            <name>Соколов И.В.</name>
+        </person>
+    </position>
+    <position>
+        <id>a7aa2e0a-b31d-438f-bcd4-6c34bbd759fe</id>
+        <name>Старший специалист</name>
+        <parentId>9e1ec373-2613-4844-bc07-46cf4d67cade</parentId>
+        <status>ACTIVE</status>
+        <rank>300</rank>
+        <roles>directory_editor</roles>
+        <roles>records_manager</roles>
+        <roles>registrator</roles>
+        <department>
+            <id>9e1ec373-2613-4844-bc07-46cf4d67cade</id>
+            <name>Канцелярия</name>
+        </department>
+        <person>
+            <id>f4cbb201-532b-43e3-b929-bf7cf3df1e69</id>
+            <name>Петров Д.И.</name>
+        </person>
+    </position>
+    <position>
+        <id>aa08094b-dda9-46b0-abe4-ff6e5282df37</id>
+        <name>Специалист</name>
+        <parentId>9e1ec373-2613-4844-bc07-46cf4d67cade</parentId>
+        <status>ACTIVE</status>
+        <rank>200</rank>
+        <roles>directory_editor</roles>
+        <roles>template_editor</roles>
+        <roles>orgstruct_editor</roles>
+        <roles>records_manager</roles>
+        <roles>registrator</roles>
+        <roles>sender</roles>
+        <department>
+            <id>9e1ec373-2613-4844-bc07-46cf4d67cade</id>
+            <name>Канцелярия</name>
+        </department>
+        <person>
+            <id>8d230f1c-de00-4eca-a138-e7f88b27fb9f</id>
+            <name>Иванов П.С.</name>
+        </person>
+    </position>
+    <position>
+        <id>5ba60fd0-3209-419f-9b2a-0906f2c53d16</id>
+        <name>Начальник отдела</name>
+        <parentId>658183c9-78de-4559-a1eb-8c20fc21440e</parentId>
+        <status>ACTIVE</status>
+        <rank>600</rank>
+        <roles>records_manager</roles>
+        <department>
+            <id>658183c9-78de-4559-a1eb-8c20fc21440e</id>
+            <name>Отдел по работе с обращениями граждан</name>
+        </department>
+        <person>
+            <id>e8479e8c-c5e0-463a-adc8-2e4004045dff</id>
+            <name>Морозов В.И.</name>
+        </person>
+    </position>
+    <position>
+        <id>c1f7fe4a-e05e-4299-8765-04374e0fe28f</id>
+        <name>Старший специалист</name>
+        <parentId>658183c9-78de-4559-a1eb-8c20fc21440e</parentId>
+        <status>ACTIVE</status>
+        <rank>300</rank>
+        <roles>directory_editor</roles>
+        <roles>records_manager</roles>
+        <roles>registrator</roles>
+        <department>
+            <id>658183c9-78de-4559-a1eb-8c20fc21440e</id>
+            <name>Отдел по работе с обращениями граждан</name>
+        </department>
+        <person>
+            <id>f55b2d92-34d9-4be0-ae4e-83a80424ceda</id>
+            <name>Козлов П.Б.</name>
+        </person>
+    </position>
+    <position>
+        <id>4125eab4-256b-4bd5-a0eb-ddffd4cf378a</id>
+        <name>Специалист</name>
+        <parentId>658183c9-78de-4559-a1eb-8c20fc21440e</parentId>
+        <status>ACTIVE</status>
+        <rank>200</rank>
+        <roles>directory_editor</roles>
+        <roles>template_editor</roles>
+        <roles>orgstruct_editor</roles>
+        <roles>records_manager</roles>
+        <roles>registrator</roles>
+        <department>
+            <id>658183c9-78de-4559-a1eb-8c20fc21440e</id>
+            <name>Отдел по работе с обращениями граждан</name>
+        </department>
+        <person>
+            <id>838638db-4cae-4f78-a0f9-535b0feca0a0</id>
+            <name>Веткин Я.П.</name>
+        </person>
+    </position>
+    <position>
+        <id>d9f0d790-c535-4e2b-8b84-2b424d5cb6c3</id>
+        <name>Технический директор</name>
+        <parentId>b5fc855d-0471-4971-af76-5735aff12124</parentId>
+        <status>ACTIVE</status>
+        <rank>600</rank>
+        <roles>contracts_manager</roles>
+        <department>
+            <id>b5fc855d-0471-4971-af76-5735aff12124</id>
+            <name>Техническая дирекция</name>
+        </department>
+        <person>
+            <id>c985fb7f-ba69-4799-b045-d32c7fa3c522</id>
+            <name>Антонов С.С.</name>
+        </person>
+    </position>
+    <position>
+        <id>119c4262-1f56-4dd7-a2ab-90dadbc4d0ac</id>
+        <name>Секретарь</name>
+        <parentId>b5fc855d-0471-4971-af76-5735aff12124</parentId>
+        <status>ACTIVE</status>
+        <rank>100</rank>
+        <roles>template_editor</roles>
+        <roles>orgstruct_editor</roles>
+        <roles>records_manager</roles>
+        <roles>registrator</roles>
+        <roles>contracts_manager</roles>
+        <department>
+            <id>b5fc855d-0471-4971-af76-5735aff12124</id>
+            <name>Техническая дирекция</name>
+        </department>
+        <person>
+            <id>7c8fb049-c224-4dde-97bc-67aa08be2f4c</id>
+            <name>Лесков А.А.</name>
+        </person>
+    </position>
+    <position>
+        <id>a82be73c-6d8f-4e65-98ef-4f995e81b092</id>
+        <name>Начальник службы</name>
+        <parentId>e13300b3-e57a-43cb-b45b-664e166e6af2</parentId>
+        <status>ACTIVE</status>
+        <rank>600</rank>
+        <roles>directory_editor</roles>
+        <roles>records_manager</roles>
+        <department>
+            <id>e13300b3-e57a-43cb-b45b-664e166e6af2</id>
+            <name>Служба АСУ</name>
+        </department>
+        <person>
+            <id>5bec0334-a067-418d-a433-3b9d5101a5ee</id>
+            <name>Попов А.В.</name>
+        </person>
+    </position>
+    <position>
+        <id>0cb232fe-8477-4002-9559-e8a82c7d204c</id>
+        <name>Инженер</name>
+        <parentId>e13300b3-e57a-43cb-b45b-664e166e6af2</parentId>
+        <status>ACTIVE</status>
+        <rank>200</rank>
+        <roles>directory_editor</roles>
+        <roles>template_editor</roles>
+        <roles>orgstruct_editor</roles>
+        <roles>records_manager</roles>
+        <department>
+            <id>e13300b3-e57a-43cb-b45b-664e166e6af2</id>
+            <name>Служба АСУ</name>
+        </department>
+        <person>
+            <id>c4c0134c-c510-4231-9ab6-29aa5cac9f75</id>
+            <name>Зверев Г.П.</name>
+        </person>
+    </position>
+    <position>
+        <id>b922f5cf-1275-4100-80b2-965bc54d92c5</id>
+        <name>Начальник отдела</name>
+        <parentId>71d4eb63-6b35-4699-9f7d-30270219b4ca</parentId>
+        <status>ACTIVE</status>
+        <rank>600</rank>
+        <department>
+            <id>71d4eb63-6b35-4699-9f7d-30270219b4ca</id>
+            <name>Технический отдел</name>
+        </department>
+        <person>
+            <id>c83349f4-3b1c-442d-b698-0517eec04332</id>
+            <name>Тимченко В.С.</name>
+        </person>
+    </position>
+    <position>
+        <id>5c00da5a-90c6-4f45-9e5d-f76516056156</id>
+        <name>Инженер</name>
+        <parentId>71d4eb63-6b35-4699-9f7d-30270219b4ca</parentId>
+        <status>ACTIVE</status>
+        <rank>200</rank>
+        <roles>template_editor</roles>
+        <roles>orgstruct_editor</roles>
+        <roles>records_manager</roles>
+        <department>
+            <id>71d4eb63-6b35-4699-9f7d-30270219b4ca</id>
+            <name>Технический отдел</name>
+        </department>
+        <person>
+            <id>ec200b33-6c3e-440a-b693-5854c5e1af27</id>
+            <name>Платонов Н.П.</name>
+        </person>
+    </position>
+    <position>
+        <id>0310b5a5-4519-452c-90b5-47cce081acd7</id>
+        <name>Директор по производству</name>
+        <parentId>2781bf53-2c6e-4634-b871-4bdeb8325de9</parentId>
+        <status>ACTIVE</status>
+        <rank>600</rank>
+        <roles>contracts_manager</roles>
+        <department>
+            <id>2781bf53-2c6e-4634-b871-4bdeb8325de9</id>
+            <name>Дирекция по производству</name>
+        </department>
+        <person>
+            <id>301bd499-5554-429e-be8a-ac7c3986c5fb</id>
+            <name>Седов И.И.</name>
+        </person>
+    </position>
+    <position>
+        <id>1816f13a-1def-4884-b7e6-dc68a1b1093d</id>
+        <name>Секретарь</name>
+        <parentId>2781bf53-2c6e-4634-b871-4bdeb8325de9</parentId>
+        <status>ACTIVE</status>
+        <rank>100</rank>
+        <roles>template_editor</roles>
+        <roles>orgstruct_editor</roles>
+        <roles>records_manager</roles>
+        <roles>registrator</roles>
+        <roles>contracts_manager</roles>
+        <department>
+            <id>2781bf53-2c6e-4634-b871-4bdeb8325de9</id>
+            <name>Дирекция по производству</name>
+        </department>
+        <person>
+            <id>4db17054-ad87-4472-94a9-23ba3c591ef5</id>
+            <name>Курочкин С.И.</name>
+        </person>
+    </position>
+    <position>
+        <id>c306cf73-25ab-4229-a5d0-a50bbde08753</id>
+        <name>Начальник отдела</name>
+        <parentId>20b3df36-ca6b-42c0-b90f-528c908686f8</parentId>
+        <status>ACTIVE</status>
+        <rank>600</rank>
+        <department>
+            <id>20b3df36-ca6b-42c0-b90f-528c908686f8</id>
+            <name>Производственный отдел</name>
+        </department>
+        <person>
+            <id>be30bb16-88d4-48d0-8edc-582d5689a8bd</id>
+            <name>Воронов И.С.</name>
+        </person>
+    </position>
+    <position>
+        <id>09a49e5e-5eb4-4a5a-8cae-b3a16eef796d</id>
+        <name>Главный технолог</name>
+        <parentId>20b3df36-ca6b-42c0-b90f-528c908686f8</parentId>
+        <status>ACTIVE</status>
+        <rank>500</rank>
+        <department>
+            <id>20b3df36-ca6b-42c0-b90f-528c908686f8</id>
+            <name>Производственный отдел</name>
+        </department>
+        <person>
+            <id>1a2de33a-0d3f-4db0-a6dc-c349123a9f07</id>
+            <name>Дедкин Ф.П.</name>
+        </person>
+    </position>
+    <position>
+        <id>c1a3b50d-6c72-4b62-9af3-d739c51e5942</id>
+        <name>Технолог</name>
+        <parentId>20b3df36-ca6b-42c0-b90f-528c908686f8</parentId>
+        <status>ACTIVE</status>
+        <rank>200</rank>
+        <roles>template_editor</roles>
+        <roles>orgstruct_editor</roles>
+        <roles>records_manager</roles>
+        <department>
+            <id>20b3df36-ca6b-42c0-b90f-528c908686f8</id>
+            <name>Производственный отдел</name>
+        </department>
+        <person>
+            <id>7e8da669-086d-4031-bd7d-5056687c194c</id>
+            <name>Серов В.В.</name>
+        </person>
+    </position>
+    <position>
+        <id>9ec605d8-c04e-44c2-9c30-da99ef7091c9</id>
+        <name>Директор по сбыту</name>
+        <parentId>a2dfccd6-46f2-4f1c-878b-c7d3c690824e</parentId>
+        <status>ACTIVE</status>
+        <rank>600</rank>
+        <roles>records_manager</roles>
+        <roles>contracts_manager</roles>
+        <department>
+            <id>a2dfccd6-46f2-4f1c-878b-c7d3c690824e</id>
+            <name>Дирекция по сбыту</name>
+        </department>
+        <person>
+            <id>fa70ceed-c52f-4500-87a0-175b36ce9f04</id>
+            <name>Зубов Н.Н.</name>
+        </person>
+    </position>
+    <position>
+        <id>4d67048f-c645-4603-8d56-180584eca203</id>
+        <name>Секретарь</name>
+        <parentId>a2dfccd6-46f2-4f1c-878b-c7d3c690824e</parentId>
+        <status>ACTIVE</status>
+        <rank>100</rank>
+        <roles>template_editor</roles>
+        <roles>orgstruct_editor</roles>
+        <roles>records_manager</roles>
+        <roles>registrator</roles>
+        <roles>contracts_manager</roles>
+        <department>
+            <id>a2dfccd6-46f2-4f1c-878b-c7d3c690824e</id>
+            <name>Дирекция по сбыту</name>
+        </department>
+        <person>
+            <id>681fed2b-5f7b-46f2-a033-3c2da0e158d8</id>
+            <name>Мамин С.И.</name>
+        </person>
+    </position>
+    <position>
+        <id>6b2f8c93-a443-4d8f-b8aa-fa87ab976fba</id>
+        <name>Начальник отдела</name>
+        <parentId>9c6b0700-50a1-44a2-bf8b-f21ced5970fd</parentId>
+        <status>ACTIVE</status>
+        <rank>600</rank>
+        <roles>contracts_manager</roles>
+        <department>
+            <id>9c6b0700-50a1-44a2-bf8b-f21ced5970fd</id>
+            <name>Отдел по работе с юридическими лицами</name>
+        </department>
+        <person>
+            <id>cf096b95-c4f8-4e72-b1b1-ab2456a0057a</id>
+            <name>Левин И.И.</name>
+        </person>
+    </position>
+    <position>
+        <id>26214183-e429-46da-8f15-c66818f79707</id>
+        <name>Менеджер</name>
+        <parentId>9c6b0700-50a1-44a2-bf8b-f21ced5970fd</parentId>
+        <status>ACTIVE</status>
+        <rank>200</rank>
+        <roles>template_editor</roles>
+        <roles>orgstruct_editor</roles>
+        <roles>records_manager, &quot;contracts_manager&quot;</roles>
+        <department>
+            <id>9c6b0700-50a1-44a2-bf8b-f21ced5970fd</id>
+            <name>Отдел по работе с юридическими лицами</name>
+        </department>
+        <person>
+            <id>60d61920-fc7b-462e-b4de-a545eadf5d99</id>
+            <name>Полозков Е.П.</name>
+        </person>
+    </position>
+    <position>
+        <id>a75cc816-de46-4d24-a741-b78cd9231179</id>
+        <name>Начальник отдела</name>
+        <parentId>a091a37a-0c23-42ba-98d0-9758d982fa7d</parentId>
+        <status>ACTIVE</status>
+        <rank>600</rank>
+        <roles>contracts_manager</roles>
+        <department>
+            <id>a091a37a-0c23-42ba-98d0-9758d982fa7d</id>
+            <name>Отдел по работе с физическими лицами</name>
+        </department>
+        <person>
+            <id>75494554-e2be-4c32-9d77-0a61067f4f19</id>
+            <name>Гвоздев В.С.</name>
+        </person>
+    </position>
+    <position>
+        <id>6863b4da-3635-491b-8cdc-9864b36737cd</id>
+        <name>Менеджер</name>
+        <parentId>a091a37a-0c23-42ba-98d0-9758d982fa7d</parentId>
+        <status>ACTIVE</status>
+        <rank>200</rank>
+        <roles>template_editor</roles>
+        <roles>orgstruct_editor</roles>
+        <roles>records_manager</roles>
+        <roles>contracts_manager</roles>
+        <department>
+            <id>a091a37a-0c23-42ba-98d0-9758d982fa7d</id>
+            <name>Отдел по работе с физическими лицами</name>
+        </department>
+        <person>
+            <id>c470464a-4eb7-4efb-95d6-3a3260b1d57b</id>
+            <name>Потапов С.Н.</name>
+        </person>
+    </position>
+    <position>
+        <id>45d526e6-9e72-4eb8-ad0f-123c20331951</id>
+        <name>Финансовый директор</name>
+        <parentId>f31f097a-a53f-4a5c-8e7b-4c795371779a</parentId>
+        <status>ACTIVE</status>
+        <rank>600</rank>
+        <roles>records_manager</roles>
+        <roles>contracts_manager</roles>
+        <department>
+            <id>f31f097a-a53f-4a5c-8e7b-4c795371779a</id>
+            <name>Финансовая дирекция</name>
+        </department>
+        <person>
+            <id>5ee352d3-690a-41f7-87e6-c35d5d592f5f</id>
+            <name>Маслова И.П.</name>
+        </person>
+    </position>
+    <position>
+        <id>aa5d9f86-f7ac-44c2-857a-7a37e678460f</id>
+        <name>Секретарь</name>
+        <parentId>f31f097a-a53f-4a5c-8e7b-4c795371779a</parentId>
+        <status>ACTIVE</status>
+        <rank>100</rank>
+        <roles>template_editor</roles>
+        <roles>orgstruct_editor</roles>
+        <roles>records_manager</roles>
+        <roles>registrator</roles>
+        <roles>contracts_manager</roles>
+        <department>
+            <id>f31f097a-a53f-4a5c-8e7b-4c795371779a</id>
+            <name>Финансовая дирекция</name>
+        </department>
+        <person>
+            <id>5f9fc656-8354-4505-8d30-eb0596596be2</id>
+            <name>Зимин Я.Г.</name>
+        </person>
+    </position>
+    <position>
+        <id>97ac2451-575f-4258-8001-d1218e3346d6</id>
+        <name>Начальник отдела</name>
+        <parentId>53f1fc14-bf77-41a9-a7d3-4e223615f683</parentId>
+        <status>ACTIVE</status>
+        <rank>600</rank>
+        <roles>records_manager</roles>
+        <roles>contracts_manager</roles>
+        <department>
+            <id>53f1fc14-bf77-41a9-a7d3-4e223615f683</id>
+            <name>Финансовый отдел</name>
+        </department>
+        <person>
+            <id>6b759836-aecb-47ac-beff-0b84e263a74e</id>
+            <name>Сурков Б.П.</name>
+        </person>
+    </position>
+    <position>
+        <id>13835d42-931a-4f62-9c4c-8323b9a2e8f8</id>
+        <name>Экономист</name>
+        <parentId>53f1fc14-bf77-41a9-a7d3-4e223615f683</parentId>
+        <status>ACTIVE</status>
+        <rank>200</rank>
+        <roles>template_editor</roles>
+        <roles>orgstruct_editor</roles>
+        <roles>records_manager</roles>
+        <roles>contracts_manager</roles>
+        <department>
+            <id>53f1fc14-bf77-41a9-a7d3-4e223615f683</id>
+            <name>Финансовый отдел</name>
+        </department>
+        <person>
+            <id>37bd01b7-f9e0-4737-972c-530f4968b30a</id>
+            <name>Лугова В.П.</name>
+        </person>
+    </position>
+    <position>
+        <id>3e7665d8-5444-4cc2-b67d-63e3aa5918cb</id>
+        <name>Начальник отдела</name>
+        <parentId>e1440111-2494-44cd-8844-4dbecd75ddb6</parentId>
+        <status>ACTIVE</status>
+        <rank>600</rank>
+        <roles>records_manager</roles>
+        <department>
+            <id>e1440111-2494-44cd-8844-4dbecd75ddb6</id>
+            <name>Планово-экономический отдел</name>
+        </department>
+        <person>
+            <id>811847f0-53e2-4d3d-b212-a0421a578f64</id>
+            <name>Борисов С.Е.</name>
+        </person>
+    </position>
+    <position>
+        <id>4bfdc776-9721-4178-a808-c29d0848522c</id>
+        <name>Экономист</name>
+        <parentId>e1440111-2494-44cd-8844-4dbecd75ddb6</parentId>
+        <status>ACTIVE</status>
+        <rank>200</rank>
+        <roles>template_editor</roles>
+        <roles>orgstruct_editor</roles>
+        <roles>records_manager</roles>
+        <department>
+            <id>e1440111-2494-44cd-8844-4dbecd75ddb6</id>
+            <name>Планово-экономический отдел</name>
+        </department>
+        <person>
+            <id>5d7dcfeb-3e0a-49cf-afc5-a856520be79a</id>
+            <name>Саблин И.Ф.</name>
+        </person>
+    </position>
+    <position>
+        <id>2ad3a840-5a21-4a74-82e1-2dad6f6212f7</id>
+        <name>Главный бухгалтер</name>
+        <parentId>4b7655d6-f7d9-4f01-8ed0-9af18ea0390c</parentId>
+        <status>ACTIVE</status>
+        <rank>600</rank>
+        <roles>records_manager</roles>
+        <roles>contracts_manager</roles>
+        <department>
+            <id>4b7655d6-f7d9-4f01-8ed0-9af18ea0390c</id>
+            <name>Бухгалтерия</name>
+        </department>
+        <person>
+            <id>1150614d-9979-451d-91fa-ef314c315248</id>
+            <name>Полканов М.П.</name>
+        </person>
+    </position>
+    <position>
+        <id>1dd9fdb7-0b3b-4a21-9670-ed9aa8a2df8d</id>
+        <name>Бухгалтер</name>
+        <parentId>4b7655d6-f7d9-4f01-8ed0-9af18ea0390c</parentId>
+        <status>ACTIVE</status>
+        <rank>200</rank>
+        <roles>template_editor</roles>
+        <roles>orgstruct_editor</roles>
+        <roles>records_manager</roles>
+        <roles>contracts_manager</roles>
+        <department>
+            <id>4b7655d6-f7d9-4f01-8ed0-9af18ea0390c</id>
+            <name>Бухгалтерия</name>
+        </department>
+        <person>
+            <id>1af10379-dcd6-4e29-a5fe-e1dcb9823864</id>
+            <name>Сестрин В.И.</name>
+        </person>
+    </position>
+    <position>
+        <id>b71cf22b-706e-41e7-8a8e-5ce87c8d6863</id>
+        <name>Директор по персоналу</name>
+        <parentId>22bbda6d-0b87-4146-a479-01868840c103</parentId>
+        <status>ACTIVE</status>
+        <rank>600</rank>
+        <roles>records_manager</roles>
+        <department>
+            <id>22bbda6d-0b87-4146-a479-01868840c103</id>
+            <name>Дирекция по персоналу</name>
+        </department>
+        <person>
+            <id>55e02cc0-0bb2-47b3-8c72-5b6c04ac502c</id>
+            <name>Николаев П.И.</name>
+        </person>
+    </position>
+    <position>
+        <id>589cdc5c-7d15-4a03-ade7-3646fa83c20c</id>
+        <name>Старший специалист</name>
+        <parentId>22bbda6d-0b87-4146-a479-01868840c103</parentId>
+        <status>ACTIVE</status>
+        <rank>300</rank>
+        <roles>template_editor</roles>
+        <roles>orgstruct_editor</roles>
+        <roles>records_manager</roles>
+        <roles>registrator</roles>
+        <roles>contracts_manager</roles>
+        <department>
+            <id>22bbda6d-0b87-4146-a479-01868840c103</id>
+            <name>Дирекция по персоналу</name>
+        </department>
+        <person>
+            <id>ff777c67-28a6-401d-8ed3-715c54474310</id>
+            <name>Зуев В.С.</name>
+        </person>
+    </position>
+    <position>
+        <id>30cc7dd3-0659-439d-a70d-09730504eed4</id>
+        <name>Зам.генерального директора - директор по экономичекому развитию</name>
+        <parentId>f93303e7-06c5-4b0a-b038-47ad258b4b2b</parentId>
+        <status>ACTIVE</status>
+        <rank>700</rank>
+        <roles>records_manager</roles>
+        <department>
+            <id>f93303e7-06c5-4b0a-b038-47ad258b4b2b</id>
+            <name>Дирекция по экономическому развитию</name>
+        </department>
+        <person>
+            <id>6e44b2a6-8180-4bc3-a4b1-29cad6eb9cec</id>
+            <name>Старостин П.И.</name>
+        </person>
+    </position>
+    <position>
+        <id>048aa2a5-0cf3-49f5-97f1-53c0056a63e6</id>
+        <name>Старший экономист</name>
+        <parentId>f93303e7-06c5-4b0a-b038-47ad258b4b2b</parentId>
+        <status>ACTIVE</status>
+        <rank>300</rank>
+        <roles>template_editor</roles>
+        <roles>orgstruct_editor</roles>
+        <roles>registrator</roles>
+        <department>
+            <id>f93303e7-06c5-4b0a-b038-47ad258b4b2b</id>
+            <name>Дирекция по экономическому развитию</name>
+        </department>
+        <person>
+            <id>9872275b-bdcf-483a-8426-c43210c61643</id>
+            <name>Медведев Ю.Л.</name>
+        </person>
+    </position>
+    <position>
+        <id>19d13ebf-d5dc-4eb9-a990-9bba419b12c5</id>
+        <name>Директор по правовым вопросам</name>
+        <parentId>4174d3dd-17a2-4e7a-9dd7-6c35aa054e70</parentId>
+        <status>ACTIVE</status>
+        <rank>600</rank>
+        <roles>records_manager</roles>
+        <department>
+            <id>4174d3dd-17a2-4e7a-9dd7-6c35aa054e70</id>
+            <name>Дирекция по правовым вопросам</name>
+        </department>
+        <person>
+            <id>b70f3e13-79f9-4454-a41f-d0787c4fff33</id>
+            <name>Суворов Б.П.</name>
+        </person>
+    </position>
+    <position>
+        <id>b97d79b1-7276-4ef3-ac77-4126278297bf</id>
+        <name>Юрисконсульт</name>
+        <parentId>4174d3dd-17a2-4e7a-9dd7-6c35aa054e70</parentId>
+        <status>ACTIVE</status>
+        <rank>200</rank>
+        <roles>records_manager</roles>
+        <roles>contracts_manager</roles>
+        <department>
+            <id>4174d3dd-17a2-4e7a-9dd7-6c35aa054e70</id>
+            <name>Дирекция по правовым вопросам</name>
+        </department>
+        <person>
+            <id>97bd6b36-6df2-456e-b892-03e5b9a773ac</id>
+            <name>Лисин П.Г.</name>
+        </person>
+    </position>
+    <position>
+        <id>a5ff671b-488b-4a81-8739-2c942c499e09</id>
+        <name>Секретарь</name>
+        <parentId>4174d3dd-17a2-4e7a-9dd7-6c35aa054e70</parentId>
+        <status>ACTIVE</status>
+        <rank>100</rank>
+        <roles>template_editor</roles>
+        <roles>orgstruct_editor</roles>
+        <roles>records_manager</roles>
+        <department>
+            <id>4174d3dd-17a2-4e7a-9dd7-6c35aa054e70</id>
+            <name>Дирекция по правовым вопросам</name>
+        </department>
+        <person>
+            <id>1f13fe69-a3e0-4ee5-bfad-fddcfe9e4f4e</id>
+            <name>Кедрова Е.С.</name>
+        </person>
+    </position>
+    <position>
+        <id>f6d3624d-16a1-4acf-8e8b-77b2ae179037</id>
+        <name>Начальник отдела</name>
+        <parentId>7dd820d6-1aaf-4a81-912b-31c2e8c03228</parentId>
+        <status>ACTIVE</status>
+        <rank>600</rank>
+        <roles>records_manager</roles>
+        <roles>contracts_manager</roles>
+        <department>
+            <id>7dd820d6-1aaf-4a81-912b-31c2e8c03228</id>
+            <name>Договорной отдел</name>
+        </department>
+        <person>
+            <id>061dd342-7185-4d62-8315-773f065ca614</id>
+            <name>Ставров Л.В.</name>
+        </person>
+    </position>
+    <position>
+        <id>0ae369c1-89ae-4861-83f2-ac9eced92943</id>
+        <name>Юрист</name>
+        <parentId>7dd820d6-1aaf-4a81-912b-31c2e8c03228</parentId>
+        <status>ACTIVE</status>
+        <rank>200</rank>
+        <roles>template_editor</roles>
+        <roles>orgstruct_editor</roles>
+        <roles>records_manager</roles>
+        <roles>contracts_manager</roles>
+        <department>
+            <id>7dd820d6-1aaf-4a81-912b-31c2e8c03228</id>
+            <name>Договорной отдел</name>
+        </department>
+        <person>
+            <id>fd6e39d6-c1a0-4a5f-8a8b-a6a26d0662cc</id>
+            <name>Петрова З.В.</name>
+        </person>
+    </position>
+    <person>
+        <id>3b127c2f-6df0-4a47-8cff-427f14f845c3</id>
+        <name>A.</name>
+        <email>admin@alfresco.com</email>
+        <userName>admin</userName>
+        <firstName>Administrator</firstName>
+        <lastName></lastName>
+    </person>
+    <person>
+        <id>0e330deb-ec3e-4624-98ef-e12ab552e04b</id>
+        <name>G.</name>
+        <email></email>
+        <userName>guest</userName>
+        <firstName>Guest</firstName>
+        <lastName></lastName>
+    </person>
+    <person>
+        <id>f35b2992-8de6-406b-9e4a-89e3b5307b00</id>
+        <name>Карпин В.Г.</name>
+        <userName>karpin</userName>
+        <firstName>Валерий</firstName>
+        <middleName>Григорьевич</middleName>
+        <lastName>Карпин</lastName>
+    </person>
+    <person>
+        <id>acbbd909-6963-4d59-9aa9-a1e3ee109195</id>
+        <name>Онопко В.С.</name>
+        <userName>onopko</userName>
+        <firstName>Виктор</firstName>
+        <middleName>Савельевич</middleName>
+        <lastName>Онопко</lastName>
+    </person>
+    <person>
+        <id>8a68d5ee-e5a5-4fc0-ab79-a83c26d9f4b8</id>
+        <name>Лебедев С.Г.</name>
+        <userName>lebedev</userName>
+        <firstName>Сергей</firstName>
+        <middleName>Геннадиевич</middleName>
+        <lastName>Лебедев</lastName>
+    </person>
+    <person>
+        <id>e1cecfb2-3209-40fc-ba82-89812fce8432</id>
+        <name>Никифоров Ю.В.</name>
+        <userName>nikiforov</userName>
+        <firstName>Юрий</firstName>
+        <middleName>Валерьевич</middleName>
+        <lastName>Никифоров</lastName>
+    </person>
+    <person>
+        <id>f46d2d08-5724-4fd9-8fcc-2c44e4af5e74</id>
+        <name>Гусева М.П.</name>
+        <userName>guseva</userName>
+        <firstName>Маргарита</firstName>
+        <middleName>Павловна</middleName>
+        <lastName>Гусева</lastName>
+    </person>
+    <person>
+        <id>7e8da669-086d-4031-bd7d-5056687c194c</id>
+        <name>Серов А.П.</name>
+        <userName>serov</userName>
+        <firstName>Анатолий</firstName>
+        <middleName>Петрович</middleName>
+        <lastName>Серов</lastName>
+    </person>
+    <person>
+        <id>d5a2e10e-7ca8-4043-864b-0b71fc685bfb</id>
+        <name>Уткина В.В.</name>
+        <userName>utkina</userName>
+        <firstName>Венера</firstName>
+        <middleName>Васильевна</middleName>
+        <lastName>Уткина</lastName>
+    </person>
+    <person>
+        <id>45537384-9f50-4f58-b8d8-99ff70c332e1</id>
+        <name>Волков И.И.</name>
+        <userName>volkov</userName>
+        <firstName>Иван</firstName>
+        <middleName>Иванович</middleName>
+        <lastName>Волков</lastName>
+    </person>
+    <person>
+        <id>64f48f8d-0fb9-4dcd-bfa3-cc1ebace6999</id>
+        <name>Соколов И.В.</name>
+        <userName>sokolov</userName>
+        <firstName>Иван</firstName>
+        <middleName>Васильевич</middleName>
+        <lastName>Соколов</lastName>
+    </person>
+    <person>
+        <id>f4cbb201-532b-43e3-b929-bf7cf3df1e69</id>
+        <name>Петров Д.И.</name>
+        <userName>petrov</userName>
+        <firstName>Дмитрий</firstName>
+        <middleName>Иванович</middleName>
+        <lastName>Петров</lastName>
+    </person>
+    <person>
+        <id>8d230f1c-de00-4eca-a138-e7f88b27fb9f</id>
+        <name>Иванов П.С.</name>
+        <userName>ivanov</userName>
+        <firstName>Петр</firstName>
+        <middleName>Сергеевич</middleName>
+        <lastName>Иванов</lastName>
+    </person>
+    <person>
+        <id>e8479e8c-c5e0-463a-adc8-2e4004045dff</id>
+        <name>Морозов В.И.</name>
+        <userName>morosov</userName>
+        <firstName>Виктор</firstName>
+        <middleName>Иванович</middleName>
+        <lastName>Морозов</lastName>
+    </person>
+    <person>
+        <id>f55b2d92-34d9-4be0-ae4e-83a80424ceda</id>
+        <name>Козлов П.Б.</name>
+        <userName>koslov</userName>
+        <firstName>Павел</firstName>
+        <middleName>Борисович</middleName>
+        <lastName>Козлов</lastName>
+    </person>
+    <person>
+        <id>838638db-4cae-4f78-a0f9-535b0feca0a0</id>
+        <name>Веткин Я.П.</name>
+        <userName>vetkin</userName>
+        <firstName>Ярослав</firstName>
+        <middleName>Попович</middleName>
+        <lastName>Веткин</lastName>
+    </person>
+    <person>
+        <id>c985fb7f-ba69-4799-b045-d32c7fa3c522</id>
+        <name>Антонов С.С.</name>
+        <userName>antonov</userName>
+        <firstName>Семён</firstName>
+        <middleName>Семёнович</middleName>
+        <lastName>Антонов</lastName>
+    </person>
+    <person>
+        <id>7c8fb049-c224-4dde-97bc-67aa08be2f4c</id>
+        <name>Лесков А.А.</name>
+        <userName>leskov</userName>
+        <firstName>Александр</firstName>
+        <middleName>Александрович</middleName>
+        <lastName>Лесков</lastName>
+    </person>
+    <person>
+        <id>5bec0334-a067-418d-a433-3b9d5101a5ee</id>
+        <name>Попов А.В.</name>
+        <userName>popov</userName>
+        <firstName>Алексей</firstName>
+        <middleName>Викторович</middleName>
+        <lastName>Попов</lastName>
+    </person>
+    <person>
+        <id>c4c0134c-c510-4231-9ab6-29aa5cac9f75</id>
+        <name>Зверев Г.П.</name>
+        <userName>zverev</userName>
+        <firstName>Геннадий</firstName>
+        <middleName>Павлович</middleName>
+        <lastName>Зверев</lastName>
+    </person>
+    <person>
+        <id>c83349f4-3b1c-442d-b698-0517eec04332</id>
+        <name>Тимченко В.С.</name>
+        <userName>timchenko</userName>
+        <firstName>Владимир</firstName>
+        <middleName>Сергеевич</middleName>
+        <lastName>Тимченко</lastName>
+    </person>
+    <person>
+        <id>ec200b33-6c3e-440a-b693-5854c5e1af27</id>
+        <name>Платонов Н.П.</name>
+        <userName>platonov</userName>
+        <firstName>Николай</firstName>
+        <middleName>Петрович</middleName>
+        <lastName>Платонов</lastName>
+    </person>
+    <person>
+        <id>301bd499-5554-429e-be8a-ac7c3986c5fb</id>
+        <name>Седов И.И.</name>
+        <userName>sedov</userName>
+        <firstName>Илья</firstName>
+        <middleName>Ильич</middleName>
+        <lastName>Седов</lastName>
+    </person>
+    <person>
+        <id>4db17054-ad87-4472-94a9-23ba3c591ef5</id>
+        <name>Курочкин С.И.</name>
+        <userName>kurochkin</userName>
+        <firstName>Святослав</firstName>
+        <middleName>Иванович</middleName>
+        <lastName>Курочкин</lastName>
+    </person>
+    <person>
+        <id>be30bb16-88d4-48d0-8edc-582d5689a8bd</id>
+        <name>Воронов И.С.</name>
+        <userName>voronov</userName>
+        <firstName>Игорь</firstName>
+        <middleName>Сергеевич</middleName>
+        <lastName>Воронов</lastName>
+    </person>
+    <person>
+        <id>1a2de33a-0d3f-4db0-a6dc-c349123a9f07</id>
+        <name>Дедкин Ф.П.</name>
+        <userName>dedkin</userName>
+        <firstName>Федор</firstName>
+        <middleName>Павлович</middleName>
+        <lastName>Дедкин</lastName>
+    </person>
+    <person>
+        <id>fa70ceed-c52f-4500-87a0-175b36ce9f04</id>
+        <name>Зубов Н.Н.</name>
+        <userName>zubov</userName>
+        <firstName>Николай</firstName>
+        <middleName>Николаевич</middleName>
+        <lastName>Зубов</lastName>
+    </person>
+    <person>
+        <id>681fed2b-5f7b-46f2-a033-3c2da0e158d8</id>
+        <name>Мамин С.И.</name>
+        <userName>mamin</userName>
+        <firstName>Святослав</firstName>
+        <middleName>Ильич</middleName>
+        <lastName>Мамин</lastName>
+    </person>
+    <person>
+        <id>cf096b95-c4f8-4e72-b1b1-ab2456a0057a</id>
+        <name>Левин И.И.</name>
+        <userName>levin</userName>
+        <firstName>Игорь</firstName>
+        <middleName>Игоревич</middleName>
+        <lastName>Левин</lastName>
+    </person>
+    <person>
+        <id>60d61920-fc7b-462e-b4de-a545eadf5d99</id>
+        <name>Полозков Е.П.</name>
+        <userName>polozkov</userName>
+        <firstName>Евгений</firstName>
+        <middleName>Петрович</middleName>
+        <lastName>Полозков</lastName>
+    </person>
+    <person>
+        <id>75494554-e2be-4c32-9d77-0a61067f4f19</id>
+        <name>Гвоздев В.С.</name>
+        <userName>gvozdev</userName>
+        <firstName>Виктор</firstName>
+        <middleName>Сергеевич</middleName>
+        <lastName>Гвоздев</lastName>
+    </person>
+    <person>
+        <id>c470464a-4eb7-4efb-95d6-3a3260b1d57b</id>
+        <name>Потапов С.Н.</name>
+        <userName>potapov</userName>
+        <firstName>Семён</firstName>
+        <middleName>Николаевич</middleName>
+        <lastName>Потапов</lastName>
+    </person>
+    <person>
+        <id>5ee352d3-690a-41f7-87e6-c35d5d592f5f</id>
+        <name>Маслова И.П.</name>
+        <userName>maslova</userName>
+        <firstName>Ирина</firstName>
+        <middleName>Петровна</middleName>
+        <lastName>Маслова</lastName>
+    </person>
+    <person>
+        <id>5f9fc656-8354-4505-8d30-eb0596596be2</id>
+        <name>Зимин Я.Г.</name>
+        <userName>zimin</userName>
+        <firstName>Ярослав</firstName>
+        <middleName>Геннадиевич</middleName>
+        <lastName>Зимин</lastName>
+    </person>
+    <person>
+        <id>6b759836-aecb-47ac-beff-0b84e263a74e</id>
+        <name>Сурков Б.П.</name>
+        <userName>surkov</userName>
+        <firstName>Борис</firstName>
+        <middleName>Петрович</middleName>
+        <lastName>Сурков</lastName>
+    </person>
+    <person>
+        <id>37bd01b7-f9e0-4737-972c-530f4968b30a</id>
+        <name>Лугова В.П.</name>
+        <userName>lugоva</userName>
+        <firstName>Вера</firstName>
+        <middleName>Павловна</middleName>
+        <lastName>Лугова</lastName>
+    </person>
+    <person>
+        <id>811847f0-53e2-4d3d-b212-a0421a578f64</id>
+        <name>Борисов С.Е.</name>
+        <userName>borisov</userName>
+        <firstName>Сергей</firstName>
+        <middleName>Евгеньевич</middleName>
+        <lastName>Борисов</lastName>
+    </person>
+    <person>
+        <id>5d7dcfeb-3e0a-49cf-afc5-a856520be79a</id>
+        <name>Саблин И.Ф.</name>
+        <userName>sablin</userName>
+        <firstName>Игорь</firstName>
+        <middleName>Фёдорович</middleName>
+        <lastName>Саблин</lastName>
+    </person>
+    <person>
+        <id>1150614d-9979-451d-91fa-ef314c315248</id>
+        <name>Полканов М.П.</name>
+        <userName>polkanov</userName>
+        <firstName>Михаил</firstName>
+        <middleName>Павлович</middleName>
+        <lastName>Полканов</lastName>
+    </person>
+    <person>
+        <id>1af10379-dcd6-4e29-a5fe-e1dcb9823864</id>
+        <name>Сестрин В.И.</name>
+        <userName>sestrin</userName>
+        <firstName>Владимир</firstName>
+        <middleName>Ильич</middleName>
+        <lastName>Сестрин</lastName>
+    </person>
+    <person>
+        <id>55e02cc0-0bb2-47b3-8c72-5b6c04ac502c</id>
+        <name>Николаев П.И.</name>
+        <userName>nikolaev</userName>
+        <firstName>Пётр</firstName>
+        <middleName>Ильич</middleName>
+        <lastName>Николаев</lastName>
+    </person>
+    <person>
+        <id>ff777c67-28a6-401d-8ed3-715c54474310</id>
+        <name>Зуев В.С.</name>
+        <userName>zuev</userName>
+        <firstName>Виталий</firstName>
+        <middleName>Сергеевич</middleName>
+        <lastName>Зуев</lastName>
+    </person>
+    <person>
+        <id>6e44b2a6-8180-4bc3-a4b1-29cad6eb9cec</id>
+        <name>Старостин П.И.</name>
+        <userName>starostin</userName>
+        <firstName>Павел</firstName>
+        <middleName>Ильич</middleName>
+        <lastName>Старостин</lastName>
+    </person>
+    <person>
+        <id>9872275b-bdcf-483a-8426-c43210c61643</id>
+        <name>Медведев Ю.Л.</name>
+        <userName>medvedev</userName>
+        <firstName>Юрий</firstName>
+        <middleName>Львович</middleName>
+        <lastName>Медведев</lastName>
+    </person>
+    <person>
+        <id>b70f3e13-79f9-4454-a41f-d0787c4fff33</id>
+        <name>Суворов Б.П.</name>
+        <userName>suvorov</userName>
+        <firstName>Борис</firstName>
+        <middleName>Петрович</middleName>
+        <lastName>Суворов</lastName>
+    </person>
+    <person>
+        <id>97bd6b36-6df2-456e-b892-03e5b9a773ac</id>
+        <name>Лисин П.Г.</name>
+        <userName>lisin</userName>
+        <firstName>Пётр</firstName>
+        <middleName>Геннадиевич</middleName>
+        <lastName>Лисин</lastName>
+    </person>
+    <person>
+        <id>1f13fe69-a3e0-4ee5-bfad-fddcfe9e4f4e</id>
+        <name>Кедрова Е.С.</name>
+        <userName>kedrova</userName>
+        <firstName>Елена</firstName>
+        <middleName>Семёновна</middleName>
+        <lastName>Кедрова</lastName>
+    </person>
+    <person>
+        <id>061dd342-7185-4d62-8315-773f065ca614</id>
+        <name>Ставров Л.В.</name>
+        <userName>stavrov</userName>
+        <firstName>Леонид</firstName>
+        <middleName>Васильевич</middleName>
+        <lastName>Ставров</lastName>
+    </person>
+    <person>
+        <id>fd6e39d6-c1a0-4a5f-8a8b-a6a26d0662cc</id>
+        <name>Петрова З.В.</name>
+        <userName>petrova</userName>
+        <firstName>Зинаида</firstName>
+        <middleName>Валерьевна</middleName>
+        <lastName>Петрова</lastName>
+    </person>
+    <substitution>
+        <id>d5648de1-b457-4878-86b9-29e7c803ab8a</id>
+        <position>
+            <id>83e249bf-0b11-4f2e-90d4-004decaee466</id>
+            <name>Генеральный директор</name>
+        </position>
+        <deputy>
+            <id>e1cecfb2-3209-40fc-ba82-89812fce8432</id>
+            <name>Никифоров Ю.В.</name>
+        </deputy>
+        <enabled>false</enabled>
+    </substitution>
+    <substitution>
+        <id>e0d47df9-e81b-4613-a33d-65a7722ec8d4</id>
+        <position>
+            <id>d9f0d790-c535-4e2b-8b84-2b424d5cb6c3</id>
+            <name>Технический директор</name>
+        </position>
+        <deputy>
+            <id>7c8fb049-c224-4dde-97bc-67aa08be2f4c</id>
+            <name>Лесков А.А.</name>
+        </deputy>
+        <enabled>false</enabled>
+    </substitution>
+    <substitution>
+        <id>396ec05e-a99f-4eeb-bea5-126338123832</id>
+        <position>
+            <id>0310b5a5-4519-452c-90b5-47cce081acd7</id>
+            <name>Директор по производству</name>
+        </position>
+        <deputy>
+            <id>4db17054-ad87-4472-94a9-23ba3c591ef5</id>
+            <name>Курочкин С.И.</name>
+        </deputy>
+        <enabled>false</enabled>
+    </substitution>
+    <substitution>
+        <id>c623c077-0e7c-46ef-929e-335d9684daf0</id>
+        <position>
+            <id>9ec605d8-c04e-44c2-9c30-da99ef7091c9</id>
+            <name>Директор по сбыту</name>
+        </position>
+        <deputy>
+            <id>681fed2b-5f7b-46f2-a033-3c2da0e158d8</id>
+            <name>Мамин С.И.</name>
+        </deputy>
+        <enabled>false</enabled>
+    </substitution>
+    <substitution>
+        <id>f7f227e9-8f00-4cef-aaec-e8292d2a0597</id>
+        <position>
+            <id>45d526e6-9e72-4eb8-ad0f-123c20331951</id>
+            <name>Финансовый директор</name>
+        </position>
+        <deputy>
+            <id>5f9fc656-8354-4505-8d30-eb0596596be2</id>
+            <name>Зимин Я.Г.</name>
+        </deputy>
+        <enabled>false</enabled>
+    </substitution>
+    <substitution>
+        <id>133f1a4a-d527-43f6-a287-c56ea2202eb2</id>
+        <position>
+            <id>19d13ebf-d5dc-4eb9-a990-9bba419b12c5</id>
+            <name>Директор по правовым вопросам</name>
+        </position>
+        <deputy>
+            <id>1f13fe69-a3e0-4ee5-bfad-fddcfe9e4f4e</id>
+            <name>Кедрова Е.С.</name>
+        </deputy>
+        <enabled>false</enabled>
+    </substitution>
+</orgstructure>

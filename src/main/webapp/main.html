@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru-RU">
+<head>
+    <title>РМРС v${application.version}</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=10; IE=9; IE=8;" />
+    <!--<meta http-equiv="msthemecompatible" content="no"/>-->
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <meta name="gwt:property" content="locale=ru"/>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+    <link rel="stylesheet" href="standard.css"/>
+    <link rel="stylesheet" href="AlfrescoLoginStyle.css"/>
+    <link rel="stylesheet" href="CellTable.css"/>
+    <link rel="stylesheet" href="CellTree.css"/>
+    <link rel="stylesheet" href="Main.css"/>
+    <link rel="stylesheet" href="pdfviewer/viewer.css"/>
+    <link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/gmcpkbhogndhoaokojnkenomjmfcbmpp">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script type="text/javascript">
+        function FocusOnInput()
+        {
+            document.getElementById("login").focus();
+        }
+        function callUpdateAttachedFile(listenerId, fileId, remoteFileId){
+            updateAttachedFile(listenerId, fileId, remoteFileId)
+        }
+    </script>
+</head>
+<body onload="FocusOnInput()">
+<script type="text/javascript" language="javascript">
+    var authRequest = new XMLHttpRequest();
+    var authData = new Object();
+
+    document.body.onkeypress = enterkey;
+
+    showLoginDialog();
+
+    function enterkey(evt) {
+        if (authData.ticket === "") {
+            var e = (evt) ? evt : event;
+            var charCode = (e.which) ? e.which : e.keyCode;
+            if (charCode == 13) {
+                document.getElementById("submit-go").click();
+            }
+        }
+    }
+    function showLoginDialog() {
+        authData.ticket = "";
+        authData.username = "";
+        var fields = document.getElementById("login_fields");
+        if (fields != null) {
+            fields.style.visibility = 'visible';
+        }
+    }
+
+    function OnPostTransferCallback() {
+        window.OnPostTransferScanHandler();
+    }
+
+    function OnTopImageInTheViewChangedCallback(sImageIndex) {
+        window.OnTopImageInTheViewChangedCallback(sImageIndex);
+    }
+
+    function testLogin(){
+        var x=document.getElementById("authResp");
+        var y=(x.contentWindow || x.contentDocument);
+        if (y.document)y=y.document;
+        if(y.body.innerHTML.indexOf("TICKET_") !== -1){
+            var ticket;
+            if(y.body.children[0]){
+                ticket=y.body.children[0].innerHTML;
+            } else {
+                ticket=y.body.innerHTML;
+            }
+            authData.ticket =ticket;
+            document.getElementById("login_fields").style.visibility = 'hidden';
+            document.getElementById("wrong_login").style.visibility = 'hidden';
+            document.getElementById("internal_error").style.visibility = 'hidden';
+        } else if(y.body.innerHTML.indexOf("401") !== -1 || y.body.innerHTML.indexOf("403") !== -1){
+            document.getElementById("wrong_login").style.visibility = 'visible';
+        } else if(y.body.innerHTML.indexOf("500") !== -1){
+            document.getElementById("internal_error").style.visibility = 'visible';
+        }
+    }
+
+</script>
+
+<script type="text/javascript" language="javascript" src="Main/Main.nocache.js"></script>
+<iframe OnLoad="testLogin()" style="display: none;" name="authResp" id="authResp"></iframe>
+<form name="loginForm" action="login"  method="post" target="authResp" OnSubmit="authData.username = document.getElementById('login').value;"  class="login-form" id="center" >
+    <fieldset class="login loginfieldset" id="login_fields">
+        <legend class="loginlegend">Логин</legend>
+        <div class="logindiv">
+            <label class="loginlabel" for="login">Пользователь</label>
+            <input class="logininput" type="text" id="login"  name="login"/>
+        </div>
+        <div class="logindiv">
+            <label class="loginlabel" for="password">Пароль</label> <input class="logininput" type="password" id="password" name="password"/>
+        </div>
+        <div class="logindiv">
+            <button id="submit-go" type="submit" name="loginbutton" value="Login"> Login</button>
+        </div>
+    </fieldset>
+</form>
+<div id="wrong_login" style="visibility: hidden" class="box red">
+    &#1053;еверный логин или пароль пользовател&#1103;
+</div>
+<div id="internal_error" style="visibility: hidden" class="box red">
+    Внутренн&#1103;&#1103; ошибка &#1089;ервера
+</div>
+
+</body>
+<iframe src="javascript:''" id="__gwt_historyFrame" style="position:absolute;width:0;height:0;border:0"></iframe>
+</html>

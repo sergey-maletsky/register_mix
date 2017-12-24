@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<directories>
+    <directory>
+        <type>sendMethod</type>
+        <displayName>Способ отправки/доставки</displayName>
+        <displayable>false</displayable>
+        <searchable>false</searchable>
+        <dictType>PLAIN</dictType>
+        <module>route</module>
+        <columns>
+            <column>
+                <columnId>name</columnId>
+                <unique>true</unique>
+                <displayName>Название способа</displayName>
+            </column>
+        </columns>
+    </directory>
+
+    <directory>
+        <type>documentRoutes</type>
+        <displayName>Маршруты документов</displayName>
+        <displayable>true</displayable>
+        <searchable>false</searchable>
+        <dictType>SIMPLE</dictType>
+        <module>route</module>
+        <columns>
+            <column>
+                <columnId>value</columnId>
+                <displayName>Вид документа</displayName>
+                <widgetType>documentRoutesDocumentTypes</widgetType>
+                <required>true</required>
+            </column>
+            <column>
+                <columnId>lifecycle</columnId>
+                <displayName>Этап маршрута</displayName>
+                <widgetType>lifecycle</widgetType>
+                <required>true</required>
+            </column>
+            <column>
+                <columnId>required</columnId>
+                <displayName>Обязательный</displayName>
+                <widgetType>boolean</widgetType>
+            </column>
+        </columns>
+    </directory>
+</directories>

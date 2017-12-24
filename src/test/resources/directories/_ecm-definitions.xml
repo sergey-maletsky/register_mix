@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<directories>
+    <directory>
+        <type>documentTypes</type>
+        <parent>documentTypes</parent>
+        <displayName>Виды документов</displayName>
+        <searchByDisplay>По виду документа</searchByDisplay>
+        <displayable>true</displayable>
+        <searchable>true</searchable>
+        <keepBootstrapped>true</keepBootstrapped>
+        <dictType>HIERARCHY</dictType>
+        <displayFormatter>${code, - }${name}</displayFormatter>
+        <module>ecm</module>
+        <columns>
+            <column>
+                <columnId>name</columnId>
+                <displayName>Наименование</displayName>
+            </column>
+            <column>
+                <columnId>parent</columnId>
+                <showColumn>false</showColumn>
+                <displayName>Род. элемент</displayName>
+                <parentDirectory>documentTypes</parentDirectory>
+                <required>true</required>
+            </column>
+            <column>
+                <columnId>code</columnId>
+                <displayName>Код</displayName>
+                <filterByColumn>false</filterByColumn>
+            </column>
+            <column>
+                <columnId>suffix</columnId>
+                <displayName>Суффикс рег. номера</displayName>
+                <parentDirectory>documentSuffixes</parentDirectory>
+            </column>
+        </columns>
+    </directory>
+
+    <directory>
+        <type>expandables_search_fields</type>
+        <columns/>
+        <displayName>Поля</displayName>
+        <displayable>false</displayable>
+        <searchable>false</searchable>
+        <dictType>SIMPLE_WITH_NO_VALUE</dictType>
+        <module>ecm</module>
+    </directory>
+
+    <directory>
+        <type>additionalFields</type>
+        <displayName>Дополнительные поля</displayName>
+        <displayable>false</displayable>
+        <searchable>true</searchable>
+        <dictType>SIMPLE</dictType>
+        <module>ecm</module>
+    </directory>
+
+    <directory>
+        <type>lifecycle</type>
+        <displayable>false</displayable>
+        <searchable>true</searchable>
+        <dictType>SIMPLE</dictType>
+        <columns/>
+        <displayName>Статус</displayName>
+        <module>ecm</module>
+    </directory>
+
+    <directory>
+        <type>dateRanges</type>
+        <displayName>Временные рамки</displayName>
+        <displayable>false</displayable>
+        <searchable>true</searchable>
+        <dictType>SIMPLE</dictType>
+        <module>ecm</module>
+    </directory>
+
+    <directory>
+        <type>relation_type</type>
+        <displayName>Типы связей</displayName>
+        <displayable>true</displayable>
+        <searchable>false</searchable>
+        <keepBootstrapped>true</keepBootstrapped>
+        <dictType>HIERARCHY</dictType>
+        <module>ecm</module>
+        <columns>
+            <column>
+                <columnId>name</columnId>
+                <displayName>Название</displayName>
+                <required>true</required>
+            </column>
+
+            <column>
+                <displayName>Связан с</displayName>
+                <showColumn>true</showColumn>
+                <columnId>parent</columnId>
+                <parentDirectory>relation_type</parentDirectory>
+            </column>
+        </columns>
+    </directory>
+
+    <directory>
+        <type>report_categories</type>
+        <displayName>Категории отчетов</displayName>
+        <displayable>false</displayable>
+        <searchable>false</searchable>
+        <dictType>PLAIN</dictType>
+        <module>ecm</module>
+        <columns>
+            <column>
+                <columnId>name</columnId>
+            </column>
+            <column>
+                <columnId>value</columnId>
+            </column>
+            <column>
+                <columnId>iconURL</columnId>
+            </column>
+        </columns>
+    </directory>
+
+    <directory>
+        <type>reports</type>
+        <displayName>Отчеты</displayName>
+        <displayable>false</displayable>
+        <searchable>false</searchable>
+        <dictType>PLAIN</dictType>
+        <module>ecm</module>
+        <columns>
+            <column>
+                <columnId>name</columnId>
+                <displayName>Наименование</displayName>
+            </column>
+            <column>
+                <columnId>documentKind</columnId>
+                <displayName>Вид документа</displayName>
+            </column>
+            <column>
+                <columnId>reportId</columnId>
+                <displayName>ID отчета</displayName>
+            </column>
+            <column>
+                <columnId>templateFile</columnId>
+                <displayName>Имя файла шаблона</displayName>
+            </column>
+            <column>
+                <columnId>defaultDateRange</columnId>
+                <displayName>Тип даты по умолчанию</displayName>
+                <parentDirectory>dateRanges</parentDirectory>
+            </column>
+            <column>
+                <columnId>defaultPeriod</columnId>
+                <displayName>Длительность по умолчанию</displayName>
+            </column>
+            <column>
+                <columnId>directories</columnId>
+                <displayName>Исп. справочники</displayName>
+            </column>
+        </columns>
+    </directory>
+
+    <directory>
+        <type>reportFormat</type>
+        <displayName>Формат отчета</displayName>
+        <searchable>false</searchable>
+        <displayable>false</displayable>
+        <dictType>SIMPLE</dictType>
+        <keepBootstrapped>true</keepBootstrapped>
+        <module>ecm</module>
+        <columns>
+            <column>
+                <columnId>name</columnId>
+                <displayName>Формат</displayName>
+                <required>true</required>
+                <unique>true</unique>
+            </column>
+        </columns>
+    </directory>
+
+    <directory>
+        <type>period</type>
+        <displayName>Период</displayName>
+        <searchable>false</searchable>
+        <displayable>false</displayable>
+        <dictType>SIMPLE</dictType>
+        <keepBootstrapped>true</keepBootstrapped>
+        <module>ecm</module>
+    </directory>
+
+</directories>

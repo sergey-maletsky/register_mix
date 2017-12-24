@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<directories>
+    <directory>
+        <version>34</version>
+        <type>reg_counter_templates</type>
+        <items>
+            <item>
+                <name>routes</name>
+                <value>ДОК/${год}-${счетчик_департамента}</value>
+            </item>
+            <item>
+                <name>routes.proposal</name>
+                <value>${год}-${счетчик_типа_документа}</value>
+            </item>
+            <item>
+                <name>routes.circular</name>
+                <value>-${счетчик_типа_документа}ц</value>
+            </item>
+            <item>
+                <name>errand.considerProposal</name>
+                <value>${счетчик_типа_документа}-${год}</value>
+            </item>
+            <item>
+                <name>errand.changeRequirement</name>
+                <value>${счетчик_типа_документа}-${год}</value>
+            </item>
+        </items>
+    </directory>
+
+    <directory>
+        <version>1</version>
+        <type>project_number_counter_templates</type>
+        <items>
+            <item>
+                <name>routes</name>
+                <value>${счетчик_номера_проекта}</value>
+            </item>
+        </items>
+    </directory>
+
+</directories>

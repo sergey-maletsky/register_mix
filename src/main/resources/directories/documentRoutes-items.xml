@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<directories>
+    <directory>
+        <version>49</version>
+        <type>documentRoutes</type>
+        <items>
+            <item>
+                <value>routes.proposal</value>
+            </item>
+            <item>
+                <parameters>
+                    <entry key="lifecycle" value="routes_execution"/>
+                    <entry key="required" value="true"/>
+                </parameters>
+                <parent>routes.proposal</parent>
+                <value>routes_execution / routes.proposal</value>
+            </item>
+
+            <item>
+                <value>routes.circular</value>
+            </item>
+            <item>
+                <parameters>
+                    <entry value="routes_approval" key="lifecycle" />
+                    <entry value="true" key="required" />
+                </parameters>
+                <parent>routes.circular</parent>
+                <value>routes_approval / routes.circular</value>
+            </item>
+        </items>
+    </directory>
+</directories>

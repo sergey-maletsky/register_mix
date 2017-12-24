@@ -1,0 +1,234 @@
+<model name="rmrs:model" xmlns="http://www.alfresco.org/model/dictionary/1.0">
+    <description>Rmrs Alfresco types</description>
+    <author>MPhilippov</author>
+    <version>1.0</version>
+    <imports>
+        <import uri="http://www.alfresco.org/model/dictionary/1.0" prefix="d"/>
+        <import uri="http://www.alfresco.org/model/content/1.0" prefix="cm"/>
+        <import uri="http://www.alfresco.org/model/system/1.0" prefix="sys"/>
+
+        <import uri="base.firstlinesoftware.com" prefix="base"/>
+        <import uri="ecm.firstlinesoftware.com" prefix="ecm"/>
+        <import uri="exec.firstlinesoftware.com" prefix="exec"/>
+        <import uri="route.firstlinesoftware.com" prefix="route"/>
+    </imports>
+
+    <namespaces>
+        <namespace uri="rmrs.firstlinesoftware.com" prefix="rmrs"/>
+    </namespaces>
+
+    <types>
+        <type name="rmrs:requirementsFolder">
+            <title>Regulations folder</title>
+            <parent>cm:folder</parent>
+        </type>
+        <type name="rmrs:requirement">
+            <title>Regulation</title>
+            <parent>ecm:compositeDocument</parent>
+            <properties>
+                <property name="rmrs:order">
+                    <type>d:int</type>
+                </property>
+                <property name="rmrs:parent"><!--id-->
+                    <type>d:text</type>
+                </property>
+                 <property name="rmrs:parentNumber">
+                    <type>d:text</type>
+                </property>
+                <property name="rmrs:englishText"><!--id-->
+                    <type>d:text</type>
+                </property>
+                <property name="rmrs:part">
+                    <type>d:text</type>
+                    <index enabled="true">
+                        <tokenised>false</tokenised>
+                    </index>
+                </property>
+                <property name="rmrs:volume">
+                    <type>d:text</type>
+                    <index enabled="true">
+                        <tokenised>false</tokenised>
+                    </index>
+                </property>
+                <property name="rmrs:circularLetter">
+                    <type>d:text</type>
+                    <index enabled="false"/>
+                </property>
+                <property name="rmrs:fullPath">
+                    <type>d:text</type>
+                </property>
+                <property name="rmrs:responsible"><!--position id, gets approval task-->
+                    <type>d:text</type>
+                    <index enabled="true">
+                        <tokenised>false</tokenised>
+                    </index>
+                </property>
+                <property name="rmrs:tags">
+                    <type>d:text</type>
+                    <multiple>true</multiple>
+                </property>
+                <property name="rmrs:header">
+                    <type>d:boolean</type>
+                </property>
+                <property name="rmrs:leafHeader"><!--no child headers-->
+                    <type>d:boolean</type>
+                </property>
+                <property name="rmrs:leaf"><!--no any child requirements-->
+                    <type>d:boolean</type>
+                </property>
+                <property name="rmrs:position">
+                    <type>d:int</type>
+                </property>
+            </properties>
+            <mandatory-aspects>
+                <aspect>cm:titled</aspect>
+                <aspect>base:searchableDocument</aspect>
+                <aspect>base:versioned</aspect>
+                <aspect>base:externalRecord</aspect>
+                <aspect>exec:hasEffectiveDate</aspect>
+                <aspect>rmrs:hasMultiLanguageFile</aspect>
+            </mandatory-aspects>
+        </type>
+        <type name="rmrs:proposal">
+            <title>Proposal</title>
+            <parent>route:abstractRoute</parent>
+            <properties>
+                <property name="rmrs:executives"><!--position ids-->
+                    <type>d:text</type>
+                    <multiple>true</multiple>
+                    <index enabled="false"/>
+                </property>
+                <property name="rmrs:errandText">
+                    <type>d:text</type>
+                </property>
+                <property name="rmrs:comment">
+                    <type>d:text</type>
+                </property>
+            </properties>
+            <associations>
+                <child-association name="rmrs:changedRequirements">
+                    <source>
+                        <mandatory>false</mandatory>
+                        <many>true</many>
+                    </source>
+                    <target>
+                        <class>rmrs:requirement</class>
+                        <mandatory>false</mandatory>
+                        <many>true</many>
+                    </target>
+                </child-association>
+            </associations>
+            <mandatory-aspects>
+                <aspect>exec:hasEffectiveDate</aspect>
+                <aspect>base:searchableDocument</aspect>
+                <aspect>rmrs:hasMultiLanguageFile</aspect>
+            </mandatory-aspects>
+        </type>
+        <type name="rmrs:circular">
+            <title>Circular Letter</title>
+            <parent>route:abstractRoute</parent>
+            <properties>
+                <property name="rmrs:referred">
+                    <type>d:text</type>
+                </property>
+                <property name="rmrs:content">
+                    <type>d:text</type>
+                </property>
+                <property name="rmrs:action">
+                    <type>d:text</type>
+                </property>
+                <property name="rmrs:approvedRequirements">
+                    <type>d:text</type>
+                    <multiple>true</multiple>
+                </property>
+                <!--<property name="rmrs:circularReplaces relatedCircularLetters">-->
+                <!--<type>d:text</type>-->
+                <!--</property>-->
+                <property name="rmrs:topic">
+                    <type>d:text</type>
+                    <multiple>true</multiple>
+                </property>
+                <property name="rmrs:approvePosition">
+                    <type>d:text</type>
+                </property>
+                <property name="rmrs:changedContent">
+                    <type>d:text</type>
+                </property>
+                <property name="rmrs:businessCaseNumber">
+                    <type>d:text</type>
+                </property>
+                <property name="rmrs:observable">
+                    <type>d:text</type>
+                </property>
+            </properties>
+            <mandatory-aspects>
+                <aspect>base:searchableDocument</aspect>
+            </mandatory-aspects>
+        </type>
+        <type name="rmrs:proposalErrandReport">
+            <title>Consider proposal errand</title>
+            <parent>exec:abstractErrandReport</parent>
+            <properties>
+                <property name="rmrs:accepted">
+                    <type>d:boolean</type>
+                </property>
+            </properties>
+            <mandatory-aspects>
+                <aspect>rmrs:hasChangesToRequirements</aspect>
+            </mandatory-aspects>
+        </type>
+        <type name="rmrs:proposalErrandVisa">
+            <title>Consider proposal errand report visa</title>
+            <parent>exec:visa</parent>
+            <mandatory-aspects>
+                <aspect>rmrs:hasChangesToRequirements</aspect>
+            </mandatory-aspects>
+        </type>
+        <type name="rmrs:changeRequirementErrand">
+            <title>Change requirement errand</title>
+            <parent>exec:abstractErrand</parent>
+            <mandatory-aspects>
+                <aspect>rmrs:hasChangesToRequirements</aspect>
+                <aspect>base:searchableDocument</aspect>
+            </mandatory-aspects>
+        </type>
+        <type name="rmrs:considerProposalErrand">
+            <title>Consider Proposal Errand</title>
+            <parent>exec:abstractErrand</parent>
+            <properties>
+                <property name="rmrs:number">
+                    <type>d:text</type>
+                </property>
+            </properties>
+            <mandatory-aspects>
+                <aspect>base:searchableDocument</aspect>
+            </mandatory-aspects>
+        </type>
+    </types>
+
+    <aspects>
+        <aspect name="rmrs:hasMultiLanguageFile">
+            <properties>
+                <property name="rmrs:russian"><!--attachment id-->
+                    <type>d:text</type>
+                    <index enabled="false"/>
+                </property>
+                <property name="rmrs:english"><!--attachment id-->
+                    <type>d:text</type>
+                    <index enabled="false"/>
+                </property>
+            </properties>
+        </aspect>
+        <aspect name="rmrs:hasChangesToRequirements">
+            <properties>
+                <property name="rmrs:createNew"><!--json with Requirements-->
+                    <type>d:text</type>
+                </property>
+                <property name="rmrs:modifyExisting"><!--requirement ids-->
+                    <type>d:text</type>
+                    <multiple>true</multiple>
+                </property>
+            </properties>
+        </aspect>
+    </aspects>
+</model>

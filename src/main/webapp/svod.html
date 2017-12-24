@@ -1,0 +1,1045 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru-RU">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=10; IE=9; IE=8;" />
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <meta name="gwt:property" content="locale=ru"/>
+    <meta name="tndStatus" content="notShop">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.png">
+    <link rel="stylesheet" href="standard.css">
+    <link rel="stylesheet" href="AlfrescoLoginStyle.css">
+    <link rel="stylesheet" href="CellTable.css">
+    <link rel="stylesheet" href="CellTree.css">
+    <link rel="stylesheet" href="Main.css">
+    <link rel="stylesheet" href="pdfviewer/viewer.css">
+    <link rel="stylesheet" href="Main/rscr.css">
+    <link rel="stylesheet" href="svod.css">
+    <link rel="stylesheet" href="text_layer_builder.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script type="text/javascript">
+        var lastModObj = new Date(document.lastModified);
+        var dd = lastModObj.getDate();
+        if (dd < 10) dd = '0' + dd;
+        var mm = lastModObj.getMonth() + 1;
+        if (mm < 10) mm = '0' + mm;
+        var yyyy = lastModObj.getFullYear();
+        document.write(decodeURIComponent("%3Ctitle%3ERSCR " + dd + "." + mm + "." + yyyy + "%3C/title%3E"));
+    </script>
+
+    <script src="js/jquery-3.1.1.min.js" type="application/javascript"></script>
+    <script src="js/svod.js" defer type="application/javascript"></script>
+    <script src="js/svod-queries.js" defer type="application/javascript"></script>
+    <script src="js/text_layer_builder.js" type="application/javascript"></script>
+    <script src="plupload/plupload.js" type="application/javascript"></script>
+    <script src="pdfviewer/l10n.js" type="application/javascript"></script>
+    <script src="pdfviewer/pdf.js" type="application/javascript"></script>
+    <script src="pdfviewer/viewer.js" type="application/javascript"></script>
+</head>
+<body>
+<div id="ticket_id" style="visibility: hidden"></div>
+<div id="current_requirement_id" style="visibility: hidden"></div>
+
+<div id="main-container" class="zero-position--absolute">
+    <div class="no-overflow zero-position--absolute">
+        <div class="desktop fillContainer zero-position--absolute">
+            <div class="no-overflow" style="position: absolute; left: 0px; top: 0px; right: 0px; height: 50px;">
+                <div class="header fillContainer zero-position--absolute">
+                    <div style="position: relative; height: 50px;">
+                        <div class="no-overflow" style="position: absolute; left: 0px; top: 0px; bottom: 0px; width: 336px;">
+                            <img class="header-Logo zero-position--absolute" src="images/logo.png" style="height: 100%;">
+                        </div>
+                        <div style="position: absolute; overflow: hidden; left: 310px; top: 0px; right: 0px; bottom: 0px;">
+                            <table cellspacing="0" cellpadding="0" class="fillContainer zero-position--absolute" style="height: 24px;">
+                                <tbody>
+                                <tr>
+                                    <td align="right" width="30px" style="vertical-align: middle;">
+                                        <div tabindex="0" role="menubar" class="gwt-MenuBar gwt-MenuBar-horizontal" hidefocus="true" style="outline: 0px;" aria-activedescendant="gwt-uid-17">
+                                            <input type="text" tabindex="-1" role="presentation" style="opacity: 0; height: 1px; width: 1px; z-index: -1; overflow: hidden; position: absolute;">
+                                            <table>
+                                                <tbody>
+                                                <tr>
+                                                    <td class="gwt-MenuItem" id="searchItem" role="menuitem" aria-haspopup="true" rel="searchPopup">
+                                                        <table cellspacing="0" cellpadding="0">
+                                                            <tbody>
+                                                            <tr>
+                                                                <td align="left" width="24px" style="vertical-align: top;">
+                                                                    <div class="base-ImageButton" style="display: inline-block; background-image: url(&quot;images/icons/24/search.png&quot;); background-repeat: no-repeat; width: 24px; height: 24px;"></div>
+                                                                </td>
+                                                                <td align="left" style="vertical-align: middle;">
+                                                                    <div class="gwt-Label">Поиск</div>
+                                                                </td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                    <td class="gwt-MenuItem" id="referenceItem" role="menuitem" aria-haspopup="true" rel="referencePopup">
+                                                        <table cellspacing="0" cellpadding="0">
+                                                            <tbody>
+                                                            <tr>
+                                                                <td align="left" width="24px" style="vertical-align: top;">
+                                                                    <div class="base-ImageButton" style="display: inline-block; background-image: url(&quot;images/icons/24/help.png&quot;); background-repeat: no-repeat; width: 24px; height: 24px;"></div>
+                                                                </td>
+                                                                <td align="left" style="vertical-align: middle;">
+                                                                    <div class="gwt-Label">Справка</div>
+                                                                </td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                    <td class="gwt-MenuItem" hidden>
+                                                        <table cellspacing="0" cellpadding="0">
+                                                            <tbody>
+                                                            <tr>
+                                                                <td align="left" width="24px" style="vertical-align: top;">
+                                                                    <div class="base-ImageButton" style="display: inline-block;"></div>
+                                                                </td>
+                                                                <td align="left" style="vertical-align: middle;">
+                                                                    <div class="gwt-Label">Обмен данными</div>
+                                                                </td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </td>
+                                    <td align="right" width="30px" height="24px" style="vertical-align: middle;">
+                                        <table cellspacing="0" cellpadding="0">
+                                            <tbody>
+                                            <tr>
+                                                <td align="left" style="vertical-align: top;">
+                                                    <table cellspacing="0" cellpadding="0">
+                                                        <tbody>
+                                                        <tr id="authorization">
+                                                            <td align="left" style="vertical-align: top;">
+                                                                <img class="gwt-Image" src="images/icons/16/user_profile.png">
+                                                            </td>
+                                                            <td align="left" style="vertical-align: top; visibility: hidden;">
+                                                                <div>
+                                                                    <nobr> <a class="gwt-Anchor">Admin </a> </nobr>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="position: absolute; overflow: hidden; left: 0px; top: 50px; right: 0px; height: 5px;">
+                <div class="bar zero-position--absolute"></div>
+            </div>
+            <div style="position: absolute; overflow: hidden; left: 0px; top: 55px; right: 0px; bottom: 0px;">
+                <div id="center_container" class="fillContainer zero-position--absolute">
+
+                    <!--LEFT PANEL-->
+                    <div id="left_panel" style="position: absolute; overflow: hidden; left: 0px; top: 0px; bottom: 0px; width: 360px;">
+                        <div class="desktop-West zero-position--absolute">
+                            <div class="gwt-StackLayoutPanel" style="position: relative; width: 100%; height: 100%;">
+                                <div style="position: absolute; overflow: hidden; left: 0px; right: 0px; bottom: 0px; top: 30px;">
+                                    <div class="gwt-StackLayoutPanelContent zero-position--absolute" style="overflow: auto; zoom: 1;">
+                                        <!--START TREE-->
+                                        <div style="position: relative; zoom: 1;">
+                                            <div id="left_tree" class="cellTreeWidget">
+                                            </div>
+                                        </div>
+                                        <!--END TREE -->
+                                    </div>
+                                </div>
+                                <div style="position: absolute; overflow: hidden; left: 0px; right: 0px; height: 30px; top: 0px;">
+                                    <div class="gwt-HTML gwt-StackLayoutPanelHeader zero-position--absolute">Свод требований
+                                        <div class="stackHeader-buttons">
+                                            <div class="base-ImageButton" title="Показать требования корневого уровня" style="display: inline-block; background-image: url('images/icons/16/goto-root.png'); background-repeat: no-repeat;">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="left_dragger" style="position: absolute; overflow: hidden; left: 360px; top: 0px; bottom: 0px; width: 8px;">
+                        <div class="gwt-SplitLayoutPanel-HDragger zero-position--absolute" style="width: 8px;"></div>
+                    </div>
+
+                    <div id="right_panel" style="position: absolute; overflow: hidden; top: 0px; right: 0px; bottom: 0px; width: 387px;">
+                        <div class="desktop-East zero-position--absolute">
+                            <div class="form-Body" style="height: 100%; width: 100%;">
+                                <div id="counting_place" class="form-HeaderPanel zero-position--absolute" style="height: 20px;">
+
+                                </div>
+                                <div class="gwt-TabLayoutPanel" id="right_panel_lines" style="position: absolute; margin-right: 5px; top: 5px; bottom: 0px; left: 0px; right: 0px;">
+                                    <div id="right_viewer" style="position: absolute; overflow: hidden; left: 0px; right: 0px; bottom: 0px; height: 0px;">
+                                        <div class="base-fileViewerSplash zero-position--absolute" style="height: 100%; width: 100%;">
+
+                                            <div style="position: absolute;  overflow: hidden; left: 0px; top: 0px; right: 0px; height: 30px;">
+                                                <div class="form-Toolbar zero-position--absolute" style="height: 30px; width: 100%;">
+                                                    <div id="minus_image" style="position: absolute; overflow: hidden; left: 5px; top: 3px; bottom: 3px; width: 25px;">
+                                                        <div class="base-ImageButton zero-position--absolute" style="display: inline-block; background-image: url('images/buttons/24/minus.png'); background-repeat: no-repeat; width: 24px; height: 24px;"></div>
+                                                    </div>
+                                                    <div id="plus_image" style="position: absolute; overflow: hidden; left: 35px; top: 3px; bottom: 3px; width: 25px;">
+                                                        <div class="base-ImageButton zero-position--absolute" style="display: inline-block; background-image: url('images/buttons/24/plus.png'); background-repeat: no-repeat; width: 24px; height: 24px;"></div>
+                                                    </div>
+                                                    <div style="position: absolute; overflow: hidden; left: 65px; top: 3px; bottom: 3px; width: 40px;">
+                                                        <div id="size_in_percent" class="base-pageManagePanelText base-tabsDelimiter zero-position--absolute" style="height: 100%;"></div>
+                                                    </div>
+                                                    <div id="previousPage" style="position: absolute; overflow: hidden; left: 110px; top: 3px; bottom: 3px; width: 25px;">
+                                                        <div class="base-ImageButton zero-position--absolute" style="display: inline-block; background-image: url('images/buttons/24/arrow_left.png'); background-repeat: no-repeat; width: 24px; height: 24px;"></div>
+                                                    </div>
+                                                    <div id="nextPage" style="position: absolute; overflow: hidden; left: 140px; top: 3px; bottom: 3px; width: 25px;">
+                                                        <div class="base-ImageButton zero-position--absolute" style="display: inline-block; background-image: url('images/buttons/24/arrow_right.png'); background-repeat: no-repeat; width: 24px; height: 24px;"></div>
+                                                    </div>
+                                                    <div style="position: absolute; overflow: hidden; left: 170px; top: 3px; bottom: 3px; width: 100px;">
+                                                        <div class="zero-position--absolute">
+                                                            <div class="leftFloat base-pageManagePanelText" style="height: 100%;">стр.</div>
+                                                            <input id="numberOfPages" type="text" class="leftFloat docPageInput" style="height: 100%; width: 30px;">
+                                                            <div id="outOfPages" class="leftFloat base-pageManagePanelText" style="height: 100%;"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div style="position: absolute; overflow: hidden; left: 280px; top: 3px; bottom: 3px; width: 25px;">
+                                                        <div class="base-ImageButton zero-position--absolute" style="display: inline-block; background-image: url('images/buttons/24/delete.png'); background-repeat: no-repeat; width: 24px; height: 24px; visibility: hidden;"></div>
+                                                    </div>
+                                                    <div style="position: absolute; overflow: hidden; left: 310px; top: 3px; bottom: 3px; width: 25px;">
+                                                        <div class="base-ImageButton zero-position--absolute" style="display: inline-block; background-image: url('images/buttons/24/delete_all.png'); background-repeat: no-repeat; width: 24px; height: 24px; visibility: hidden;"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div style=" position: absolute; overflow: hidden; left: 260px; top: 0px; right: 0px; height: 30px;">
+                                                <div class="form-Toolbar zero-position--absolute" style="height: 30px; width: 100%;">
+                                                    <div style="position: absolute; overflow: hidden; left: 5px; top: 3px; bottom: 3px; width: 25px;">
+                                                        <div id="fullscreen_mode" class="base-ImageButton zero-position--absolute" title="На весь экран" style="display: inline-block; background-image: url('pdfviewer/images/presentationMode.png'); background-repeat: no-repeat;"></div>
+                                                    </div>
+                                                    <div id="browser_search" style="position: absolute; overflow: hidden; left: 35px; top: 3px; bottom: 3px; width: 25px;">
+                                                        <div class="base-ImageButton zero-position--absolute" title="Поиск" style="display: inline-block; background-image: url('images/icons/24/search.png'); background-repeat: no-repeat; width: 24px; height: 24px;"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div style="position: absolute; overflow: hidden; left: 0px; top: 30px; right: 0px; bottom: 0px;">
+                                                <div class="zero-position--absolute" style="height: 100%; width: 100%;">
+                                                    <div style="position: absolute; overflow: hidden; left: 0px; top: 0px; width: 32px; height: 32px;">
+                                                        <div class="base-ImageButton zero-position--absolute" style="display: inline-block; background-image: url('images/buttons/32/left.png'); background-repeat: no-repeat; width: 32px; height: 32px; z-index: 3; visibility: hidden;"></div>
+                                                    </div>
+                                                    <div style="position: absolute; overflow: hidden; top: 0px; right: 0px; width: 32px; height: 32px;">
+                                                        <div class="base-ImageButton zero-position--absolute" style="display: inline-block; background-image: url('images/buttons/32/right.png'); background-repeat: no-repeat; width: 32px; height: 32px; z-index: 3; visibility: hidden;"></div>
+                                                    </div>
+                                                    <div style="position: absolute; overflow: hidden; left: 32px; top: 0px; right: 32px; height: 32px;">
+                                                        <div id="viewer_file_name" class="textNoWrap zero-position--absolute" aria-hidden="true" style="z-index: 3; text-align: center; vertical-align: middle;"></div>
+                                                    </div>
+                                                    <div style="position: absolute; overflow: hidden; left: 0px; top: 32px; right: 0px; height: 32px;">
+                                                        <div class="loading zero-position--absolute" aria-hidden="true" style="display: none; z-index: 3;"></div>
+                                                    </div>
+                                                    <div class="zero-position--absolute no-overflow">
+                                                        <div class="zero-position--absolute" style="overflow: auto; zoom: 1; height: 100%; width: 100%;">
+                                                            <div style="position: relative; zoom: 1;"><img class="gwt-Image"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="zero-position--absolute no-overflow">
+                                                        <div class="zero-position--absolute" style="overflow: auto; zoom: 1; height: 100%; width: 100%;">
+                                                            <div style="position: relative; zoom: 1;">
+                                                                <img class="gwt-Image">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div style="position: absolute; overflow: hidden; left: 0px; top: 30px; right: 0px; bottom: 0px;">
+                                                <div class="gwt-HTML" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px;">
+                                                    <link href="pdfviewer/locale/locale.properties" rel="resource" type="application/l10n">
+                                                    <div id="pdfOuterContainer">
+                                                        <input id="viewThumbnail" type="hidden">
+                                                        <input id="viewOutline" type="hidden">
+                                                        <input id="viewAttachments" type="hidden">
+                                                        <div class="hidden" id="sidebarContent">
+                                                            <div class="hidden" id="thumbnailView"></div>
+                                                            <div class="hidden" id="outlineView"></div>
+                                                            <div class="hidden" id="attachmentsView"></div>
+                                                        </div>
+                                                        <div id="mainContainer">
+                                                            <div class="findbar hidden doorHanger hiddenSmallView" id="findbar" style="top: 0px; width: 400px;">
+                                                                <label class="toolbarLabel" data-l10n-id="find_label" for="findInput" style="position: relative;float: left;">Find:</label>
+                                                                <input id="findInput" class="toolbarField" tabindex="91" style="position: relative;float: left;">
+                                                                <div class="splitToolbarButton" style="position: relative;float: left;margin: 3px 2px 4px 0;display: inline-block;">
+                                                                    <button class="toolbarButton findPrevious" data-l10n-id="find_previous" id="findPrevious" tabindex="92" title="" style="margin-left: 3px;position: relative;margin: 0;margin-right: -1px;border-top-left-radius: 2px;border-bottom-left-radius: 2px;border-right-color: transparent;border-radius: 0;float: left;">
+                                                                        <span data-l10n-id="find_previous_label">Previous</span>
+                                                                    </button>
+                                                                    <div class="splitToolbarButtonSeparator" style="float: left;"></div>
+                                                                    <button class="toolbarButton findNext" data-l10n-id="find_next" id="findNext" tabindex="93" title="" style="margin-right: 3px;position: relative;margin: 0;margin-left: -1px;border-top-right-radius: 2px;border-bottom-right-radius: 2px;border-left-color: transparent;border-radius: 0;float: left;">
+                                                                        <span data-l10n-id="find_next_label">Next</span>
+                                                                    </button>
+                                                                </div>
+                                                                <input class="toolbarField hidden" id="findHighlightAll" tabindex="94" type="checkbox" style="position: relative;float: left;">
+                                                                <label class="toolbarLabel hidden" data-l10n-id="find_highlight" for="findHighlightAll" style="position: relative;float: left;">Highlight all</label>
+                                                                <input class="toolbarField" id="findMatchCase" tabindex="95" type="checkbox" style="position: relative;float: left;">
+                                                                <label class="toolbarLabel" data-l10n-id="find_match_case_label" for="findMatchCase" style="position: relative;float: left;">Match case</label>
+                                                                <span class="toolbarLabel hidden" id="findResultsCount" style="position: relative;float: left;"></span>
+                                                                <span class="toolbarLabel" id="findMsg" style="position: relative;float: left;"></span>
+                                                            </div>
+                                                            <div class="hidden" id="secondaryToolbar">
+                                                                <div id="secondaryToolbarButtonContainer">
+                                                                    <input id="secondaryPresentationMode" type="hidden">
+                                                                    <input id="secondaryOpenFile" type="hidden">
+                                                                    <input id="secondaryPrint" type="hidden">
+                                                                    <input id="secondaryDownload" type="hidden">
+                                                                    <input id="secondaryViewBookmark" type="hidden">
+                                                                    <input id="firstPage" type="hidden">
+                                                                    <input id="lastPage" type="hidden">
+                                                                    <input id="pageRotateCw" type="hidden">
+                                                                    <input id="pageRotateCcw" type="hidden">
+                                                                    <input id="toggleHandTool" type="hidden">
+                                                                    <input id="documentProperties" type="hidden">
+                                                                </div>
+                                                            </div>
+                                                            <div class="toolbar hidden">
+                                                                <input id="sidebarToggle" type="hidden">
+                                                                <input id="viewFind" type="hidden">
+                                                                <input id="previous" type="hidden">
+                                                                <input id="next" type="hidden">
+                                                                <input id="pageNumber" type="hidden">
+                                                                <input id="numPages" type="hidden">
+                                                                <input id="presentationMode" type="hidden">
+                                                                <input id="openFile" type="hidden">
+                                                                <input id="print" type="hidden">
+                                                                <input id="download" type="hidden">
+                                                                <input id="viewBookmark" type="hidden">
+                                                                <input id="secondaryToolbarToggle" type="hidden">
+                                                                <input id="zoomOut" type="hidden">
+                                                                <input id="zoomIn" type="hidden">
+                                                                <input id="scaleSelect" type="hidden">
+                                                                <div id="toolbarContainer">
+                                                                    <div id="toolbarViewer">
+                                                                        <div id="toolbarViewerLeft"></div>
+                                                                        <div class="hidden" id="toolbarViewerRight"></div>
+                                                                        <span class="hidden" id="scaleSelectContainer"></span>
+                                                                    </div>
+                                                                    <div id="loadingBar">
+                                                                        <div class="progress">
+                                                                            <div class="glimmer"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div id="viewerContainer" tabindex="0">
+                                                                <div class="pdfViewer" id="viewer"></div>
+                                                            </div>
+                                                            <div class="hidden" id="errorWrapper">
+                                                                <div id="errorMessageLeft">
+                                                                    <span id="errorMessage"></span>
+                                                                    <button data-l10n-id="error_more_info" id="errorShowMore">More Information</button>
+                                                                    <button data-l10n-id="error_less_info" id="errorShowLess">Less Information</button>
+                                                                </div>
+                                                                <div id="errorMessageRight">
+                                                                    <button data-l10n-id="error_close" id="errorClose">Close</button>
+                                                                </div>
+                                                                <div class="clearBoth"></div>
+                                                                <textarea id="errorMoreInfo" readonly="readonly"></textarea>
+                                                            </div>
+                                                        </div>
+                                                        <div class="hidden" id="overlayContainer">
+                                                            <div class="hidden" id="passwordOverlay">
+                                                                <input id="password" type="hidden">
+                                                                <input id="passwordCancel" type="hidden">
+                                                                <input id="passwordSubmit" type="hidden">
+                                                            </div>
+                                                            <div class="hidden" id="documentPropertiesOverlay">
+                                                                <input id="fileNameField" type="hidden">
+                                                                <input id="fileSizeField" type="hidden">
+                                                                <input id="titleField" type="hidden">
+                                                                <input id="authorField" type="hidden">
+                                                                <input id="subjectField" type="hidden">
+                                                                <input id="keywordsField" type="hidden">
+                                                                <input id="creationDateField" type="hidden">
+                                                                <input id="modificationDateField" type="hidden">
+                                                                <input id="creatorField" type="hidden">
+                                                                <input id="producerField" type="hidden">
+                                                                <input id="versionField" type="hidden">
+                                                                <input id="pageCountField" type="hidden">
+                                                                <input id="documentPropertiesClose" type="hidden">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div id="printContainer"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="right_dragger" style="position: absolute; overflow: hidden; top: 0px; right: 387px; bottom: 0px; width: 8px;">
+                        <div class="gwt-SplitLayoutPanel-HDragger zero-position--absolute" style="width: 8px;"></div>
+                    </div>
+
+                    <div id="bottom_center_panel" style="position: absolute; overflow: hidden; left: 368px; right: 395px; bottom: 0px; height: 0px;">
+                        <div class="desktop-South zero-position--absolute"></div>
+                    </div>
+
+                    <div id="bottom_dragger" style="position: absolute; overflow: hidden; left: 368px; right: 395px; bottom: 0px; height: 8px;">
+                        <div class="gwt-SplitLayoutPanel-VDragger zero-position--absolute" style="height: 8px;"></div>
+                    </div>
+
+                    <!--Main center panel-->
+                    <div id="center_panel" style="position: absolute; overflow: hidden; left: 368px; top: 0px; right: 395px; bottom: 8px;">
+                        <div id="center_panel_internal" class="desktop-Center zero-position--absolute">
+                            <div class="left_close_button" style="position: absolute; overflow: hidden; left: 0px; top: 4px; width: 32px; height: 32px;">
+                                <div class="base-ImageButton closeButton closeButtonLeft zero-position--absolute" style="display: inline-block; background-image: url('images/buttons/32/left.png'); background-repeat: no-repeat; width: 32px; height: 32px;"></div>
+                            </div>
+                            <div id="right_close_button_id" class="right_close_button" style="position: absolute; overflow: hidden; top: 4px; right: 0px; width: 32px; height: 32px;">
+                                <div class="closeButton base-ImageButton closeButtonRight zero-position--absolute" style="display: inline-block; background-image: url('images/buttons/32/right.png'); background-repeat: no-repeat; width: 32px; height: 32px;"></div>
+                            </div>
+                            <div style="position: absolute; overflow: hidden; left: 0px; top: 40px; right: 0px; bottom: 0px;">
+                                <div class="zero-position--absolute">
+                                    <div style="position: relative; height: 100%; width: 100%;">
+
+                                        <div style="position: absolute; overflow: hidden; left: 0px; top: 0px; width: 100%; height: 0px;">
+                                            <div class="grid-ButtonsPanel zero-position--absolute"></div>
+                                        </div>
+                                        <div style="position: absolute; overflow: hidden; left: 0px; top: 0px; bottom: 0px; width: 100%;">
+                                            <div class="zero-position--absolute" style="width: 100%; height: 100%;">
+
+                                                <div style="position: absolute; overflow: hidden; left: 0px; top: 0px; width: 100%; height: 33px;">
+                                                    <div class="treeTableToolbar zero-position--absolute" style="height: 30px;">
+                                                        <div style="position: absolute; overflow: hidden; top: 0px; right: 10px; width: 144px; height: 100%;">
+                                                            <div class="buttonsPanel zero-position--absolute" style="padding: 2px 10px; border-top: 2px solid rgb(224, 224, 224); border-right: 2px solid rgb(224, 224, 224); border-bottom: 0px; border-left: 2px solid rgb(224, 224, 224); background-color: rgb(245, 245, 245); text-align: center;">
+                                                                <!-- <div id="select_columns_button" class="base-ImageButton" style="display: inline-block; background-image: url('images/icons/24/select_columns.png'); background-repeat: no-repeat; width: 24px; height: 24px;"></div>-->
+                                                                <img id="compact_button" src="images/icons/24/compact.png" title="Переключить режим отображения" style="display: inline-block; width: 24px; height: 24px; cursor: pointer;">
+                                                                <img id="lang_changing" src="images/flags/24/eng.png" title="Выбор русского/английского содержания" style="cursor: pointer">
+                                                                <img id="navigate" src="images/buttons/24/navigate_down.png" title="Режим отображения вложеннных требований" style="cursor: pointer">
+                                                                <img id="effective_changing" src="images/icons/24/not_only_effective.png" title="Срок действия" style="cursor: pointer">
+                                                            </div>
+                                                        </div>
+                                                        <div style="position: absolute; overflow: hidden; right: 164px; bottom: 5px; width: 30px; height: 19px;">
+                                                            <div id="req_number" class="zero-position--absolute" dir="rtl"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div style="position: absolute; overflow: hidden; left: 0px; top: 30px; width: 100%; height: 32px;" class="cellTableAllHeader-fixScroll-bg">
+                                                    <div class="cellTreeTableHeader zero-position--absolute">
+                                                        <div>
+                                                            <div style=" position: relative; height:100%" class="">
+                                                                <div onclick="" style="outline:none; position:relative; left:0; width: 100%; height: 100%; white-space: nowrap; overflow: hidden;" class="">
+                                                                    <div style="outline:none; margin-left: 15px; position:relative; right: 0">
+                                                                        <div class="columnsPane" style="position:relative;">
+                                                                            <div class="columnsPane" style="position:relative;">
+                                                                                <div style="position:absolute; height: 100%; right: 471px; left: 0; min-width:50%">
+                                                                                    <div style="outline:none; position:absolute; white-space: nowrap; overflow: hidden; height: 100%; left: 0%; right: 50%" class="cellTableAllHeader cellTableNonFixedHeader cellTableSortableHeader cellTableSortedHeaderAscending">
+                                                                                        <div style="position:relative;zoom:1;">
+                                                                                            <div>
+                                                                                                <div class="textNoWrap" title="<div class=&quot;textNoWrap&quot; title=&quot;Наименование&quot;>Наименование</div>">
+                                                                                                    <div class="textNoWrap" title="Наименование">Наименование</div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <!-- <div style="outline:none; position:absolute; white-space: nowrap; overflow: hidden; height: 100%; left: 30%; right: 40%" class="cellTableAllHeader cellTableNonFixedHeader cellTableSortableHeader">
+                                                                                         <div class="textNoWrap" title="Автор">Автор</div>
+                                                                                     </div>-->
+                                                                                    <div style="outline:none; position:absolute; white-space: nowrap; overflow: hidden; height: 100%; left: 50%; right: 0%" class="cellTableAllHeader cellTableNonFixedHeader cellTableSortableHeader">
+                                                                                        <div class="textNoWrap" title="Номер">Номер</div>
+                                                                                    </div>
+                                                                                    <!--<div style="outline:none; position:absolute; white-space: nowrap; overflow: hidden; height: 100%; left: 80%; right: 0%" class="cellTableAllHeader cellTableNonFixedHeader cellTableSortableHeader">
+                                                                                        <div class="textNoWrap" title="Ответственный">Ответственный</div>
+                                                                                    </div>-->
+                                                                                </div>
+                                                                                <div style="position:absolute; height: 100%; right:0; width: 471px; max-width:50%">
+                                                                                    <!--<div style="outline:none; position:absolute; white-space: nowrap; overflow: hidden; height: 100%; width: 123px; left: 0px" class="cellTableAllHeader cellTableFixedHeader cellTableSortableHeader">
+                                                                                        <div class="textNoWrap" title="Дата создания">Дата создания</div>
+                                                                                    </div>-->
+                                                                                    <div style="outline:none; position:absolute; white-space: nowrap; overflow: hidden; height: 100%; right: 55%; left: 0%" class="cellTableAllHeader cellTableFixedHeader cellTableSortableHeader">
+                                                                                        <div class="textNoWrap" title="Дата вступления в силу">Дата вступления в силу</div>
+                                                                                    </div>
+                                                                                    <div style="outline:none; position:absolute; white-space: nowrap; overflow: hidden; height: 100%; right: 10%; left: 45%" class="cellTableAllHeader cellTableFixedHeader cellTableSortableHeader">
+                                                                                        <div class="textNoWrap" title="Дата утраты силы">Дата утраты силы</div>
+                                                                                    </div>
+                                                                                    <!--<div style="outline:none; position:absolute; white-space: nowrap; overflow: hidden; height: 100%; width: 33px; left: 315px" class="cellTableAllHeader cellTableFixedHeader cellTableSortableHeader">
+                                                                                        <div class="textNoWrap" title="Номер позиции">Номер позиции</div>
+                                                                                    </div>
+                                                                                    <div style="outline:none; position:absolute; white-space: nowrap; overflow: hidden; height: 100%; width: 93px; left: 350px" class="cellTableAllHeader cellTableFixedHeader cellTableSortableHeader">
+                                                                                        <div class="textNoWrap" title="Дата утверждения">Дата утверждения</div>
+                                                                                    </div>-->
+                                                                                    <div style="outline:none; position:absolute; white-space: nowrap; overflow: hidden; height: 100%; right: 0%;left: 90%;" class="cellTableAllHeader cellTableFixedHeader cellTableSortableHeader">
+                                                                                        <div class="textNoWrap" title=""></div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!--CENTER TREE START -->
+                                                <div style="position: absolute; overflow: hidden; left: 0px; top: 62px; bottom: 0px; width: 100%;">
+                                                    <div class="zero-position--absolute" style="overflow: auto; zoom: 1;">
+                                                        <div style="position: relative; zoom: 1;">
+                                                            <div id="center_tree" class="cellTreeWidget" style="overflow: hidden; width: 100%;">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!--CENTER TREE FINISH -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End Main center panel-->
+                    <!--Advanced search center panel-->
+                    <div id="advanced_search_center_panel" class="advanced" style="position: absolute;overflow: hidden;left: 368px;top: 0px;right: 8px;bottom: 8px; display: none"><div class="desktop-Center zero-position--absolute"><div class="left_close_button" style="position: absolute; overflow: hidden; left: 0px; top: 4px; width: 32px; height: 32px;"><div class="base-ImageButton closeButton closeButtonLeft zero-position--absolute" style="display: inline-block; background-image: url(&quot;images/buttons/32/left.png&quot;); background-repeat: no-repeat; width: 32px; height: 32px;"></div></div><div style="position: absolute; overflow: hidden; top: 4px; right: 0px; width: 32px; height: 32px;"><div class="closeButton base-ImageButton-disabled zero-position--absolute" style="display: inline-block; background-image: url(&quot;images/buttons/32/left.png&quot;); background-repeat: no-repeat; width: 32px; height: 32px;"></div></div><div style="position: absolute; overflow: hidden; left: 32px; top: 5px; right: 32px; height: 40px;"><div class="desktop-FolderName zero-position--absolute">Поиск</div></div><div style="position: absolute; overflow: hidden; left: 0px; top: 40px; right: 0px; bottom: 0px;"><div class="zero-position--absolute"><div class="form-Body" style="height: 100%; width: 100%;"><div class="form-HeaderPanel" aria-hidden="true" style="height: 20px; display: none; position: absolute; top: 49px; bottom: 0px; left: 0px; right: 0px;"></div><div class="form-ButtonsPanel" style="overflow: visible;"><button type="button" class="form-ToolbarButton gwt-Button" style="margin-right: 5px; vertical-align: top;">Поиск</button><button type="button" class="cancel_from_search form-ToolbarButton gwt-Button" style="margin-right: 5px; vertical-align: top;">Отменить</button><button type="button" class="form-ToolbarButton gwt-Button" style="margin-right: 5px; vertical-align: top;">Новый поиск</button><button type="button" class="form-ToolbarButton gwt-Button" disabled="" style="margin-right: 5px; vertical-align: top;">Печать</button><button type="button" class="form-ToolbarButton gwt-Button" style="margin-right: 5px; vertical-align: top;">Сохранённые запросы</button><div class="gwt-HTML" style="padding: 0px;"><div style="clear:both;"></div></div></div><div class="form-Layout" style="margin-right: 5px; position: absolute; top: 49px; bottom: 0px; left: 0px; right: 0px;"><div style="position: absolute; left: 0px; right: 0px; top: 0%; bottom: 91.7526%;"><div class="form-ItemRow" style="position: absolute; left: 0px; right: 20px; top: 0px; height: 22px;"><div style="position: absolute; overflow: hidden; left: 0px; top: 0px; bottom: 0px; width: 113px;"><div class="form-Label zero-position--absolute" style="white-space: nowrap;"><nobr>Искать по номеру:</nobr></div></div><div style="position: absolute; overflow: hidden; left: 118px; top: 0px; right: 0px; bottom: 0px;"><input type="text" class="gwt-TextBox form-Item zero-position--absolute" placeholder="Введите номер документа" style="width: 40%; overflow: hidden;"></div></div><div class="form-ItemRow" style="position: absolute; left: 0px; right: 0px; top: 28px; bottom: 3px;"><div style="position: absolute; overflow: hidden; left: 0px; top: 0px; bottom: 0px; width: 113px;"><div class="form-Label zero-position--absolute" style="white-space: nowrap;"><nobr>Искать все:</nobr></div></div><div style="position: absolute; overflow: hidden; left: 118px; top: 0px; right: 0px; bottom: 0px;"><div class="form-Item zero-position--absolute"><div class="zero-position--absolute no-overflow"><div class="zero-position--absolute" style="overflow-x: hidden; overflow-y: auto; zoom: 1; height: 100%;"><div style="position: relative; zoom: 1;"><div><div style="position: relative; height: 22px;"><div style="position: absolute; overflow: hidden; left: 0px; top: 0px; right: 22px; bottom: 0px;"><div class="zero-position--absolute" style="width: 100%; height: 100%;"><div style="position: absolute; overflow: hidden; left: 0px; top: 0px; bottom: 0px; width: 40%;"><div class="zero-position--absolute"><div style="position: absolute; overflow: hidden; left: 0px; top: 0px; right: 18px; bottom: 0px;"><input type="text" class="gwt-SuggestBox zero-position--absolute" placeholder="Введите значение для поиска" style="height: 100%; width: 100%;"></div><div style="position: absolute; overflow: hidden; top: 0px; right: 0px; bottom: 0px; width: 18px;"><div class="base-ImageButton zero-position--absolute" title="Выбрать" style="display: inline-block; background-image: url(&quot;images/pickers/comboBoxPicker.png&quot;); background-repeat: no-repeat;"></div></div><div style="position: absolute; overflow: hidden; top: 0px; right: 18px; bottom: 0px; width: 18px;"><div class="base-ImageButton zero-position--absolute" style="display: inline-block; background-image: url(&quot;images/loader/loading16.gif&quot;); background-repeat: no-repeat; margin-top: 3px; visibility: hidden;"></div></div></div></div><div style="position: absolute; overflow: hidden; top: 0px; right: 0%; bottom: 0px; width: 59%;"><div class="zero-position--absolute" style="width: 100%; height: 100%;"></div></div></div></div><div style="position: absolute; overflow: hidden; top: 4px; right: 2px; width: 16px; height: 16px;"><div class="base-ImageButton zero-position--absolute" style="display: inline-block; background-image: url(&quot;images/icons/16/error.png&quot;); background-repeat: no-repeat;"></div></div></div></div></div></div></div></div></div></div></div><div style="position: absolute; left: 0px; right: 0px; top: 8.24742%; bottom: 87.6289%;"><div class="form-ItemRow" style="position: absolute; left: 0px; right: 0px; top: 0px; bottom: 3px;"><div style="position: absolute; overflow: hidden; left: 0px; top: 0px; bottom: 0px; width: 113px;"><div class="form-Label zero-position--absolute" style="white-space: nowrap;"><nobr>И хотя бы одно из:</nobr></div></div><div style="position: absolute; overflow: hidden; left: 118px; top: 0px; right: 0px; bottom: 0px;"><div class="form-Item zero-position--absolute"><div style="position: absolute; overflow: hidden; left: 0px; top: 0px; right: 0px; bottom: 0px;"><div style="overflow-x: hidden; overflow-y: auto; position: absolute; zoom: 1; height: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px;"><div style="position: relative; zoom: 1;"><div><div style="position: relative; height: 22px;"><div style="position: absolute; overflow: hidden; left: 0px; top: 0px; right: 22px; bottom: 0px;"><div style="position: absolute; width: 100%; height: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px;"><div style="position: absolute; overflow: hidden; left: 0px; top: 0px; bottom: 0px; width: 40%;"><div style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px;"><div style="position: absolute; overflow: hidden; left: 0px; top: 0px; right: 18px; bottom: 0px;"><input type="text" class="gwt-SuggestBox" placeholder="Введите значение для поиска" style="height: 100%; width: 100%; position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px;"></div><div style="position: absolute; overflow: hidden; top: 0px; right: 0px; bottom: 0px; width: 18px;"><div class="base-ImageButton" title="Выбрать" style="display: inline-block; background-image: url(&quot;images/pickers/comboBoxPicker.png&quot;); background-repeat: no-repeat; position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px;"></div></div><div style="position: absolute; overflow: hidden; top: 0px; right: 18px; bottom: 0px; width: 18px;"><div class="base-ImageButton" style="display: inline-block; background-image: url(&quot;images/loader/loading16.gif&quot;); background-repeat: no-repeat; margin-top: 3px; visibility: hidden; position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px;"></div></div></div></div><div style="position: absolute; overflow: hidden; top: 0px; right: 0%; bottom: 0px; width: 59%;"><div style="width: 100%; height: 100%; position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px;"></div></div></div></div><div style="position: absolute; overflow: hidden; top: 4px; right: 2px; width: 16px; height: 16px;"><div class="base-ImageButton" style="display: inline-block; background-image: url(&quot;images/icons/16/error.png&quot;); background-repeat: no-repeat; position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px;"></div></div></div></div></div></div></div></div></div></div></div><div style="position: absolute; left: 0px; right: 0px; top: 12.3711%; bottom: 0px;"><div class="form-ItemRow" style="position: absolute; left: 0px; right: 0px; top: 0px; bottom: 3px;"><div style="position: absolute; overflow: hidden; left: 0px; top: 0px; bottom: 0px; width: 113px;"><div class="form-Label" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; white-space: nowrap;"></div></div><div style="position: absolute; overflow: hidden; left: 0px; top: 0px; right: 0px; bottom: 0px;"><div class="form-Item" style="position: absolute; width: 100%; height: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px;"><div style="position: absolute; overflow: hidden; left: 0px; top: 0px; width: 100%; height: 33px;"><div class="treeTableToolbar" style="position: absolute; height: 30px; left: 0px; top: 0px; right: 0px; bottom: 0px;"><div style="position: absolute; overflow: hidden; top: 0px; right: 10px; width: 84px; height: 100%;"><div class="buttonsPanel" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; padding: 2px 10px; border-top: 2px solid rgb(224, 224, 224); border-right: 2px solid rgb(224, 224, 224); border-bottom: 0px; border-left: 2px solid rgb(224, 224, 224); background-color: rgb(245, 245, 245); text-align: center;"><div class="base-ImageButton" style="display: inline-block; background-image: url(&quot;images/icons/24/select_columns.png&quot;); background-repeat: no-repeat; width: 24px; height: 24px;"></div><img class="gwt-Image" src="images/buttons/24/navigate_open.png" style="height: 24px; width: 24px;"></div></div><div style="position: absolute; overflow: hidden; right: 104px; bottom: 5px; width: 30px; height: 19px;"><div class="" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px;"></div></div><div style="position: absolute; overflow: hidden; left: 0px; right: 144px; bottom: 2px; height: 22px;"><div style="position: absolute; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px;"><div style="position: absolute; overflow: hidden; left: 0px; top: 0px; right: 54px; bottom: 0px;"><input type="text" class="selector" style="width: 100%; position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px;"></div><div style="position: absolute; overflow: hidden; top: 0px; right: 0px; bottom: 0px; width: 18px;"><div class="base-ImageButton-disabled" title="Поиск" style="display: inline-block; background-image: url(&quot;images/pickers/search_picker.png&quot;); background-repeat: no-repeat; position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px;"></div></div><div style="position: absolute; overflow: hidden; top: 0px; right: 18px; bottom: 0px; width: 18px;"><div class="base-ImageButton-disabled" title="Очистить" style="display: inline-block; background-image: url(&quot;images/pickers/clear.png&quot;); background-repeat: no-repeat; position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px;"></div></div><div style="position: absolute; overflow: hidden; top: 0px; right: 36px; bottom: 0px; width: 18px;"><div class="base-ImageButton" title="Добавить" style="display: inline-block; background-image: url(&quot;images/pickers/create.png&quot;); background-repeat: no-repeat; position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px;"></div></div><div style="position: absolute; overflow: hidden; top: 0px; right: 54px; bottom: 0px; width: 100px;"><div class="filteredLabel" aria-hidden="true" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; display: none;">фильтр</div></div></div></div></div></div><div style="position: absolute; overflow: hidden; left: 0px; top: 30px; width: 100%; height: 32px;"><div class="cellTreeTableHeader" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px;"><div><div style=" position: relative; height:100%" class=""><div onclick="" style="outline:none; position:relative; left:0; width: 100%; height: 100%; white-space: nowrap; overflow: hidden;" class=""><div style="outline:none; margin-left: 15px; position:relative; right: 0"><div class="columnsPane" style="position:relative;"><div style="position:absolute; height: 100%; right: 0px; left: 0; min-width:100%"><div style="outline:none; position:absolute; white-space: nowrap; overflow: hidden; height: 100%; left: 0%; right: 34%" class="cellTableAllHeader cellTableNonFixedHeader cellTableSortableHeader"><div class="textNoWrap" title="Название">Название</div></div><div style="outline:none; position:absolute; white-space: nowrap; overflow: hidden; height: 100%; left: 66%; right: 0%" class="cellTableAllHeader cellTableNonFixedHeader cellTableSortableHeader cellTableNonFixedHeaderLast"><div class="textNoWrap" title="Вид документа">Вид документа</div></div></div><div style="position:absolute; height: 100%; right:0; width: 0px; max-width:0%"></div></div></div></div></div></div></div></div><div style="position: absolute; overflow: hidden; left: 0px; top: 62px; bottom: 0px; width: 100%;"><div style="overflow: auto; position: absolute; zoom: 1; left: 0px; top: 0px; right: 0px; bottom: 0px;"><div style="position: relative; zoom: 1;"><div class="cellTreeWidget" __gwtcellbasedwidgetimpldispatchingfocus="true" __gwtcellbasedwidgetimpldispatchingblur="true" role="treeitem" style="height: 33px; overflow: hidden; width: 100%;"><div style="overflow: hidden;"><div><div></div><div class="cellTreeTableEmptyMessage" tabindex="0">Empty</div><a href="javascript:;" class="cellTreeTableShowMoreButton" style="display: none;">Show more</a></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>
+                    <!--End Advanced search center panel-->
+
+                    <!--Requirements search center panel-->
+                    <div id="requirements_search_center_panel" class="requirements_rel" style="position: absolute;overflow: hidden;left: 368px;top: 0px;right: 8px;bottom: 8px; display: none">
+                        <div class="desktop-Center zero-position--absolute">
+                            <div class="left_close_button" style="position: absolute; overflow: hidden; left: 0px; top: 4px; width: 32px; height: 32px;">
+                                <div class="base-ImageButton closeButton closeButtonLeft zero-position--absolute" style="display: inline-block; background-image: url(&quot;images/buttons/32/left.png&quot;); background-repeat: no-repeat; width: 32px; height: 32px;"></div>
+                            </div>
+                            <div id="search_right_close_parent" class="right_close_button" style="position: absolute; overflow: hidden; top: 4px; right: 0px; width: 32px; height: 32px;">
+                                <div id="search_right_close" class="closeButton base-ImageButton-disabled closeButtonRight zero-position--absolute" style="display: inline-block; background-image: url(&quot;images/buttons/32/left.png&quot;); background-repeat: no-repeat; width: 32px; height: 32px;"></div>
+                            </div>
+                            <div style="position: absolute; overflow: hidden; left: 32px; top: 5px; right: 32px; height: 40px;">
+                                <div class="desktop-FolderName zero-position--absolute">Поиск</div>
+                            </div>
+                            <div style="position: absolute; overflow: hidden; left: 0px; top: 40px; right: -5px; bottom: 0px;">
+                                <div class="zero-position--absolute">
+                                    <div class="form-Body" style="height: 100%; width: 100%;">
+                                        <div class="form-HeaderPanel" aria-hidden="true" style="height: 20px; display: none; position: absolute; top: 49px; bottom: 0px; left: 0px; right: 0px;"></div>
+                                        <div class="form-ButtonsPanel" style="overflow: visible;">
+                                            <button id="search_button" type="button" class="form-ToolbarButton gwt-Button" style="margin-right: 5px; vertical-align: top;">Поиск</button>
+                                            <!--<button type="button" class="form-ToolbarButton gwt-Button" style="margin-right: 5px; vertical-align: top;">Сохранённые запросы</button>-->
+                                            <button type="button" class="cancel_from_search form-ToolbarButton gwt-Button" style="margin-right: 5px; vertical-align: top;">Отменить</button>
+                                            <button type="button" class="new_search form-ToolbarButton gwt-Button" style="margin-right: 5px; vertical-align: top;">Новый поиск</button>
+                                            <!--<button type="button" class="gwt-Button advanced_search" rel="advanced" style="margin-right: 5px; vertical-align: top;">Расширенный поиск&gt;&gt;</button>-->
+                                            <div class="gwt-HTML" style="padding: 0px;">
+                                                <div style="clear:both;"></div>
+                                            </div>
+                                        </div>
+                                        <div class="search_items form-Layout" style="margin-right: 5px; position: absolute; top: 49px; bottom: 0px; left: 0px; right: 0px;">
+                                            <div style="position: absolute; left: 0px; right: 0px; top: 0%; bottom: 85%;">
+                                                <div class="form-ItemRow" style="position: absolute; left: 0px; right: 0px; top: 0px; white-space: nowrap; height: 22px;">
+                                                    <div style="position: absolute; overflow: hidden; left: 0px; top: 0px; bottom: 0px; width: 147px;">
+                                                        <div class="form-Label zero-position--absolute" style="white-space: nowrap;">
+                                                            <nobr>Номер / НД:</nobr>
+                                                        </div>
+                                                    </div>
+                                                    <div style="position: absolute; overflow: hidden; left: 152px; top: 0px; right: 50%; bottom: 0px;">
+                                                        <input id="search_number" type="text" class="gwt-TextBox form-Item zero-position--absolute no-overflow" name="com.firstlinesoftware.rmrs.shared.dto.SearchRequirementData_Номер / НД" style="width: 100%;">
+                                                    </div>
+                                                    <div style="position: absolute; overflow: hidden; left: 50%; top: 0px; right: 0%; bottom: 0px;">
+                                                        <div class="zero-position--absolute">
+                                                            <div style="position: absolute; overflow: hidden; left: 10px; top: 0px; bottom: 0px; width: 94px;">
+                                                                <div class="form-Label zero-position--absolute" style="white-space: nowrap;">
+                                                                    <nobr>Наименование:</nobr>
+                                                                </div>
+                                                            </div>
+                                                            <div style="position: absolute; overflow: hidden; left: 114px; top: 0px; right: 0px; bottom: 0px;">
+                                                                <input id="search_main_content" type="text" class="gwt-TextBox form-Item zero-position--absolute" name="com.firstlinesoftware.rmrs.shared.dto.SearchRequirementData_Наименование" style="width: 100%;">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!--<div class="form-ItemRow" style="position: absolute; left: 0px; right: 0px; top: 28px; height: 22px;">
+                                                    <div style="position: absolute; overflow: hidden; left: 0px; top: 0px; bottom: 0px; width: 147px;">
+                                                        <div class="form-Label" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; white-space: nowrap;">
+                                                            <nobr>Включено в:</nobr>
+                                                        </div>
+                                                    </div>
+                                                    <div style="position: absolute; overflow: hidden; left: 152px; top: 0px; right: 0px; bottom: 0px;">
+                                                        <div class="form-Item" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden;">
+
+                                                            <div style="position: absolute; overflow: hidden; left: 0px; top: 0px; right: 36px; bottom: 0px;">
+                                                                <div style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px;">
+                                                                    <div style="position: absolute; overflow: hidden; left: 0px; top: 0px; right: 0px; bottom: 0px;">
+                                                                        <input id="search_included" type="text" class="gwt-SuggestBox" style="width: 100%; height: 100%; position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px;"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div style="position: absolute; overflow: hidden; top: 0px; right: 0px; bottom: 0px; width: 18px;">
+                                                                <div class="base-ImageButton" title="Выбрать" style="display: inline-block; background-image: url(&quot;images/pickers/search_picker.png&quot;); background-repeat: no-repeat; position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px;"></div>
+                                                            </div>
+                                                            <div style="position: absolute; overflow: hidden; top: 0px; right: 18px; bottom: 0px; width: 18px;">
+                                                                <div class="base-ImageButton-disabled" title="Очистить" style="display: inline-block; background-image: url(&quot;images/pickers/clear.png&quot;); background-repeat: no-repeat; position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px;"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>-->
+                                                <!--<div class="form-ItemRow" style="position: absolute; left: 0px; right: 0px; top: 56px; white-space: nowrap; height: 22px;">
+                                                    <div style="position: absolute; overflow: hidden; left: 0px; top: 0px; bottom: 0px; width: 147px;">
+                                                        <div class="form-Label" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; white-space: nowrap;">
+                                                            <nobr>Дата вступления в силу:</nobr>
+                                                        </div>
+                                                    </div>
+                                                    <div style="position: absolute; overflow: hidden; left: 152px; top: 0px; bottom: 0px; width: 115px;">
+                                                        <div class="form-Item" style="position: absolute; width: 115px; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden;">
+                                                            <div style="position: absolute; overflow: hidden; left: 0px; top: 0px; right: 36px; bottom: 0px;">
+                                                                <input type="text" class="gwt-DateBox" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px;"></div>
+                                                            <div style="position: absolute; overflow: hidden; top: 0px; right: 18px; bottom: 0px; width: 18px;">
+                                                                <div class="base-ImageButton" title="Очистить" style="display: inline-block; background-image: url(&quot;images/pickers/clear.png&quot;); background-repeat: no-repeat; position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px;"></div>
+                                                            </div>
+                                                            <div style="position: absolute; overflow: hidden; top: 0px; right: 0px; bottom: 0px; width: 18px;">
+                                                                <div class="base-ImageButton" title="Выбрать" style="display: inline-block; background-image: url(&quot;images/pickers/date_picker.png&quot;); background-repeat: no-repeat; position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px;"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div style="position: absolute; overflow: hidden; left: 267px; top: 0px; right: 0px; bottom: 0px;">
+                                                        <div style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px;">
+                                                            <div style="position: absolute; overflow: hidden; left: 10px; top: 0px; bottom: 0px; width: 112px;">
+                                                                <div class="form-Label" style="white-space: nowrap; position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px;">
+                                                                    <nobr>Дата утраты силы:</nobr>
+                                                                </div>
+                                                            </div>
+                                                            <div style="position: absolute; overflow: hidden; left: 132px; top: 0px; bottom: 0px; width: 115px;">
+                                                                <div class="form-Item" style="position: absolute; width: 115px; left: 0px; top: 0px; right: 0px; bottom: 0px;">
+                                                                    <div style="position: absolute; overflow: hidden; left: 0px; top: 0px; right: 36px; bottom: 0px;">
+                                                                        <input type="text" class="gwt-DateBox" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px;"></div>
+                                                                    <div style="position: absolute; overflow: hidden; top: 0px; right: 18px; bottom: 0px; width: 18px;">
+                                                                        <div class="base-ImageButton" title="Очистить" style="display: inline-block; background-image: url(&quot;images/pickers/clear.png&quot;); background-repeat: no-repeat; position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px;"></div>
+                                                                    </div>
+                                                                    <div style="position: absolute; overflow: hidden; top: 0px; right: 0px; bottom: 0px; width: 18px;">
+                                                                        <div class="base-ImageButton" title="Выбрать" style="display: inline-block; background-image: url(&quot;images/pickers/date_picker.png&quot;); background-repeat: no-repeat; position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px;"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>-->
+
+                                                <!--<div class="form-ItemRow" style="position: absolute; left: 0px; right: 0px; top: 56px; height: 22px;">
+                                                    <div style="position: absolute; overflow: hidden; left: 0px; top: 0px; bottom: 0px; width: 147px;">
+                                                        <div class="form-Label" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; white-space: nowrap;">
+                                                            <nobr>Автор:</nobr>
+                                                        </div>
+                                                    </div>
+                                                    <div style="position: absolute; overflow: hidden; left: 152px; top: 0px; right: 0px; bottom: 0px;">
+                                                        <div class="form-Item" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden;">
+                                                            <div style="position: absolute; overflow: hidden; left: 0px; top: 0px; right: 36px; bottom: 0px;">
+                                                                <div style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px;">
+                                                                    <div style="position: absolute; overflow: hidden; left: 0px; top: 0px; right: 0px; bottom: 0px;">
+                                                                        <input id="search_author" type="text" class="gwt-SuggestBox" style="width: 100%; height: 100%; position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px;">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div style="position: absolute; overflow: hidden; top: 0px; right: 0px; bottom: 0px; width: 18px;">
+                                                                <div class="base-ImageButton" title="Выбрать" style="display: inline-block; background-image: url(&quot;images/pickers/search_picker.png&quot;); background-repeat: no-repeat; position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px;"></div>
+                                                            </div>
+                                                            <div style="position: absolute; overflow: hidden; top: 0px; right: 18px; bottom: 0px; width: 18px;">
+                                                                <div class="base-ImageButton-disabled" title="Очистить" style="display: inline-block; background-image: url(&quot;images/pickers/clear.png&quot;); background-repeat: no-repeat; position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px;"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>-->
+                                            </div>
+
+                                            <div style="position: absolute; overflow: hidden; left: 0px; top: 50px; width: 100%; bottom: 0%;">
+                                                <div class="zero-position--absolute" style="height: 40px;">
+                                                    <div style="position: absolute; overflow: hidden; left: 152px; right: 144px; bottom: 0px; top:15px;">
+                                                        <div class="zero-position--absolute" style="width: 100%;">
+                                                            <div style="position: absolute; overflow: hidden; left: 0px; top: 0px; right: 36px; bottom: 0px;">
+                                                                <input id="content_search" type="text" class="selector zero-position--absolute" style="width: 100%;"></div>
+                                                            <!-- <div style="position: absolute; overflow: hidden; top: 0px; right: 0px; bottom: 0px; width: 18px;">
+                                                                 <div class="search_text base-ImageButton zero-position--absolute" title="Поиск" style="display: inline-block; background-image: url('images/pickers/search_picker.png'); background-repeat: no-repeat;"></div>
+                                                             </div>-->
+                                                            <div id="content_clean" style="position: absolute; overflow: hidden; top: 0px; right: 18px; bottom: 0px; width: 18px;">
+                                                                <div class="base-ImageButton zero-position--absolute" title="Очистить" style="display: inline-block; background-image: url(&quot;images/pickers/clear.png&quot;); background-repeat: no-repeat;"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div style="position: absolute; overflow: hidden; left: -5px; top: 0px; bottom: -15px; width: 147px;">
+                                                        <div class="form-Label zero-position--absolute" style="white-space: nowrap;">
+                                                            <div class="form-ButtonsPanel" style="overflow: visible;">
+                                                                <button id="full_search" type="button" class="form-ToolbarButton gwt-Button" style="margin-right: 5px; vertical-align: top;">Поиск по тексту</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div style="position: absolute; left: 0px; right: 0px; top: 105px; bottom: 0px;">
+                                                <div class="form-ItemRow" style="position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px;">
+                                                    <div class="zero-position--absolute no-overflow">
+                                                        <div class="form-Item zero-position--absolute" style="width: 100%; height: 100%;">
+                                                            <div style="position: absolute; overflow: hidden; left: 0px; top: 0px; width: 100%; height: 32px;">
+                                                                <div class="cellTreeTableHeader zero-position--absolute">
+                                                                    <div>
+                                                                        <div style=" position: relative; height:100%" class="">
+                                                                            <div onclick="" style="outline:none; position:relative; left:0; width: 100%; height: 100%; white-space: nowrap; overflow: hidden;" class="">
+                                                                                <div style="outline:none; margin-left: 15px; position:relative; right: 0">
+                                                                                    <div class="columnsPane" style="position:relative;">
+                                                                                        <div style="position:absolute; height: 100%; right: 471px; left: 0; min-width:50%">
+                                                                                            <div style="outline:none; position:absolute; white-space: nowrap; overflow: hidden; height: 100%; left: 0%; right: 50%" class="cellTableAllHeader cellTableNonFixedHeader cellTableSortableHeader cellTableSortedHeaderAscending">
+                                                                                                <div style="position:relative;zoom:1;">
+                                                                                                    <div>
+                                                                                                        <div class="textNoWrap" title="<div class=&quot;textNoWrap&quot; title=&quot;Наименование&quot;>Наименование</div>">
+                                                                                                            <div class="textNoWrap" title="Наименование">Наименование</div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <!--<div style="outline:none; position:absolute; white-space: nowrap; overflow: hidden; height: 100%; left: 30%; right: 40%" class="cellTableAllHeader cellTableNonFixedHeader cellTableSortableHeader">
+                                                                                                <div class="textNoWrap" title="Автор">Аор</div>
+                                                                                            </div>-->
+                                                                                            <div style="outline:none; position:absolute; white-space: nowrap; overflow: hidden; height: 100%; left: 50%; right: 0%" class="cellTableAllHeader cellTableNonFixedHeader cellTableSortableHeader">
+                                                                                                <div class="textNoWrap" title="Номер">Номер</div>
+                                                                                            </div>
+                                                                                            <!--<div style="outline:none; position:absolute; white-space: nowrap; overflow: hidden; height: 100%; left: 80%; right: 0%" class="cellTableAllHeader cellTableNonFixedHeader cellTableSortableHeader">
+                                                                                                <div class="textNoWrap" title="Ответственный">Ответственный</div>
+                                                                                            </div>-->
+                                                                                        </div>
+                                                                                        <div style="position:absolute; height: 100%; right:0; width: 471px; max-width:50%">
+                                                                                            <!--<div style="outline:none; position:absolute; white-space: nowrap; overflow: hidden; height: 100%; right: 55%; left: 0%" class="cellTableAllHeader cellTableFixedHeader cellTableSortableHeader">
+                                                                                                <div class="textNoWrap" title="Дата создания">Дата создания</div>
+                                                                                            </div>-->
+                                                                                            <div style="outline:none; position:absolute; white-space: nowrap; overflow: hidden; height: 100%; right: 55%; left: 0%" class="cellTableAllHeader cellTableFixedHeader cellTableSortableHeader">
+                                                                                                <div class="textNoWrap" title="Дата вступления в силу">Дата вступления в силу</div>
+                                                                                            </div>
+                                                                                            <div style="outline:none; position:absolute; white-space: nowrap; overflow: hidden; height: 100%; right: 10%; left: 45%" class="cellTableAllHeader cellTableFixedHeader cellTableSortableHeader">
+                                                                                                <div class="textNoWrap" title="Дата утраты силы">Дата утраты силы</div>
+                                                                                            </div>
+                                                                                            <!--<div style="outline:none; position:absolute; white-space: nowrap; overflow: hidden; height: 100%; width: 33px; left: 315px" class="cellTableAllHeader cellTableFixedHeader cellTableSortableHeader">
+                                                                                                <div class="textNoWrap" title="Номер позиции">Номер позиции</div>
+                                                                                            </div>
+                                                                                            <div style="outline:none; position:absolute; white-space: nowrap; overflow: hidden; height: 100%; width: 93px; left: 350px" class="cellTableAllHeader cellTableFixedHeader cellTableSortableHeader">
+                                                                                                <div class="textNoWrap" title="Дата утверждения">Дата утверждения</div>
+                                                                                            </div>-->
+                                                                                            <div style="outline:none; position:absolute; white-space: nowrap; overflow: hidden; height: 100%; right: 0%; left: 90%" class="cellTableAllHeader cellTableFixedHeader cellTableSortableHeader">
+                                                                                                <div class="textNoWrap" title=""></div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div style="position: absolute; overflow: hidden; left: 0px; top: 32px; bottom: 0px; width: 100%;">
+                                                                <div class="zero-position--absolute" style="overflow: auto; zoom: 1;">
+                                                                    <div style="position: relative; zoom: 1;">
+                                                                        <div id="search_center_tree" class="cellTreeWidget" role="treeitem" style="overflow: hidden; width: 100%;">
+                                                                            <div id="req_search_place" style="overflow: hidden;">
+
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Requirements search center panel-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="gwt-MenuBarPopup searchPopup" style="left: 702px; top: 40px; visibility: visible; position: absolute; overflow: visible; display: none;">
+    <div class="">
+        <table cellspacing="0" cellpadding="0" class="">
+            <tbody>
+            <tr class="menuPopupTop">
+                <td class="menuPopupTopLeft">
+                    <div class="menuPopupTopLeftInner"></div>
+                </td>
+                <td class="menuPopupTopCenter">
+                    <div class="menuPopupTopCenterInner"></div>
+                </td>
+                <td class="menuPopupTopRight">
+                    <div class="menuPopupTopRightInner"></div>
+                </td>
+            </tr>
+            <tr class="menuPopupMiddle">
+                <td class="menuPopupMiddleLeft">
+                    <div class="menuPopupMiddleLeftInner"></div>
+                </td>
+                <td class="menuPopupMiddleCenter">
+                    <div class="menuPopupMiddleCenterInner menuPopupContent">
+                        <div tabindex="-1" role="menubar" class="gwt-MenuBar gwt-MenuBar-vertical" hidefocus="true" style="outline: 0px;" aria-activedescendant="gwt-uid-33">
+                            <input type="text" tabindex="-1" role="presentation" style="opacity: 0; height: 1px; width: 1px; z-index: -1; overflow: hidden; position: absolute;">
+                            <table>
+                                <tbody>
+                                <tr class="advanced_search" rel="advanced">
+                                    <td class="gwt-MenuItem" id="gwt-uid-33" role="menuitem" colspan="2">Расширенный поиск</td>
+                                </tr>
+                                <tr id="requirements_id" rel="requirements_rel">
+                                    <td class="gwt-MenuItem" id="gwt-uid-45" role="menuitem" colspan="2">Требования</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </td>
+                <td class="menuPopupMiddleRight">
+                    <div class="menuPopupMiddleRightInner"></div>
+                </td>
+            </tr>
+            <tr class="menuPopupBottom">
+                <td class="menuPopupBottomLeft">
+                    <div class="menuPopupBottomLeftInner"></div>
+                </td>
+                <td class="menuPopupBottomCenter">
+                    <div class="menuPopupBottomCenterInner"></div>
+                </td>
+                <td class="menuPopupBottomRight">
+                    <div class="menuPopupBottomRightInner"></div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="gwt-MenuBarPopup referencePopup" style="left: 783px; top: 40px; visibility: visible; position: absolute; overflow: visible; display: none;">
+    <div class="">
+        <table cellspacing="0" cellpadding="0" class="">
+            <tbody>
+            <tr class="menuPopupTop">
+                <td class="menuPopupTopLeft">
+                    <div class="menuPopupTopLeftInner"></div>
+                </td>
+                <td class="menuPopupTopCenter">
+                    <div class="menuPopupTopCenterInner"></div>
+                </td>
+                <td class="menuPopupTopRight">
+                    <div class="menuPopupTopRightInner"></div>
+                </td>
+            </tr>
+            <tr class="menuPopupMiddle">
+                <td class="menuPopupMiddleLeft">
+                    <div class="menuPopupMiddleLeftInner"></div>
+                </td>
+                <td class="menuPopupMiddleCenter">
+                    <div class="menuPopupMiddleCenterInner menuPopupContent">
+                        <div tabindex="-1" role="menubar" class="gwt-MenuBar gwt-MenuBar-vertical" hidefocus="true" style="outline: 0px;" aria-activedescendant="gwt-uid-35">
+                            <input type="text" tabindex="-1" role="presentation" style="opacity: 0; height: 1px; width: 1px; z-index: -1; overflow: hidden; position: absolute;">
+                            <table>
+                                <tbody>
+                                <tr id="user_guide_id" rel="user_guide">
+                                    <td class="gwt-MenuItem" role="menuitem" aria-haspopup="true" colspan="1">
+                                        <table cellspacing="0" cellpadding="0">
+                                            <tbody>
+                                            <tr>
+                                                <td align="left" width="24px" style="vertical-align: top;">
+                                                    <div class="base-ImageButton" style="display: inline-block; background-image: url(&quot;images/icons/24/reference.png&quot;); background-repeat: no-repeat; width: 24px; height: 24px;">
+                                                    </div>
+                                                </td>
+                                                <td align="left" style="vertical-align: middle;">
+                                                    <div class="gwt-Label">Руководство пользователя</div>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                    <td valign="middle" class="subMenuIcon">
+                                        <img onload="this.__gwtLastUnhandledEvent=&quot;load&quot;;" src="Main/clear.cache.gif" style="width:5px;height:9px;background:url(data:image/gif;base64,R0lGODlhBQAJAIAAAAAAAAAAACH5BAEAAAEALAAAAAAFAAkAAAIMRB5gp9v2YlJsJRQKADs=) no-repeat 0px 0px;" border="0">
+                                    </td>
+                                </tr>
+                                <tr id="admin_guide_id" rel="admin_guide">
+                                    <td class="gwt-MenuItem" id="gwt-uid-35" role="menuitem" aria-haspopup="true" colspan="1">
+                                        <table cellspacing="0" cellpadding="0">
+                                            <tbody>
+                                            <tr>
+                                                <td align="left" width="24px" style="vertical-align: top;">
+                                                    <div class="base-ImageButton" style="display: inline-block; background-image: url(&quot;images/icons/24/manual.png&quot;); background-repeat: no-repeat; width: 24px; height: 24px;">
+                                                    </div>
+                                                </td>
+                                                <td align="left" style="vertical-align: middle;">
+                                                    <div class="gwt-Label">Руководство предметного администратора</div>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                    <td valign="middle" class="subMenuIcon">
+                                        <img onload="this.__gwtLastUnhandledEvent=&quot;load&quot;;" src="Main/clear.cache.gif" style="width:5px;height:9px;background:url(data:image/gif;base64,R0lGODlhBQAJAIAAAAAAAAAAACH5BAEAAAEALAAAAAAFAAkAAAIMRB5gp9v2YlJsJRQKADs=) no-repeat 0px 0px;" border="0">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="gwt-MenuItemSeparator" colspan="2">
+                                        <div class="menuSeparatorInner"></div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="gwt-MenuItem gwt-MenuItem-selectable show_popup" id="about_program" role="menuitem" rel="gwt-PopupPanel" colspan="2">О программе</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </td>
+                <td class="menuPopupMiddleRight">
+                    <div class="menuPopupMiddleRightInner"></div>
+                </td>
+            </tr>
+            <tr class="menuPopupBottom">
+                <td class="menuPopupBottomLeft">
+                    <div class="menuPopupBottomLeftInner"></div>
+                </td>
+                <td class="menuPopupBottomCenter">
+                    <div class="menuPopupBottomCenterInner"></div>
+                </td>
+                <td class="menuPopupBottomRight">
+                    <div class="menuPopupBottomRightInner"></div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="gwt-MenuBarPopup user_guide" style="left: 435px; top: 32px; visibility: visible; position: absolute; overflow: visible; display: none;">
+    <div class="">
+        <table cellspacing="0" cellpadding="0" class="">
+            <tbody>
+            <tr class="menuPopupTop">
+                <td class="menuPopupTopLeft">
+                    <div class="menuPopupTopLeftInner"></div>
+                </td>
+                <td class="menuPopupTopCenter">
+                    <div class="menuPopupTopCenterInner"></div>
+                </td>
+                <td class="menuPopupTopRight">
+                    <div class="menuPopupTopRightInner"></div>
+                </td>
+            </tr>
+            <tr class="menuPopupMiddle">
+                <td class="menuPopupMiddleLeft">
+                    <div class="menuPopupMiddleLeftInner"></div>
+                </td>
+                <td class="menuPopupMiddleCenter">
+                    <div class="menuPopupMiddleCenterInner menuPopupContent">
+                        <div tabindex="-1" role="menubar" class="gwt-MenuBar gwt-MenuBar-vertical" hidefocus="true" style="outline: 0px;" aria-activedescendant="gwt-uid-40">
+                            <input type="text" tabindex="-1" role="presentation" style="opacity: 0; height: 1px; width: 1px; z-index: -1; overflow: hidden; position: absolute;">
+                            <table>
+                                <tbody>
+                                <tr id="manual_base">
+                                    <td class="gwt-MenuItem" id="gwt-uid-36" role="menuitem" colspan="2">Общее описание интерфейса</td>
+                                </tr>
+                                <tr id="manual_ord">
+                                    <td class="gwt-MenuItem" id="gwt-uid-40" role="menuitem" colspan="2">Организационно-распорядительный документооборот</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </td>
+                <td class="menuPopupMiddleRight">
+                    <div class="menuPopupMiddleRightInner"></div>
+                </td>
+            </tr>
+            <tr class="menuPopupBottom">
+                <td class="menuPopupBottomLeft">
+                    <div class="menuPopupBottomLeftInner"></div>
+                </td>
+                <td class="menuPopupBottomCenter">
+                    <div class="menuPopupBottomCenterInner"></div>
+                </td>
+                <td class="menuPopupBottomRight">
+                    <div class="menuPopupBottomRightInner"></div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+<div class="gwt-MenuBarPopup admin_guide" style="left: 435px; top: 74px; visibility: visible; position: absolute; overflow: visible; display: none;">
+    <div class="">
+        <table cellspacing="0" cellpadding="0" class="">
+            <tbody>
+            <tr class="menuPopupTop">
+                <td class="menuPopupTopLeft">
+                    <div class="menuPopupTopLeftInner"></div>
+                </td>
+                <td class="menuPopupTopCenter">
+                    <div class="menuPopupTopCenterInner"></div>
+                </td>
+                <td class="menuPopupTopRight">
+                    <div class="menuPopupTopRightInner"></div>
+                </td>
+            </tr>
+            <tr class="menuPopupMiddle">
+                <td class="menuPopupMiddleLeft">
+                    <div class="menuPopupMiddleLeftInner"></div>
+                </td>
+                <td class="menuPopupMiddleCenter">
+                    <div class="menuPopupMiddleCenterInner menuPopupContent">
+                        <div tabindex="-1" role="menubar" class="gwt-MenuBar gwt-MenuBar-vertical" hidefocus="true" style="outline: 0px;" aria-activedescendant="gwt-uid-37">
+                            <input type="text" tabindex="-1" role="presentation" style="opacity: 0; height: 1px; width: 1px; z-index: -1; overflow: hidden; position: absolute;">
+                            <table>
+                                <tbody>
+                                <tr id="admin_base">
+                                    <td class="gwt-MenuItem" role="menuitem" colspan="2">Базовые настройки</td>
+                                </tr>
+                                <tr id="admin_ord">
+                                    <td class="gwt-MenuItem" id="gwt-uid-41" role="menuitem" colspan="2">Организационно-распорядительный документооборот</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </td>
+                <td class="menuPopupMiddleRight">
+                    <div class="menuPopupMiddleRightInner"></div>
+                </td>
+            </tr>
+            <tr class="menuPopupBottom">
+                <td class="menuPopupBottomLeft">
+                    <div class="menuPopupBottomLeftInner"></div>
+                </td>
+                <td class="menuPopupBottomCenter">
+                    <div class="menuPopupBottomCenterInner"></div>
+                </td>
+                <td class="menuPopupBottomRight">
+                    <div class="menuPopupBottomRightInner"></div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="gwt-PopupPanel" style="left: 397px; top: 346px; z-index: 4; visibility: visible; position: absolute; overflow: visible; display: none;">
+    <div class="popupContent">
+        <div class="formContainer" style="position: relative;">
+            <div style="width: 100%;">
+                <img src="images/logo.png" class="gwt-Image" style="width: 500px;">
+                <div class="gwt-HTML" style="width: 500px;">«Аврора ЕСМ» - это СЭД система нового поколения, которая решает все традиционные задачи СЭД просто и понятно для обычного пользователя. Система, которая делает бизнес эффективным.</div>
+                <div class="gwt-HTML">Версия: 2.7&nbsp;&nbsp;© First Line Software 2011-2016</div>
+            </div>
+        </div>
+        <div class="popup-ButtonsPanel grid-ButtonsPanel">
+            <button type="button" class="gwt-Button close">Закрыть</button>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

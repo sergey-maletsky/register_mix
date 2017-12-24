@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<directories>
+    <directory>
+        <type>tags</type>
+        <displayName>Теги</displayName>
+        <displayable>true</displayable>
+        <searchable>false</searchable>
+        <dictType>PLAIN</dictType>
+        <columns>
+            <column>
+                <columnId>name</columnId>
+                <unique>true</unique>
+                <displayName>Тег</displayName>
+            </column>
+        </columns>
+    </directory>
+</directories>

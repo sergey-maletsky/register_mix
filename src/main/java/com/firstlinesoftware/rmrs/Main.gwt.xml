@@ -1,0 +1,18 @@
+<module rename-to="Main">
+
+    <inherits name="com.google.gwt.user.theme.standard.StandardResources"/>
+
+    <inherits name="com.firstlinesoftware.base.Base"/>
+    <inherits name="com.firstlinesoftware.crm.Crm" />
+    <inherits name="com.firstlinesoftware.route.Route"/>
+    <inherits name="com.firstlinesoftware.ord.Ord"/>
+
+    <entry-point class='com.firstlinesoftware.rmrs.client.Rmrs'/>
+
+    <!--<set-property name="user.agent" value="gecko1_8,safari"/>-->
+    <set-property name="locale" value="ru" />
+
+    <source path='client'/>
+    <source path='shared'/>
+    <stylesheet src='rscr.css' />
+</module>

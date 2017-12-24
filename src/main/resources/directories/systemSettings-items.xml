@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<directories>
+    <directory>
+        <version>20170621</version>
+        <type>systemSettings</type>
+        <items>
+            <item>
+                <name>Редактирование</name>
+                <value>edit</value>
+            </item>
+            <item>
+                <name>Стандартный текст в поле "Содержание ЦП"</name>
+                <key>standardTextInCPField</key>
+                <value>Настоящим вносятся изменения в </value>
+                <parent>edit</parent>
+            </item>
+            <item>
+                <name>Стандартный текст для "Поручение на рассмотрение необходимости внедрения предложения"</name>
+                <key>errand.considerProposal</key>
+                <value>*Стандартный текст для "Поручение на рассмотрение необходимости внедрения предложения"*</value>
+                <parent>edit</parent>
+            </item>
+            <item>
+                <name>Стандартный текст для "Поручение на внесение изменений"</name>
+                <key>errand.changeRequirement</key>
+                <value>*Стандартный текст для "Поручение на внесение изменений"*</value>
+                <parent>edit</parent>
+            </item>
+            <item>
+                <name>Стандартный текст для "Поручение на изменение требования"</name>
+                <key>errand.changeRequirement.change</key>
+                <value>*Стандартный текст для "Поручение на изменение требования"*</value>
+                <parent>edit</parent>
+            </item>
+             <item>
+                <name>Стандартный текст для "Поручение на создание требования"</name>
+                <key>errand.changeRequirement.create</key>
+                <value>*Стандартный текст для "Поручение на создание требования"*</value>
+                <parent>edit</parent>
+            </item>
+            <item>
+                <name>Стандартный текст для "Поручение на создание документа"</name>
+                <key>errand.changeRequirement.create.doc</key>
+                <value>*Стандартный текст для "Поручение на создание документа"*</value>
+                <parent>edit</parent>
+            </item>
+            <item>
+                <name>Максимальная длина аннотации</name>
+                <key>client.document.maxAnnotation</key>
+                <parent>edit</parent>
+                <value>10000</value>
+            </item>
+            <item>
+                <name>Редактор PDF (PDFViewer,Word)</name>
+                <key>client.document.pdfeditor</key>
+                <parent>edit</parent>
+                <value>Word</value>
+            </item>
+
+
+            <item>
+                <name>Поручения</name>
+                <value>errands</value>
+                <module>ord</module>
+            </item>
+            <item>
+                <name>Контрольные поручения по умолчанию</name>
+                <parent>errands</parent>
+                <key>client.errand.default.onControl</key>
+                <value>false</value>
+                <widgetType>boolean</widgetType>
+                <module>ord</module>
+            </item>
+            <item>
+                <name>Срок исполнения по умолчанию</name>
+                <parent>errands</parent>
+                <key>client.errand.defaultControlDate</key>
+                <value>15</value>
+                <module>ord</module>
+            </item>
+
+
+
+            <item>
+                <name>Предпросмотр</name>
+                <value>preview</value>
+            </item>
+            <item>
+                <name>Использовать Open Office</name>
+                <parent>preview</parent>
+                <key>jodconverter.enabled</key>
+                <value>true</value>
+                <widgetType>boolean</widgetType>
+            </item>
+            <item>
+                <name>Каталог Open Office</name>
+                <parent>preview</parent>
+                <key>jodconverter.officeHome</key>
+                <value>/Alfresco/openoffice/App/openoffice/</value>
+            </item>
+            <item>
+                <name>Порт Open Office</name>
+                <parent>preview</parent>
+                <key>jodconverter.portNumbers</key>
+                <value>2022</value>
+            </item>
+            <item>
+                <name>Использовать Microsoft Office</name>
+                <parent>preview</parent>
+                <key>msoconverter.enabled</key>
+                <value>true</value>
+                <widgetType>boolean</widgetType>
+            </item>
+            <item>
+                <name>Предпросмотр PDF (IcePdfCropped, IcePdf,GhostScript,PdfBox)</name>
+                <parent>preview</parent>
+                <key>pdf.preview</key>
+                <value>IcePdfCropped</value>
+            </item>
+
+
+            <item>
+                <name>Отправка электронной почты</name>
+                <value>sendmail</value>
+            </item>
+            <item>
+                <name>Автоматически отправлять документы по электронной почте</name>
+                <parent>sendmail</parent>
+                <key>mail.outgoing.enabled</key>
+                <value>false</value>
+                <widgetType>boolean</widgetType>
+            </item>
+            <item>
+                <name>Отправлять уведомления</name>
+                <parent>sendmail</parent>
+                <key>mail.send.notifications</key>
+                <value>false</value>
+                <widgetType>boolean</widgetType>
+            </item>
+            <item>
+                <name>Адрес сервера для ссылок в уведомлениях</name>
+                <parent>sendmail</parent>
+                <key>mail.deploy.address</key>
+                <value></value>
+            </item>
+            <item>
+                <name>Почтовый протокол</name>
+                <parent>sendmail</parent>
+                <key>mail.protocol</key>
+                <value>smtps</value>
+            </item>
+            <item>
+                <name>Для отправки требуется авторизация</name>
+                <parent>sendmail</parent>
+                <key>mail.smtp.auth</key>
+                <value>false</value>
+                <widgetType>boolean</widgetType>
+            </item>
+            <item>
+                <name>Адрес для отправки</name>
+                <parent>sendmail</parent>
+                <key>mail.host</key>
+                <value>smtp.gmail.com</value>
+            </item>
+            <item>
+                <name>Порт для отправки</name>
+                <parent>sendmail</parent>
+                <key>mail.port</key>
+                <value>465</value>
+            </item>
+            <item>
+                <name>Имя пользователя для авторизации</name>
+                <parent>sendmail</parent>
+                <key>mail.username</key>
+                <value></value>
+            </item>
+            <item>
+                <name>Пароль для авторизации</name>
+                <parent>sendmail</parent>
+                <key>mail.password</key>
+                <value></value>
+                <widgetType>password</widgetType>
+            </item>
+            <item>
+                <name>Обратный адрес</name>
+                <parent>sendmail</parent>
+                <key>mail.from</key>
+                <value></value>
+            </item>
+        </items>
+    </directory>
+</directories>

@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<directories>
+    <directory>
+        <type>addressees</type>
+        <parent>correspondent_category</parent>
+        <displayName>Адресаты</displayName>
+        <displayable>false</displayable>
+        <searchable>false</searchable>
+        <lazyLoad>true</lazyLoad>
+        <dictType>SIMPLE_WITH_NO_VALUE</dictType>
+        <module>crm</module>
+        <columns>
+            <column>
+                <columnId>name</columnId>
+                <displayName>Имя</displayName>
+            </column>
+            <column>
+                <columnId>organizationName</columnId>
+                <displayName>Организация</displayName>
+            </column>
+            <column>
+                <columnId>inn</columnId>
+                <displayName>ИНН</displayName>
+            </column>
+            <column>
+                <columnId>defaultPostalAddress</columnId>
+                <displayName>Адрес</displayName>
+                <widgetType>postalAddress</widgetType>
+            </column>
+            <column>
+                <columnId>emailAddress</columnId>
+                <displayName>Адрес эл. почты</displayName>
+                <widgetType>emailAddress</widgetType>
+            </column>
+            <column>
+                <columnId>defaultPhone</columnId>
+                <displayName>Телефон</displayName>
+                <widgetType>phone</widgetType>
+            </column>
+            <column>
+                <columnId>fax</columnId>
+                <displayName>Факс</displayName>
+                <widgetType>fax</widgetType>
+            </column>
+            <column>
+                <columnId>medo</columnId>
+                <displayName>МЭДО</displayName>
+                <widgetType>medo</widgetType>
+                <module>gov</module>
+            </column>
+        </columns>
+    </directory>
+
+    <directory>
+        <type>correspondent_category</type>
+        <displayName>Категории корреспондентов</displayName>
+        <displayable>false</displayable>
+        <searchable>false</searchable>
+        <dictType>HIERARCHY</dictType>
+        <module>crm</module>
+        <columns>
+            <column>
+                <columnId>parent</columnId>
+                <displayName>Родительская категория</displayName>
+                <parentDirectory>correspondent_category</parentDirectory>
+            </column>
+            <column>
+                <columnId>name</columnId>
+                <displayName>Название</displayName>
+                <unique>true</unique>
+                <required>true</required>
+            </column>
+        </columns>
+    </directory>
+
+    <directory>
+        <type>countries</type>
+        <displayName>Страны/Cубъекты РФ</displayName>
+        <searchByDisplay>По стране/субъекту РФ</searchByDisplay>
+        <displayable>false</displayable>
+        <searchable>false</searchable>
+        <dictType>PLAIN</dictType>
+        <module>crm</module>
+        <columns>
+            <column>
+                <columnId>name</columnId>
+                <unique>true</unique>
+                <displayName>Страна/Субъект РФ</displayName>
+            </column>
+        </columns>
+    </directory>
+
+    <directory>
+        <type>address_fields</type>
+        <lazyLoad>true</lazyLoad>
+        <dictType>REFERENCE</dictType>
+        <module>crm</module>
+        <columns>
+            <column>
+                <columnId>index</columnId>
+                <displayName>Индекс</displayName>
+                <widgetType>int</widgetType>
+            </column>
+
+            <column>
+                <columnId>country</columnId>
+                <displayName>Страна/Субъект РФ</displayName>
+                <parentDirectory>countries</parentDirectory>
+            </column>
+
+            <column>
+                <columnId>region</columnId>
+                <displayName>Регион</displayName>
+            </column>
+
+            <column>
+                <columnId>district</columnId>
+                <displayName>Район</displayName>
+            </column>
+
+            <column>
+                <columnId>city</columnId>
+                <displayName>Населенный пункт</displayName>
+                <widgetType>city</widgetType>
+            </column>
+
+            <column>
+                <columnId>street</columnId>
+                <displayName>Улица</displayName>
+                <widgetType>street</widgetType>
+            </column>
+
+            <column>
+                <columnId>house</columnId>
+                <displayName>Дом</displayName>
+            </column>
+
+
+            <column>
+                <columnId>building</columnId>
+                <displayName>Корпус</displayName>
+            </column>
+
+            <column>
+                <columnId>flat</columnId>
+                <displayName>Квартира / офис</displayName>
+            </column>
+
+            <column>
+                <columnId>address_refinement</columnId>
+                <displayName>Уточнение адреса</displayName>
+            </column>
+        </columns>
+    </directory>
+
+    <directory>
+        <type>address_types</type>
+        <dictType>SIMPLE</dictType>
+        <displayable>false</displayable>
+        <searchable>false</searchable>
+        <module>crm</module>
+        <columns>
+            <column>
+                <columnId>value</columnId>
+                <displayName>Тип</displayName>
+            </column>
+
+            <column>
+                <columnId>name</columnId>
+                <displayName>Название</displayName>
+            </column>
+        </columns>
+    </directory>
+
+    <directory>
+        <type>identityTypes</type>
+        <displayName>Типы удостоверений личности</displayName>
+        <displayable>false</displayable>
+        <searchable>false</searchable>
+        <dictType>PLAIN</dictType>
+        <module>crm</module>
+        <columns>
+            <column>
+                <columnId>name</columnId>
+                <displayName>Наименование</displayName>
+            </column>
+        </columns>
+    </directory>
+
+
+</directories>

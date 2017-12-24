@@ -1,0 +1,48 @@
+.effective {
+	color: black;
+}
+.effective img {
+	opacity: 1;
+}
+.requirementExpired {
+	color: #afafaf;
+}
+.requirementExpired img {
+	opacity: 0.5;
+}
+.requirementNotYetEffective {
+	color: #8ca9c7;
+}
+.stackHeader-buttons {
+	position: absolute;
+	right: 4px;
+	top: 4px;
+}
+.stackHeader-buttons .base-ImageButton {
+	width: 16px;
+	height: 16px;
+	padding: 3px;
+	border-radius: 3px;
+	background-position: 3px 3px;
+	margin: 0;
+}
+.stackHeader-buttons .base-ImageButton:hover {
+	border: 1px solid #d3d3d3;
+	padding: 2px;
+	border-radius: 3px;
+	background-position: 2px 2px;
+}
+.stackHeader-buttons .base-ImageButton:active {
+	background-color: rgb(220,220,230);
+	background-position: 2px 3px;
+}
+.form-Label {
+	text-align: left;
+	vertical-align: top;
+	color: #999999;
+}
+.documentCounting {
+	float: right;
+	flex: 45%;
+	font-weight: bold;
+}

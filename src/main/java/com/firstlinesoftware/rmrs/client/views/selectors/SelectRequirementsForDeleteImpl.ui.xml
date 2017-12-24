@@ -1,0 +1,23 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+             xmlns:g='urn:import:com.google.gwt.user.client.ui'
+             xmlns:base='urn:import:com.firstlinesoftware.base.client.widgets'
+             xmlns:ecm='urn:import:com.firstlinesoftware.ecm.client.widgets'
+>
+    <ui:with field="msg" type="com.firstlinesoftware.ecm.client.messages.EcmMessages"/>
+    <base:Form>
+        <base:DefaultButton text="{msg.select}" ui:field="select" styleName="form-ToolbarButton gwt-Button"
+                            enabled="false"/>
+        <!--<g:Button text="{msg.search}" ui:field="search" styleName="form-ToolbarButton gwt-Button"/>-->
+        <base:DefaultCancelButton text="{msg.cancel}" ui:field="cancel" styleName="form-ToolbarButton gwt-Button"/>
+        <!--<g:Button text="{msg.newSearch}" ui:field="clear" styleName="form-ToolbarButton gwt-Button"/>-->
+        <!--<ecm:SelectFormatPopupButton text="{msg.print}" ui:field="print" styleName="form-ToolbarButton gwt-Button"-->
+                                     <!--visible="false"/>-->
+        <!--<base:SelectObjectPopupButton text="{msg.savesearch}" ui:field="searchTemplatesListButton"-->
+                                      <!--styleName="form-ToolbarButton gwt-Button"/>-->
+        <base:FormLayout>
+            <base:WideFormItem lastFormItem="true" order="LOW2">
+                <base:TreeTableViewer ui:field="requirementsViewer" height="100%" hasSearchPanel="true"/>
+            </base:WideFormItem>
+        </base:FormLayout>
+    </base:Form>
+</ui:UiBinder>

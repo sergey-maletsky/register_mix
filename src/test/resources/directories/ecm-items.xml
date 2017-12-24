@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<directories>
+
+
+    <directory>
+        <type>documentTypes</type>
+        <version>1</version>
+        <items>
+            <item>
+                <name>Поручения</name>
+                <value>errand</value>
+            </item>
+            <item>
+                <name>Нормативно-правовые акты</name>
+                <value>routes.acts</value>
+            </item>
+            <item>
+                <name>Справочно-информационные документы</name>
+                <value>routes.info</value>
+            </item>
+            <item>
+                <name>Справка</name>
+                <parent>routes.info</parent>
+                <value>routes.info.certificate</value>
+            </item>
+            <item>
+                <name>Расписка</name>
+                <parent>routes.info</parent>
+                <value>routes.info.consignment</value>
+            </item>
+            <item>
+                <name>Объяснительная записка</name>
+                <parent>routes.info</parent>
+                <value>routes.info.excuse</value>
+            </item>
+            <item>
+                <name>Распоряжение</name>
+                <parent>routes.acts</parent>
+                <value>routes.acts.orders</value>
+            </item>
+            <item>
+                <name>Постановление</name>
+                <parent>routes.acts</parent>
+                <value>routes.acts.resolution</value>
+            </item>
+            <item>
+                <name>Указ</name>
+                <parent>routes.acts</parent>
+                <value>routes.acts.directive</value>
+            </item>
+            <item>
+                <name>Организационно-распорядительные документы</name>
+                <value>routes.organisational</value>
+            </item>
+            <item>
+                <name>Приказ</name>
+                <parent>routes.organisational</parent>
+                <value>routes.organisational.order</value>
+            </item>
+            <item>
+                <name>Протокол</name>
+                <parent>routes.organisational</parent>
+                <value>routes.organisational.protocol</value>
+            </item>
+            <item>
+                <name>Положение</name>
+                <parent>routes.organisational</parent>
+                <value>routes.organisational.regulation</value>
+            </item>
+            <item>
+                <name>Правило</name>
+                <parent>routes.organisational</parent>
+                <value>routes.organisational.rule</value>
+            </item>
+            <item>
+                <name>Инструкция</name>
+                <parent>routes.organisational</parent>
+                <value>routes.organisational.instruction</value>
+            </item>
+            <item>
+                <name>Входящие</name>
+                <value>routes.incoming</value>
+            </item>
+            <item>
+                <name>Запрос</name>
+                <parent>routes.incoming</parent>
+                <value>routes.incoming.request</value>
+            </item>
+            <item>
+                <name>Письмо</name>
+                <parent>routes.incoming</parent>
+                <value>routes.incoming.letter</value>
+            </item>
+            <item>
+                <name>Постановление</name>
+                <parent>routes.incoming</parent>
+                <value>routes.incoming.resolution</value>
+            </item>
+            <item>
+                <name>Протокол</name>
+                <parent>routes.incoming</parent>
+                <value>routes.incoming.protocol</value>
+            </item>
+            <item>
+                <name>Распоряжение</name>
+                <parent>routes.incoming</parent>
+                <value>routes.incoming.order</value>
+            </item>
+            <item>
+                <name>Сопроводительное письмо</name>
+                <parent>routes.incoming</parent>
+                <value>routes.incoming.covering_letter</value>
+            </item>
+            <item>
+                <name>Телеграмма</name>
+                <parent>routes.incoming</parent>
+                <value>routes.incoming.telegram</value>
+            </item>
+            <item>
+                <name>Телефонограмма</name>
+                <parent>routes.incoming</parent>
+                <value>routes.incoming.telephone_message</value>
+            </item>
+            <item>
+                <name>Факсограмма</name>
+                <parent>routes.incoming</parent>
+                <value>routes.incoming.fax</value>
+            </item>
+            <item>
+                <name>Электронное письмо</name>
+                <parent>routes.incoming</parent>
+                <value>routes.incoming.email</value>
+            </item>
+            <item>
+                <name>Исходящие</name>
+                <value>routes.outgoing</value>
+            </item>
+            <item>
+                <name>Исходящее инициативное</name>
+                <parent>routes.outgoing</parent>
+                <value>routes.outgoing.initiative</value>
+            </item>
+            <item>
+                <name>Исходящий запрос</name>
+                <parent>routes.outgoing</parent>
+                <value>routes.outgoing.request</value>
+            </item>
+            <item>
+                <name>Ответ</name>
+                <parent>routes.outgoing</parent>
+                <value>routes.outgoing.answer</value>
+            </item>
+            <item>
+                <name>Ответ на обращение</name>
+                <parent>routes.outgoing</parent>
+                <value>routes.outgoing.answer_on_public_request</value>
+            </item>
+            <item>
+                <name>Сопроводительное письмо</name>
+                <parent>routes.outgoing</parent>
+                <value>routes.outgoing.covering_letter</value>
+            </item>
+        </items>
+    </directory>
+
+    <directory>
+        <type>lifecycle</type>
+        <version>1</version>
+        <items>
+            <item>
+                <name>Аннулирован</name>
+                <value>annulated</value>
+                <applicable>routes,case</applicable>
+            </item>
+            <item>
+                <name>Проект документа</name>
+                <value>draft</value>
+                <applicable>routes</applicable>
+            </item>
+            <item>
+                <name>На предварительной обработке</name>
+                <value>routes_preprocessing</value>
+                <applicable>routes</applicable>
+            </item>
+            <item>
+                <name>На доработке</name>
+                <value>routes_rejected</value>
+                <applicable>routes</applicable>
+            </item>
+            <item>
+                <name>На согласовании</name>
+                <value>routes_approval</value>
+                <applicable>routes,case</applicable>
+            </item>
+            <item>
+                <name>Согласован</name>
+                <value>routes_approved</value>
+                <applicable>routes,case</applicable>
+            </item>
+            <item>
+                <name>На подписи</name>
+                <value>routes_signing</value>
+                <applicable>routes</applicable>
+            </item>
+            <item>
+                <name>На гос. регистрации</name>
+                <value>state_registration</value>
+                <applicable>routes</applicable>
+            </item>
+            <item>
+                <name>На регистрации</name>
+                <value>routes_registration</value>
+                <applicable>routes</applicable>
+            </item>
+            <item>
+                <name>На подготовке рассмотрения</name>
+                <value>routes_preconsideration</value>
+                <applicable>routes</applicable>
+            </item>
+            <item>
+                <name>На рассмотрении</name>
+                <value>routes_consideration</value>
+                <applicable>routes</applicable>
+            </item>
+            <item>
+                <name>На исполнении(документ)</name>
+                <value>routes_execution</value>
+                <applicable>routes</applicable>
+            </item>
+            <item>
+                <name>На публикации</name>
+                <value>routes_publication</value>
+                <applicable>routes</applicable>
+            </item>
+            <item>
+                <name>На ознакомлении</name>
+                <value>routes_familiarization</value>
+                <applicable>routes</applicable>
+            </item>
+            <item>
+                <name>На отправке</name>
+                <value>routes_sending</value>
+                <applicable>routes</applicable>
+            </item>
+            <item>
+                <name>На ожидании ответа</name>
+                <value>routes_response_waiting</value>
+                <applicable>routes</applicable>
+            </item>
+            <item>
+                <name>Обработка завершена</name>
+                <value>archived</value>
+                <applicable>routes,case</applicable>
+            </item>
+
+            <item>
+                <name>Проект поручения</name>
+                <value>draftErrand</value>
+                <applicable>errand</applicable>
+            </item>
+            <item>
+                <name>На исполнении(поручение)</name>
+                <value>onExecution</value>
+                <applicable>errand</applicable>
+            </item>
+            <item>
+                <name>На принятии отчёта контролёром</name>
+                <value>onControl</value>
+                <applicable>errand</applicable>
+            </item>
+            <!--<item>-->
+            <!--<name>На принятии отчёта автором</name>-->
+            <!--<value>onReview</value>-->
+            <!--</item>-->
+            <item>
+                <name>Отозвано</name>
+                <value>cancelled</value>
+                <applicable>errand</applicable>
+            </item>
+            <item>
+                <name>Выполнено</name>
+                <value>completed</value>
+                <applicable>errand</applicable>
+            </item>
+            <item>
+                <name>На обработке</name>
+                <value>case_onprocessing</value>
+                <applicable>case</applicable>
+            </item>
+        </items>
+    </directory>
+
+    <directory>
+        <type>relation_type</type>
+        <version>1</version>
+        <items>
+            <item>
+                <name>Cсылается на</name>
+                <value>type_7</value>
+            </item>
+            <item>
+                <name>На него ссылаются</name>
+                <value>type_7.type_8</value>
+                <parent>type_7</parent>
+            </item>
+
+            <item>
+                <name>Ответ на</name>
+                <value>type_11</value>
+                <module>ord</module>
+            </item>
+            <item>
+                <name>На него отвечают</name>
+                <value>type_11.type_12</value>
+                <parent>type_11</parent>
+                <module>ord</module>
+            </item>
+
+            <item>
+                <name>Результат внешнего согласования</name>
+                <value>externalApproval</value>
+                <module>ord</module>
+            </item>
+            <item>
+                <name>Документ согласован</name>
+                <value>externalApproval.approved</value>
+                <parent>externalApproval</parent>
+                <module>ord</module>
+            </item>
+            <item>
+                <name>Документ отклонён</name>
+                <value>externalApproval.rejected</value>
+                <parent>externalApproval</parent>
+                <module>ord</module>
+            </item>
+
+            <item>
+                <name>На основании</name>
+                <value>type_13</value>
+            </item>
+            <item>
+                <name>Основание для</name>
+                <value>type_13.type_14</value>
+                <parent>type_13</parent>
+            </item>
+
+            <item>
+                <name>Сопроводительное письмо</name>
+                <value>sendCopy</value>
+                <module>ord</module>
+            </item>
+            <item>
+                <name>Отправлен с сопроводительным письмом</name>
+                <value>sendCopy.with</value>
+                <parent>sendCopy</parent>
+                <module>ord</module>
+            </item>
+
+            <item>
+                <name>Повторное обращение</name>
+                <value>type_18</value>
+                <module>gov</module>
+            </item>
+            <item>
+                <name>Первичное обращение</name>
+                <value>type_18.type_19</value>
+                <parent>type_18</parent>
+                <module>gov</module>
+            </item>
+            <item>
+                <name>Дубликат обращения</name>
+                <value>duplicate_request</value>
+                <module>gov</module>
+            </item>
+            <item>
+                <name>Первичное обращение</name>
+                <value>duplicate_request.original_request</value>
+                <parent>duplicate_request</parent>
+                <module>gov</module>
+            </item>
+
+            <item>
+                <name>Создан промежуточный</name>
+                <value>created_interim</value>
+                <module>ord</module>
+            </item>
+            <item>
+                <name>По поручению</name>
+                <value>created_interim.document</value>
+                <parent>created_interim</parent>
+                <module>ord</module>
+            </item>
+            <item>
+                <name>По документу</name>
+                <value>created_interim.incoming</value>
+                <parent>created_interim</parent>
+                <module>ord</module>
+            </item>
+
+
+            <item>
+                <name>Создан окончательный</name>
+                <value>created_final</value>
+                <module>ord</module>
+            </item>
+            <item>
+                <name>По поручению</name>
+                <value>created_final.document</value>
+                <parent>created_final</parent>
+                <module>ord</module>
+            </item>
+            <item>
+                <name>По документу</name>
+                <value>created_final.incoming</value>
+                <parent>created_final</parent>
+                <module>ord</module>
+            </item>
+
+            <item>
+                <name>Дополнительное соглашение</name>
+                <value>type_additional_agreement</value>
+                <module>ddo</module>
+            </item>
+            <item>
+                <name>Основной договор</name>
+                <value>type_additional_agreement.type_master_contract</value>
+                <parent>type_additional_agreement</parent>
+                <module>ddo</module>
+            </item>
+
+            <item>
+                <name>Создан по заявке</name>
+                <value>type_created_by_request</value>
+                <module>ddo</module>
+            </item>
+
+            <item>
+                <name>В соответствии с протоколом</name>
+                <value>protocol</value>
+                <module>ord</module>
+            </item>
+            <item>
+                <name>По документу выдано поручение</name>
+                <value>protocol.errandCreated</value>
+                <parent>protocol</parent>
+                <module>ord</module>
+            </item>
+            <item>
+                <name>Документ утверждён</name>
+                <value>protocol.documentApproved</value>
+                <parent>protocol</parent>
+                <module>ord</module>
+            </item>
+            <item>
+                <name>Документ отклонён</name>
+                <value>protocol.documentRejected</value>
+                <parent>protocol</parent>
+                <module>ord</module>
+            </item>
+
+        </items>
+    </directory>
+</directories>

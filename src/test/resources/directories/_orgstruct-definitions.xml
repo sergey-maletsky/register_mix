@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<directories>
+    <directory>
+        <type>ranks</type>
+        <displayable>true</displayable>
+        <searchable>false</searchable>
+        <displayName>Ранги</displayName>
+        <searchByDisplay>По рангу</searchByDisplay>
+        <dictType>PLAIN</dictType>
+        <module>orgstruct</module>
+        <displayFormatter>${value, - }${name}</displayFormatter>
+
+        <columns>
+            <column>
+                <columnId>name</columnId>
+                <displayName>Наименование</displayName>
+                <unique>true</unique>
+            </column>
+
+            <column>
+                <columnId>value</columnId>
+                <displayName>Ранг</displayName>
+                <widgetType>int</widgetType>
+            </column>
+        </columns>
+
+    </directory>
+
+    <directory>
+        <type>positions</type>
+        <displayName>Должности</displayName>
+        <searchByDisplay>По должности</searchByDisplay>
+        <parent>ranks</parent>
+        <displayable>true</displayable>
+        <searchable>false</searchable>
+        <dictType>PLAIN</dictType>
+        <module>orgstruct</module>
+        <columns>
+            <column>
+                <columnId>name</columnId>
+                <displayName>Наименование</displayName>
+                <unique>true</unique>
+            </column>
+
+        </columns>
+    </directory>
+
+    <directory>
+        <type>orgstruct_roles_search</type>
+        <columns/>
+        <displayName>Роли на обработке</displayName>
+        <displayable>false</displayable>
+        <searchable>true</searchable>
+        <dictType>SIMPLE</dictType>
+        <module>orgstruct</module>
+    </directory>
+
+    <directory>
+        <type>roles</type>
+        <displayName>Роли</displayName>
+        <columns/>
+        <displayable>false</displayable>
+        <searchable>false</searchable>
+        <dictType>SIMPLE</dictType>
+        <module>orgstruct</module>
+    </directory>
+</directories>

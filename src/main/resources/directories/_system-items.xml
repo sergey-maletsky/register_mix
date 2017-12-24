@@ -1,0 +1,587 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<directories>
+    <directory>
+        <version>4</version>
+        <type>priority</type>
+
+        <items>
+            <item>
+                <name>Высокий</name>
+                <value>high</value>
+                <applicable>routes</applicable>
+            </item>
+            <item>
+                <name>Средний</name>
+                <value>medium</value>
+                <applicable>routes</applicable>
+            </item>
+            <item>
+                <name>Низкий</name>
+                <value>low</value>
+                <applicable>routes</applicable>
+            </item>
+        </items>
+    </directory>
+
+    <directory>
+        <version>2</version>
+        <type>envelope_format</type>
+
+        <items>
+            <item>
+                <name>Е65 - 110 х 220 мм</name>
+                <value>E65</value>
+            </item>
+            <item>
+                <name>С5 - 162 х 229 мм</name>
+                <value>C5</value>
+            </item>
+            <item>
+                <name>С4 - 229 х 324 мм</name>
+                <value>C4</value>
+            </item>
+        </items>
+    </directory>
+
+    <directory>
+        <version>10</version>
+        <type>sendMethod</type>
+
+        <items>
+            <item>
+                <name>Электронная почта</name>
+                <value>email</value>
+                <applicable>routes</applicable>
+            </item>
+            <item>
+                <name>Электронная почта и почта</name>
+                <value>mailAndemail</value>
+                <applicable>routes</applicable>
+            </item>
+            <item>
+                <name>Почта</name>
+                <value>mail</value>
+                <applicable>routes</applicable>
+            </item>
+            <item>
+                <name>Факс и почта</name>
+                <value>faxAndMail</value>
+                <applicable>routes</applicable>
+            </item>
+            <item>
+                <name>Факс</name>
+                <value>fax</value>
+                <applicable>routes</applicable>
+            </item>
+            <item>
+                <name>МЭДО</name>
+                <value>MEDO</value>
+                <applicable>routes</applicable>
+            </item>
+            <item>
+                <name>Фельдъегерская служба</name>
+                <value>governmentCourier</value>
+                <applicable>routes</applicable>
+            </item>
+            <!--<item>-->
+                <!--<name>Из ЦА в РО</name>-->
+                <!--<value>syncToRO</value>-->
+            <!--</item>-->
+            <!--<item>-->
+                <!--<name>Из РО в ЦА</name>-->
+                <!--<value>syncToCA</value>-->
+            <!--</item>-->
+        </items>
+    </directory>
+
+    <directory>
+        <type>lifecycle</type>
+        <version>29</version>
+        <items>
+            <item>
+                <name>Аннулирован</name>
+                <value>annulated</value>
+                <applicable>routes</applicable>
+            </item>
+            <item>
+                <name>Черновик</name>
+                <value>draft</value>
+                <applicable>routes</applicable>
+            </item>
+            <item>
+                <name>На предварительной обработке</name>
+                <value>routes_preprocessing</value>
+                <applicable>routes</applicable>
+            </item>
+            <item>
+                <name>На доработке</name>
+                <value>routes_rejected</value>
+                <applicable>routes</applicable>
+            </item>
+            <item>
+                <name>На согласовании</name>
+                <value>routes_approval</value>
+                <applicable>routes</applicable>
+            </item>
+            <item>
+                <name>Согласовано</name>
+                <value>routes_approved</value>
+                <applicable>routes</applicable>
+            </item>
+            <item>
+                <name>На утверждении</name>
+                <value>routes_signing</value>
+                <applicable>routes</applicable>
+            </item>
+            <item>
+                <name>Утверждено</name>
+                <value>routes_signed</value>
+                <applicable>routes</applicable>
+            </item>
+            <item>
+                <name>На обработке</name>
+                <value>routes_execution</value>
+                <applicable>routes</applicable>
+            </item>
+            <item>
+                <name>Обработка завершена</name>
+                <value>archived</value>
+                <applicable>routes</applicable>
+            </item>
+
+            <item>
+                <name>Проект поручения</name>
+                <value>draftErrand</value>
+                <applicable>errand</applicable>
+            </item>
+            <item>
+                <name>На исполнении</name>
+                <value>onExecution</value>
+                <applicable>errand</applicable>
+            </item>
+            <item>
+                <name>На принятии отчёта</name>
+                <value>onControl</value>
+                <applicable>errand</applicable>
+            </item>
+            <item>
+                <name>Отозвано</name>
+                <value>cancelled</value>
+                <applicable>errand</applicable>
+            </item>
+            <item>
+                <name>Выполнено</name>
+                <value>completed</value>
+                <applicable>errand</applicable>
+            </item>
+        </items>
+    </directory>
+
+
+    <directory>
+        <version>34</version>
+        <type>dateRanges</type>
+        <items>
+            <item>
+                <name>Дата создания</name>
+                <value>cm:created</value>
+                <applicable>all</applicable>
+            </item>
+            <item>
+                <name>Срок исполнения</name>
+                <value>exec:dateOfExecution</value>
+                <applicable>ALL</applicable>
+            </item>
+             <item>
+                <name>Срок согласования</name>
+                <value>route:deadlineDates</value>
+                <applicable>routes</applicable>
+            </item>
+
+            <item>
+                <name>Дата завершения выполнения</name>
+                <value>exec:finishedDate</value>
+                <applicable>errand</applicable>
+            </item>
+
+            <item>
+                <name>Отчет создан</name>
+                <value>exec:reportDateCreated</value>
+                <applicable>errand</applicable>
+            </item>
+            <item>
+                <name>Отчет принят</name>
+                <value>exec:reportDateApproved</value>
+                <applicable>errand</applicable>
+            </item>
+
+            <item>
+                <name>Дата завершения согласования</name>
+                <value>route:approvingDate</value>
+                <applicable>routes</applicable>
+            </item>
+            <item>
+                <name>Дата утверждения</name>
+                <value>route:signingDate</value>
+            </item>
+            <item>
+                <name>Дата завершения обработки</name>
+                <value>route:archivingDate</value>
+                <applicable>routes</applicable>
+            </item>
+
+            <item>
+                <name>Дата вступления в силу</name>
+                <value>exec:begin</value>
+            </item>
+           <item>
+                <name>Дата утраты силы</name>
+                <value>exec:end</value>
+            </item>
+
+
+        </items>
+    </directory>
+
+    <directory>
+        <version>7</version>
+        <type>expandables_search_fields</type>
+        <items>
+            <item>
+                <name>ecm:documentAuthor</name>
+            </item>
+            <item>
+                <name>exec:executor</name>
+            </item>
+            <item>
+                <name>exec:controller</name>
+            </item>
+            <item>
+                <name>route:consideration</name>
+            </item>
+            <item>
+                <name>route:execution</name>
+            </item>
+            <item>
+                <name>route:familiarization</name>
+            </item>
+            <item>
+                <name>route:signing</name>
+            </item>
+            <item>
+                <name>route:registration</name>
+            </item>
+            <item>
+                <name>route:sending</name>
+            </item>
+            <item>
+                <name>route:approval</name>
+            </item>
+        </items>
+    </directory>
+
+    <directory>
+        <version>43</version>
+        <type>counters</type>
+        <items>
+            <item>
+                <name>Глобальный счетчик</name>
+                <value>счетчик_глобальный</value>
+                <start_from>0</start_from>
+                <reserveEachDay>0</reserveEachDay>
+                <required>Нет</required>
+            </item>
+
+            <item>
+                <name>Подразделение-регистратор</name>
+                <value>подразделение_регистратор</value>
+                <required>Нет</required>
+            </item>
+
+            <item>
+                <name>Подразделение-автор</name>
+                <value>подразделение_автор</value>
+                <required>Нет</required>
+            </item>
+           <item>
+                <name>Табельный номер</name>
+                <value>табельный_номер</value>
+                <required>Нет</required>
+            </item>
+
+            <item>
+                <name>Индекс дела</name>
+                <value>индекс_дела</value>
+                <required>Нет</required>
+            </item>
+
+            <item>
+                <name>Счетчик уровня департамента</name>
+                <value>счетчик_департамента</value>
+                <start_from>0</start_from>
+                <reserveEachDay>0</reserveEachDay>
+            </item>
+
+            <item>
+                <name>Год</name>
+                <value>год</value>
+            </item>
+            <item>
+                <name>Месяц</name>
+                <value>месяц</value>
+            </item>
+            <item>
+                <name>Неделя</name>
+                <value>неделя</value>
+            </item>
+            <item>
+                <name>День</name>
+                <value>день</value>
+            </item>
+
+            <item>
+                <name>ДСП</name>
+                <value>ДСП</value>
+                <required>Нет</required>
+            </item>
+
+            <item>
+                <name>Суффикс вида документа</name>
+                <value>суффикс_вида_документа</value>
+            </item>
+
+            <item>
+                <name>Код подписавшего</name>
+                <value>код_подписавшего</value>
+                <required>Нет</required>
+            </item>
+
+            <item>
+                <name>Счетчик вида документа</name>
+                <value>счетчик_вида_документа</value>
+                <start_from>0</start_from>
+                <reserveEachDay>0</reserveEachDay>
+                <required>Нет</required>
+            </item>
+
+            <item>
+                <name>Счетчик типа документа</name>
+                <value>счетчик_типа_документа</value>
+                <start_from>0</start_from>
+                <reserveEachDay>0</reserveEachDay>
+                <required>Нет</required>
+            </item>
+
+            <item>
+                <name>Счетчик типа документа по департаменту</name>
+                <value>счетчик_типа_документа_по_департаменту</value>
+                <start_from>0</start_from>
+                <reserveEachDay>0</reserveEachDay>
+                <required>Нет</required>
+            </item>
+
+            <item>
+                <name>Счетчик вида документа по департаменту</name>
+                <value>счетчик_вида_документа_по_департаменту</value>
+                <start_from>0</start_from>
+                <reserveEachDay>0</reserveEachDay>
+                <required>Нет</required>
+            </item>
+            <item>
+                <name>Cчетчик фельдсвязи</name>
+                <value>счетчик_фельдсвязи</value>
+                <start_from>0</start_from>
+                <reserveEachDay>0</reserveEachDay>
+                <required>Нет</required>
+            </item>
+
+            <item>
+                <name>Счетчик номера проекта</name>
+                <value>счетчик_номера_проекта</value>
+                <start_from>0</start_from>
+                <reserveEachDay>0</reserveEachDay>
+                <required>Нет</required>
+            </item>
+
+            <item>
+                <name>Номенклатурный номер товара</name>
+                <value>номенклатурный_номер_товара</value>
+                <start_from>0</start_from>
+                <reserveEachDay>0</reserveEachDay>
+                <required>Нет</required>
+                <period>never</period>
+                <module>products</module>
+            </item>
+            <item>
+                <name>Номер родительского документа</name>
+                <value>номер_родительского_документа</value>
+                <start_from>0</start_from>
+                <reserveEachDay>0</reserveEachDay>
+                <required>Да</required>
+                <period>never</period>
+            </item>
+            <item>
+                <name>Счетчик дочерних документов</name>
+                <value>счетчик_дочерних_документов</value>
+                <start_from>1</start_from>
+                <reserveEachDay>0</reserveEachDay>
+                <required>Да</required>
+                <period>never</period>
+            </item>
+        </items>
+    </directory>
+
+    <directory>
+        <version>6</version>
+        <type>reportFormat</type>
+        <items>
+            <item>
+                <name>pdf</name>
+                <value>pdf</value>
+            </item>
+            <item>
+                <name>rtf</name>
+                <value>rtf</value>
+            </item>
+            <item>
+                <name>xlsx</name>
+                <value>xlsx</value>
+            </item>
+            <item>
+                <name>docx</name>
+                <value>docx</value>
+            </item>
+
+        </items>
+    </directory>
+
+    <directory>
+        <version>4</version>
+        <type>additionalFields</type>
+        <items>
+        </items>
+    </directory>
+
+    <directory>
+        <version>14</version>
+        <type>orgstruct_roles_search</type>
+
+        <items>
+            <item>
+                <name>Автор</name>
+                <value>ecm:documentAuthor</value>
+                <orgstructType>position</orgstructType>
+                <applicable>all</applicable>
+            </item>
+            <item>
+                <name>Исполнитель поручения</name>
+                <value>exec:executor</value>
+                <orgstructType>position</orgstructType>
+                <applicable>errand</applicable>
+            </item>
+            <item>
+                <name>Контролёр поручения</name>
+                <value>exec:controller</value>
+                <orgstructType>position</orgstructType>
+                <applicable>errand</applicable>
+            </item>
+
+            <item>
+                <name>Ответственный за исполнение</name>
+                <value>route:execution</value>
+                <orgstructType>orgstruct_item</orgstructType>
+                <applicable>routes</applicable>
+            </item>
+            <item>
+                <name>На подпись</name>
+                <value>route:signing</value>
+                <orgstructType>position</orgstructType>
+                <applicable>routes</applicable>
+            </item>
+
+            <item>
+                <name>На согласование</name>
+                <value>route:approval</value>
+                <orgstructType>position</orgstructType>
+                <applicable>routes</applicable>
+            </item>
+        </items>
+    </directory>
+
+    <directory>
+        <type>propertyTypes</type>
+        <version>6</version>
+        <items>
+            <item>
+                <name>Строка</name>
+                <value>text</value>
+            </item>
+            <item>
+                <name>Выбор из справочника</name>
+                <value>parentDirectory</value>
+            </item>
+            <item>
+                <name>Тип/вид документа</name>
+                <value>documentTypes</value>
+                <module>ecm</module>
+            </item>
+            <item>
+                <name>Пароль</name>
+                <value>password</value>
+            </item>
+            <item>
+                <name>Многострочный текст</name>
+                <value>textArea</value>
+            </item>
+            <item>
+                <name>Целое число</name>
+                <value>int</value>
+            </item>
+            <item>
+                <name>Вещественное число</name>
+                <value>double</value>
+            </item>
+            <item>
+                <name>Логическое значение</name>
+                <value>boolean</value>
+            </item>
+            <item>
+                <name>Дата</name>
+                <value>date</value>
+            </item>
+            <item>
+                <name>Адресат</name>
+                <value>addressee</value>
+                <module>crm</module>
+            </item>
+            <item>
+                <name>Оргпозиция</name>
+                <value>position</value>
+                <module>orgstruct</module>
+            </item>
+            <item>
+                <name>Подразделение</name>
+                <value>department</value>
+                <module>orgstruct</module>
+            </item>
+            <item>
+                <name>Адрес</name>
+                <value>address</value>
+                <module>crm</module>
+            </item>
+            <item>
+                <name>Список значений из справочника</name>
+                <value>embeddedDirectoryGrid</value>
+            </item>
+            <item>
+                <name>Выбор значений</name>
+                <value>directoryAdditionalInfo</value>
+            </item>
+            <item>
+                <name>Муниципальное образование</name>
+                <value>crm:formation</value>
+                <module>koap</module>
+            </item>
+        </items>
+    </directory>
+</directories>

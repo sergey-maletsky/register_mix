@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<directories>
+
+
+    <directory>
+        <type>positions</type>
+        <version>1</version>
+        <items>
+            <item>
+                <name>Директор</name>
+            </item>
+            <item>
+                <name>Заведующий отделом</name>
+            </item>
+            <item>
+                <name>Консультант-программист</name>
+            </item>
+            <item>
+                <name>Специалист-эксперт</name>
+            </item>
+            <item>
+                <name>Специалист 1 разряда</name>
+            </item>
+            <item>
+                <name>Бухгалтер</name>
+            </item>
+            <item>
+                <name>Генеральный директор</name>
+            </item>
+            <item>
+                <name>Главный бухгалтер</name>
+            </item>
+            <item>
+                <name>Главный технолог</name>
+            </item>
+            <item>
+                <name>Директор по персоналу</name>
+            </item>
+            <item>
+                <name>Директор по правовым вопросам</name>
+            </item>
+            <item>
+                <name>Директор по производству</name>
+            </item>
+            <item>
+                <name>Директор по сбыту</name>
+            </item>
+            <item>
+                <name>Заместитель начальника отдела</name>
+            </item>
+            <item>
+                <name>Зам.генерального директора - директор по экономичекому развитию</name>
+            </item>
+            <item>
+                <name>Инженер</name>
+            </item>
+            <item>
+                <name>Менеджер</name>
+            </item>
+            <item>
+                <name>Начальник аппарата</name>
+            </item>
+            <item>
+                <name>Начальник канцелярии</name>
+            </item>
+            <item>
+                <name>Начальник отдела</name>
+            </item>
+            <item>
+                <name>Начальник службы</name>
+            </item>
+            <item>
+                <name>Секретарь</name>
+            </item>
+            <item>
+                <name>Советник</name>
+            </item>
+            <item>
+                <name>Специалист</name>
+            </item>
+            <item>
+                <name>Старший специалист</name>
+            </item>
+            <item>
+                <name>Старший экономист</name>
+            </item>
+            <item>
+                <name>Технический директор</name>
+            </item>
+            <item>
+                <name>Технолог</name>
+            </item>
+            <item>
+                <name>Финансовый директор</name>
+            </item>
+            <item>
+                <name>Экономист</name>
+            </item>
+            <item>
+                <name>Юрисконсульт</name>
+            </item>
+            <item>
+                <name>Юрист</name>
+            </item>
+        </items>
+    </directory>
+
+    <directory>
+        <type>ranks</type>
+        <version>1</version>
+        <items>
+            <item>
+                <name>Руководитель организации</name>
+                <value>900</value>
+            </item>
+            <item>
+                <name>Первый заместитель руководителя организации</name>
+                <value>800</value>
+            </item>
+            <item>
+                <name>Заместитель руководителя организации</name>
+                <value>700</value>
+            </item>
+            <item>
+                <name>Руководитель подразделения</name>
+                <value>600</value>
+            </item>
+            <item>
+                <name>Первый заместитель руководителя подразделения</name>
+                <value>500</value>
+            </item>
+            <item>
+                <name>Заместитель руководителя подразделения</name>
+                <value>400</value>
+            </item>
+            <item>
+                <name>Старший специалист</name>
+                <value>300</value>
+            </item>
+            <item>
+                <name>Специалист</name>
+                <value>200</value>
+            </item>
+            <item>
+                <name>Младший специалист</name>
+                <value>100</value>
+            </item>
+        </items>
+    </directory>
+
+    <directory>
+        <type>roles</type>
+        <version>1</version>
+        <items>
+            <item>
+                <name>Администрирование</name>
+                <value>admin</value>
+            </item>
+            <item>
+                <name>Делопроизводство</name>
+                <value>filer</value>
+                <module>ord</module>
+            </item>
+            <item>
+                <name>Создание документов</name>
+                <value>contributor</value>
+            </item>
+            <item>
+                <name>Контроль</name>
+                <value>control</value>
+                <module>ord</module>
+            </item>
+            <item>
+                <name>Подготовка договоров</name>
+                <value>cases</value>
+                <module>ddo</module>
+            </item>
+            <item>
+                <name>Склад и управление запасами</name>
+                <value>stockManagement</value>
+            </item>
+
+            <item>
+                <name>Администратор справочников</name>
+                <value>directory_editor</value>
+                <parent>admin</parent>
+                <requires>admin</requires>
+            </item>
+            <item>
+                <name>Кадровик</name>
+                <value>control_execution_routes.hr</value>
+                <parent>admin</parent>
+                <requires>admin</requires>
+            </item>
+            <item>
+                <name>Корректировка документов на маршруте</name>
+                <value>falcificate_documents</value>
+                <parent>admin</parent>
+                <requires>admin</requires>
+                <module>ord</module>
+            </item>
+            <item>
+                <name>Просмотр всех документов организации</name>
+                <value>view_all_documents</value>
+                <parent>admin</parent>
+                <requires>admin</requires>
+            </item>
+            <item>
+                <name>Просмотр всех документов подразделения</name>
+                <value>view_all_department_documents</value>
+                <parent>admin</parent>
+                <requires>admin</requires>
+            </item>
+            <item>
+                <name>Редактор оргструктуры подразделения</name>
+                <value>orgstruct_editor</value>
+                <parent>admin</parent>
+            </item>
+            <item>
+                <name>Редактор шаблонов подразделения</name>
+                <value>template_editor</value>
+                <parent>admin</parent>
+            </item>
+
+            <item>
+                <name>Регистратор документов</name>
+                <value>registrator</value>
+                <parent>filer</parent>
+                <module>ord</module>
+            </item>
+            <item>
+                <name>Резервирование номеров</name>
+                <value>reserving_reg_number</value>
+                <parent>filer</parent>
+                <module>ord</module>
+            </item>
+            <item>
+                <name>Делопроизводитель</name>
+                <value>filing_clerk</value>
+                <parent>filer</parent>
+                <module>ord</module>
+            </item>
+            <item>
+                <name>Ответственный за отправку</name>
+                <value>sender</value>
+                <parent>filer</parent>
+                <module>ord</module>
+            </item>
+            <item>
+                <name>Ответственный за хранение</name>
+                <value>archivist</value>
+                <parent>filer</parent>
+                <requires>admin</requires>
+                <module>archive</module>
+            </item>
+
+            <item>
+                <name>Создание входящих документов</name>
+                <value>records_manager</value>
+                <parent>contributor</parent>
+                <module>ord</module>
+            </item>
+            <item>
+                <name>Создание входящих документов (импорт)</name>
+                <value>scan_manager</value>
+                <parent>contributor</parent>
+                <module>ord</module>
+            </item>
+            <item>
+                <name>Ответcтвенный за предварительную обработку</name>
+                <value>incoming_email_manager</value>
+                <parent>contributor</parent>
+                <module>ord</module>
+            </item>
+            <item>
+                <name>Создание исходящих документов</name>
+                <value>outgoing_documents_manager</value>
+                <parent>contributor</parent>
+                <module>ord</module>
+            </item>
+            <item>
+                <name>Создание организационно-распорядительных документов</name>
+                <value>ord_manager</value>
+                <parent>contributor</parent>
+                <module>ord</module>
+            </item>
+            <item>
+                <name>Создание справочно-информационных документов</name>
+                <value>is_manager</value>
+                <parent>contributor</parent>
+                <module>ord</module>
+            </item>
+            <item>
+                <name>Создание нормативно-правовых документов</name>
+                <value>npd_manager</value>
+                <parent>contributor</parent>
+                <module>gov</module>
+            </item>
+            <item>
+                <name>Создание обращений граждан и юр. лиц</name>
+                <value>applicants_manager</value>
+                <parent>contributor</parent>
+                <module>gov</module>
+            </item>
+            <item>
+                <name>Создание договоров</name>
+                <value>contracts_manager</value>
+                <parent>contributor</parent>
+                <module>ddo</module>
+            </item>
+
+            <item>
+                <name>Возможность выдачи поручений по всей оргструктуре</name>
+                <value>top_errand_issuer</value>
+                <parent>control</parent>
+                <requires>admin</requires>
+                <module>ord</module>
+            </item>
+
+            <item>
+                <name>Ответственный за контроль исполнения входящих документов</name>
+                <value>control_execution_routes.incoming</value>
+                <parent>control</parent>
+                <module>ord</module>
+            </item>
+            <item>
+                <name>Ответственный за контроль исполнения организационно-распорядительных документов</name>
+                <value>control_execution_routes.organisational</value>
+                <parent>control</parent>
+                <module>ord</module>
+            </item>
+            <item>
+                <name>Ответственный за контроль исполнения справочно-информационных документов</name>
+                <value>control_execution_routes.info</value>
+                <parent>control</parent>
+                <module>ord</module>
+            </item>
+            <item>
+                <name>Ответственный за контроль исполнения обращений граждан и юр. лиц</name>
+                <value>control_execution_routes.publicRequest</value>
+                <parent>control</parent>
+                <module>gov</module>
+            </item>
+            <item>
+                <name>Ответственный за контроль исполнения договоров</name>
+                <value>control_execution_routes.contract</value>
+                <parent>control</parent>
+                <module>ddo</module>
+            </item>
+            <item>
+                <name>Ответственный за контроль исполнения закупок</name>
+                <value>control_execution_routes.purchasing</value>
+                <parent>control</parent>
+                <module>ddo</module>
+            </item>
+            <item>
+                <name>Контроль гос. регистрации</name>
+                <value>npd_approval</value>
+                <parent>control</parent>
+                <module>ord</module>
+            </item>
+
+            <item>
+                <name>Создание проектов договоров</name>
+                <value>draft_contracts_manager</value>
+                <parent>cases</parent>
+                <module>ddo</module>
+            </item>
+            <item>
+                <name>Работа с контрагентами</name>
+                <value>counteragents_manager</value>
+                <parent>cases</parent>
+                <module>ddo</module>
+            </item>
+
+            <item>
+                <name>Управление складами</name>
+                <value>storekeeper</value>
+                <parent>stockManagement</parent>
+                <requires>admin</requires>
+                <module>store</module>
+            </item>
+            <item>
+                <name>Товаровед</name>
+                <value>commodities_expert</value>
+                <parent>stockManagement</parent>
+                <requires>admin</requires>
+                <module>store</module>
+            </item>
+            <item>
+                <name>Ответственный за закупки</name>
+                <value>stockManagementResponsible</value>
+                <parent>stockManagement</parent>
+                <requires>admin</requires>
+                <module>stockman</module>
+            </item>
+        </items>
+    </directory>
+</directories>

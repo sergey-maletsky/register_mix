@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<directories>
+    <directory>
+        <version>20170515</version>
+        <type>documentTypes</type>
+        <items>
+            <item>
+                <name>Требование РС</name>
+                <value>rmrs.requirement</value>
+            </item>
+            <item>
+                <name>Предложение по требованию</name>
+                <value>routes.proposal</value>
+            </item>
+            <item>
+                <name>Циркулярное письмо</name>
+                <value>routes.circular</value>
+            </item>
+
+            <item>
+                <name>Поручение</name>
+                <value>errand</value>
+            </item>
+            <item>
+                <name>Поручение с написанием отчета</name>
+                <value>errand.withReport</value>
+                <parent>errand</parent>
+            </item>
+            <item>
+                <name>Поручение на рассмотрение необходимости внедрения предложения</name>
+                <value>errand.considerProposal</value>
+                <parent>errand</parent>
+            </item>
+            <item>
+                <name>Поручение на внесение изменений</name>
+                <value>errand.changeRequirement</value>
+                <parent>errand</parent>
+            </item>
+            <item>
+                <name>Поручение на создание требования</name>
+                <value>errand.changeRequirement.create</value>
+                <parent>errand</parent>
+            </item>
+            <item>
+                <name>Поручение на создание документа</name>
+                <value>errand.changeRequirement.create.doc</value>
+                <parent>errand</parent>
+            </item>
+            <item>
+                <name>Поручение на изменение требования</name>
+                <value>errand.changeRequirement.change</value>
+                <parent>errand</parent>
+            </item>
+        </items>
+    </directory>
+</directories>

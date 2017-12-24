@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<directories>
+    <directory>
+        <type>systemSettings</type>
+        <displayName>Настройки</displayName>
+        <displayable>true</displayable>
+        <searchable>false</searchable>
+        <dictType>SIMPLE</dictType>
+        <module>ecm</module>
+        <columns>
+            <column>
+                <columnId>name</columnId>
+                <displayName>Название</displayName>
+                <required>true</required>
+            </column>
+            <column>
+                <columnId>value</columnId>
+                <displayName>Значение</displayName>
+            </column>
+            <column>
+                <columnId>key</columnId>
+                <showColumn>false</showColumn>
+            </column>
+            <column>
+                <columnId>widgetType</columnId>
+                <showColumn>false</showColumn>
+            </column>
+        </columns>
+    </directory>
+    <directory>
+        <type>propertyTypes</type>
+        <displayName>Типы полей</displayName>
+        <displayable>false</displayable>
+        <searchable>false</searchable>
+        <dictType>SIMPLE</dictType>
+        <module>base</module>
+        <columns>
+            <column>
+                <columnId>name</columnId>
+                <displayName>Название</displayName>
+                <required>true</required>
+            </column>
+            <column>
+                <columnId>value</columnId>
+                <displayName>Обозначение</displayName>
+                <required>true</required>
+            </column>
+        </columns>
+    </directory>
+</directories>

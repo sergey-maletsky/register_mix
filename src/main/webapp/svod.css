@@ -1,0 +1,73 @@
+.zero-position--absolute {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+}
+.no-overflow {
+    overflow: hidden;
+}
+
+#overlay {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: block;
+    z-index: 2;
+}
+.active-popup {
+    display: block !important;
+}
+.tree-item {
+    left: 0px;
+    width: 9px;
+    height: 9px;
+    position:absolute;
+}
+.tree-item__image {
+    width: 9px;
+    height: 9px;
+    border: 0px;
+}
+.tree-item__folder {
+    padding-left: 22px;
+    color: #0274ba;
+}
+.tree-item__folder--closed {
+    background:url(images/folder.png) no-repeat 0px 1px;
+}
+.tree-item__folder--opened {
+    background:url(images/openedFolder.png) no-repeat 0px 1px;
+}
+.tree-item__image--plus {
+    background:url(images/plus.png) no-repeat 0px 1px;
+}
+.document-counting {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-weight: bold;
+}
+
+.toolbarButton.findPrevious::before {
+    content: url(images/findbarButton-previous.png);
+}
+
+.toolbarButton.findNext::before {
+    content: url(images/findbarButton-next.png);
+}
+
+.in_block {
+    display: inline-block;
+}
+
+.doorHanger:before {
+    left: 5px;
+}
+
+.doorHanger:after {
+    left: 6px;
+}

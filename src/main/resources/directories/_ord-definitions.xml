@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<directories>
+    <directory>
+        <type>envelope_format</type>
+        <displayName>Формат конверта</displayName>
+        <displayable>false</displayable>
+        <searchable>false</searchable>
+        <dictType>PLAIN</dictType>
+        <module>ord</module>
+        <columns>
+            <column>
+                <columnId>name</columnId>
+                <displayName>Наименование</displayName>
+            </column>
+        </columns>
+    </directory>
+
+    <directory>
+        <type>supplementary_info</type>
+        <displayName>Виды дополнительной информации</displayName>
+        <displayable>false</displayable>
+        <searchable>true</searchable>
+        <dictType>PLAIN</dictType>
+        <module>ord</module>
+        <columns>
+            <column>
+                <columnId>name</columnId>
+                <displayName>Наименование</displayName>
+            </column>
+        </columns>
+    </directory>
+
+    <directory>
+        <columns/>
+        <type>priority</type>
+        <displayName>Приоритет</displayName>
+        <searchByDisplay>По приоритету</searchByDisplay>
+        <displayable>false</displayable>
+        <searchable>true</searchable>
+        <dictType>PLAIN</dictType>
+        <module>ord</module>
+        <columns>
+            <column>
+                <columnId>name</columnId>
+                <displayName>Приоритет</displayName>
+                <unique>true</unique>
+            </column>
+        </columns>
+    </directory>
+
+    <directory>
+        <type>counters</type>
+        <displayName>Счетчики</displayName>
+        <displayable>true</displayable>
+        <searchable>false</searchable>
+        <dictType>SIMPLE</dictType>
+        <module>ord</module>
+        <columns>
+            <column>
+                <columnId>name</columnId>
+                <displayName>Название</displayName>
+            </column>
+            <column>
+                <columnId>value</columnId>
+                <displayName>Идентификатор</displayName>
+                <required>true</required>
+                <unique>true</unique>
+                <showColumn>true</showColumn>
+            </column>
+            <column>
+                <columnId>start_from</columnId>
+                <displayName>Начальное значение</displayName>
+                <required>true</required>
+                <widgetType>int</widgetType>
+            </column>
+            <column>
+                <columnId>reserveEachDay</columnId>
+                <displayName>Кол-во резервируемых в день номеров</displayName>
+                <required>true</required>
+                <widgetType>int</widgetType>
+            </column>
+            <column>
+                <columnId>period</columnId>
+                <displayName>Период ротации</displayName>
+                <defaultValue>year</defaultValue>
+            </column>
+            <column>
+                <columnId>format</columnId>
+                <displayName>Формат</displayName>
+            </column>
+            <column>
+                <columnId>required</columnId>
+                <displayName>Обязательный</displayName>
+                <required>false</required>
+                <widgetType>boolean</widgetType>
+            </column>
+        </columns>
+    </directory>
+
+    <directory>
+        <type>reg_counter_templates</type>
+        <displayName>Шаблоны регистрационных номеров</displayName>
+        <searchByDisplay>По шаблонам регистрационных номеров</searchByDisplay>
+        <searchable>false</searchable>
+        <displayable>true</displayable>
+        <dictType>PLAIN</dictType>
+        <module>ord</module>
+        <columns>
+            <column>
+                <columnId>name</columnId>
+                <displayName>Вид документа</displayName>
+                <widgetType>documentTypes</widgetType>
+                <required>true</required>
+                <unique>true</unique>
+            </column>
+            <column>
+                <columnId>value</columnId>
+                <displayName>Шаблон</displayName>
+                <required>true</required>
+            </column>
+        </columns>
+    </directory>
+
+    <directory>
+        <type>project_number_counter_templates</type>
+        <displayName>Шаблоны номеров проекта</displayName>
+        <searchByDisplay>По шаблонам номеров проекта</searchByDisplay>
+        <searchable>false</searchable>
+        <displayable>false</displayable>
+        <dictType>SIMPLE</dictType>
+        <module>ord</module>
+        <columns>
+            <column>
+                <columnId>name</columnId>
+                <displayName>Вид документа</displayName>
+                <widgetType>documentTypes</widgetType>
+                <required>true</required>
+                <unique>true</unique>
+            </column>
+            <column>
+                <columnId>value</columnId>
+                <displayName>Шаблон</displayName>
+                <required>true</required>
+            </column>
+        </columns>
+    </directory>
+
+    <directory>
+        <type>nomenclature</type>
+        <displayName>Номенклатура дел</displayName>
+        <searchByDisplay>По номенклатуре дел</searchByDisplay>
+
+        <parent>nomenclature</parent>
+        <displayable>false</displayable>
+        <searchable>false</searchable>
+        <dictType>HIERARCHY</dictType>
+        <displayFormatter>${index, - }${name}</displayFormatter>
+        <module>ord</module>
+
+        <columns>
+            <column>
+                <columnId>name</columnId>
+                <displayName>Заголовок</displayName>
+                <required>true</required>
+            </column>
+            <column>
+                <columnId>parent</columnId>
+                <displayName>Род. элемент</displayName>
+                <parentDirectory>nomenclature</parentDirectory>
+                <required>true</required>
+                <filterByColumn>false</filterByColumn>
+            </column>
+            <column>
+                <columnId>index</columnId>
+                <displayName>Индекс</displayName>
+                <required>true</required>
+                <filterByColumn>false</filterByColumn>
+            </column>
+            <column>
+                <columnId>storagePeriod</columnId>
+                <displayName>Срок хранения</displayName>
+                <parentDirectory>storagePeriod</parentDirectory>
+                <required>true</required>
+            </column>
+            <column>
+                <columnId>category</columnId>
+                <displayName>Категория</displayName>
+                <parentDirectory>nomenclatureCategory</parentDirectory>
+                <required>true</required>
+                <filterByColumn>false</filterByColumn>
+            </column>
+            <column>
+                <columnId>article</columnId>
+                <displayName>Статьи</displayName>
+            </column>
+            <column>
+                <columnId>department</columnId>
+                <displayName>Подразделение</displayName>
+                <widgetType>department</widgetType>
+            </column>
+            <column>
+                <columnId>dateOpen</columnId>
+                <displayName>Дата с</displayName>
+                <widgetType>date</widgetType>
+            </column>
+            <column>
+                <columnId>dateClosed</columnId>
+                <displayName>Дата по</displayName>
+                <widgetType>date</widgetType>
+            </column>
+            <column>
+                <columnId>toArchive</columnId>
+                <displayName>В архив</displayName>
+                <widgetType>boolean</widgetType>
+            </column>
+            <column>
+                <columnId>toTrashcan</columnId>
+                <displayName>К уничтожению</displayName>
+                <widgetType>boolean</widgetType>
+            </column>
+            <column>
+                <columnId>removed</columnId>
+                <displayName>Уничтожено</displayName>
+                <widgetType>boolean</widgetType>
+            </column>
+            <column>
+                <columnId>transferred</columnId>
+                <displayName>В архиве</displayName>
+                <widgetType>boolean</widgetType>
+            </column>
+            <column>
+                <columnId>fond</columnId>
+                <displayName>Фонд</displayName>
+            </column>
+            <column>
+                <columnId>pages</columnId>
+                <displayName>Количество листов</displayName>
+                <filterByColumn>false</filterByColumn>
+            </column>
+            <column>
+                <columnId>remark</columnId>
+                <displayName>Примечание</displayName>
+                <filterByColumn>false</filterByColumn>
+            </column>
+        </columns>
+    </directory>
+
+
+    <directory>
+        <type>storagePeriod</type>
+        <displayName>Срок хранения</displayName>
+        <displayable>false</displayable>
+        <searchable>false</searchable>
+        <dictType>PLAIN</dictType>
+        <module>ord</module>
+
+        <columns>
+            <column>
+                <columnId>name</columnId>
+                <displayName>Срок хранения</displayName>
+            </column>
+        </columns>
+    </directory>
+
+    <directory>
+        <type>resolution</type>
+        <displayName>Резолюция</displayName>
+        <displayable>false</displayable>
+        <searchable>false</searchable>
+        <dictType>PLAIN</dictType>
+        <module>ord</module>
+
+        <columns>
+            <column>
+                <columnId>name</columnId>
+                <displayName>Текст</displayName>
+                <unique>true</unique>
+                <required>true</required>
+            </column>
+            <column>
+                <columnId>hasExecution</columnId>
+                <displayName>Исполнение</displayName>
+                <widgetType>boolean</widgetType>
+            </column>
+            <column>
+                <columnId>hasFamiliarization</columnId>
+                <displayName>Ознакомление</displayName>
+                <widgetType>boolean</widgetType>
+            </column>
+            <column>
+                <columnId>default</columnId>
+                <displayName>По умолчанию</displayName>
+                <widgetType>boolean</widgetType>
+            </column>
+        </columns>
+    </directory>
+
+    <directory>
+        <type>documentSuffixes</type>
+        <displayName>Индексы видов документов</displayName>
+        <displayable>false</displayable>
+        <searchable>false</searchable>
+        <dictType>PLAIN</dictType>
+        <module>ord</module>
+
+        <columns>
+            <column>
+                <columnId>name</columnId>
+                <displayName>Название</displayName>
+                <required>true</required>
+                <unique>true</unique>
+            </column>
+            <column>
+                <columnId>value</columnId>
+                <displayName>Индекс</displayName>
+                <required>true</required>
+            </column>
+        </columns>
+    </directory>
+
+    <directory>
+        <type>placesOfPublication</type>
+        <displayName>Места публикации</displayName>
+        <displayable>false</displayable>
+        <searchable>false</searchable>
+        <dictType>PLAIN</dictType>
+        <module>ord</module>
+        <columns>
+            <column>
+                <columnId>name</columnId>
+                <displayName>Наименование</displayName>
+            </column>
+            <column>
+                <columnId>address</columnId>
+                <displayName>Адрес</displayName>
+            </column>
+        </columns>
+    </directory>
+
+    <directory>
+        <type>rules</type>
+        <displayName>Правила обработки</displayName>
+        <displayable>false</displayable>
+        <searchable>false</searchable>
+        <lazyLoad>true</lazyLoad>
+        <clonable>false</clonable>
+        <dictType>PLAIN</dictType>
+        <module>ord</module>
+    </directory>
+</directories>

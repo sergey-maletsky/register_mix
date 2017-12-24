@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<directories>
+    <directory>
+        <type>relation_type</type>
+        <version>20170726</version>
+        <items>
+            <item>
+                <name>Заменяет</name>
+                <value>replace</value>
+            </item>
+            <item>
+                <name>Заменено</name>
+                <value>replace.by</value>
+                <parent>replace</parent>
+            </item>
+            <item>
+                <name>Связано с</name>
+                <value>relatedWith</value>
+            </item>
+            <item>
+                <name>С ним связано</name>
+                <value>relatedWith.relatedTo</value>
+                <parent>relatedWith</parent>
+            </item>
+
+            <item>
+                <name>Создано</name>
+                <value>created</value>
+            </item>
+            <item>
+                <name>На основании</name>
+                <value>created.createdOn</value>
+                <parent>created</parent>
+            </item>
+
+            <item>
+                <name>На основании</name>
+                <value>type_13</value>
+            </item>
+            <item>
+                <name>Основание для</name>
+                <value>type_13.type_14</value>
+                <parent>type_13</parent>
+            </item>
+
+            <item>
+                <name>Изменяет</name>
+                <value>changes</value>
+            </item>
+            <item>
+                <name>Изменено на основании</name>
+                <value>changes.basedOn</value>
+                <parent>changes</parent>
+            </item>
+
+              <item>
+                <name>Дубликат</name>
+                <value>duplicate_proposal</value>
+            </item>
+            <item>
+                <name>Первичное</name>
+                <value>duplicate_proposal.original_proposal</value>
+                <parent>duplicate_proposal</parent>
+            </item>
+        </items>
+    </directory>
+</directories>

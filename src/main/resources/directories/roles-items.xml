@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<directories>
+    <directory>
+        <version>20170622</version>
+        <type>roles</type>
+        <items>
+            <item>
+                <name>Администрирование</name>
+                <value>admin</value>
+            </item>
+
+            <item>
+                <name>Администратор справочников</name>
+                <value>directory_editor</value>
+                <parent>admin</parent>
+                <requires>admin</requires>
+            </item>
+            <item>
+                <name>Корректировка документов на маршруте</name>
+                <value>falcificate_documents</value>
+                <parent>admin</parent>
+                <requires>admin</requires>
+            </item>
+            <item>
+                <name>Редактор оргструктуры подразделения</name>
+                <value>orgstruct_editor</value>
+                <parent>admin</parent>
+            </item>
+            <item>
+                <name>Редактор шаблонов подразделения</name>
+                <value>template_editor</value>
+                <parent>admin</parent>
+            </item>
+            <item>
+                <name>Возможность выдачи поручений по всей оргструктуре</name>
+                <value>top_errand_issuer</value>
+                <parent>admin</parent>
+                <requires>admin</requires>
+                <module>ord</module>
+            </item>
+
+
+            <item>
+                <name>Автор</name>
+                <value>author</value>
+            </item>
+            <!--<item>-->
+                <!--<name>Продвинутый автор</name>-->
+                <!--<value>advanced</value>-->
+            <!--</item>-->
+            <item>
+                <name>Инспектор</name>
+                <value>inspector</value>
+            </item>
+            <!--<item>-->
+                <!--<name>Переводчик</name>-->
+                <!--<value>translator</value>-->
+            <!--</item>-->
+        </items>
+    </directory>
+</directories>
